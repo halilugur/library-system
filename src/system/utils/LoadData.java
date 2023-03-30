@@ -28,7 +28,9 @@ public class LoadData {
                 dataList.add(values);
             }
             System.out.println(messageEnd);
-            dataList.remove(0);
+            if (!dataList.isEmpty()) {
+            dataList.remove(0); // Remove header row
+        }
             return dataList;
         } catch (FileNotFoundException ex) {
             Logger.getLogger(StudentUtil.class.getName()).log(Level.SEVERE, null, ex);
