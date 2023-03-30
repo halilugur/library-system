@@ -8,7 +8,7 @@ import java.util.Objects;
 
 /**
  *
- * @author tolgabp
+ * @author Tolga Baris Pinar
  */
 public class Book {
 
@@ -76,6 +76,5 @@ public class Book {
         }
         return Objects.equals(this.id, other.id);
     }
-    
-    
+
 }
