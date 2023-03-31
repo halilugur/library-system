@@ -1,5 +1,6 @@
 package system.models;
 
+import java.util.Arrays;
 import java.util.Objects;
 
 /**
@@ -80,4 +81,14 @@ public class Student extends BaseModel {
         }
         return Objects.equals(this.getId(), other.getId());
     }
+
+    @Override
+    public String toString() {
+        return "Student{"
+                + "name=" + name + ", "
+                + "surname=" + surname + ", "
+                + "waitingList=" + Arrays.toString(waitingList) + ", "
+                + "borrowedList=" + Arrays.toString(borrowedList) + '}';
+    }
+
 }
