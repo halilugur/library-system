@@ -18,8 +18,8 @@ public class AuthorUtil {
 
     public static List<Author> readFromCsv() {
         List<Author> authors = new ArrayList<>();
-        List<String[]> dataList = LoadData.dataFromCsv(AUTHOR_CSV_PATH, "Author data loading...", "Author data is loaded!");
-        dataList.parallelStream().forEach(data -> {
+        List<String[]> dataList = CSVUtil.readCSV(AUTHOR_CSV_PATH, "Author data loading...", "Author data is loaded!");
+        dataList.stream().forEach(data -> {
             Integer id = Integer.valueOf(data[0]);
             String author_first_name = data[1];
             String author_last_name = data[2];

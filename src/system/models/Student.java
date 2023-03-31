@@ -6,26 +6,17 @@ import java.util.Objects;
  *
  * @author halilugur
  */
-public class Student {
+public class Student extends BaseModel {
 
-    private Integer id;
     private String name;
     private String surname;
     private Book[] waitingList;
     private Book[] borrowedList;
 
     public Student(Integer id, String name, String surname) {
-        this.id = id;
+        super(id);
         this.name = name;
         this.surname = surname;
-    }
-
-    public Integer getId() {
-        return id;
-    }
-
-    public void setId(Integer id) {
-        this.id = id;
     }
 
     public String getName() {
@@ -63,7 +54,7 @@ public class Student {
     @Override
     public int hashCode() {
         int hash = 5;
-        hash = 97 * hash + Objects.hashCode(this.id);
+        hash = 97 * hash + Objects.hashCode(this.getId());
         hash = 97 * hash + Objects.hashCode(this.name);
         hash = 97 * hash + Objects.hashCode(this.surname);
         return hash;
@@ -87,6 +78,6 @@ public class Student {
         if (!Objects.equals(this.surname, other.surname)) {
             return false;
         }
-        return Objects.equals(this.id, other.id);
+        return Objects.equals(this.getId(), other.getId());
     }
 }

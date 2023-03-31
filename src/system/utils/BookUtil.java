@@ -18,8 +18,8 @@ public class BookUtil {
 
     public static List<Book> readFromCsv() {
         List<Book> books = new ArrayList<>();
-        List<String[]> dataList = LoadData.dataFromCsv(BOOK_CSV_PATH, "Book data loading...", "Book data loaded!");
-        dataList.parallelStream().forEach(data -> {
+        List<String[]> dataList = CSVUtil.readCSV(BOOK_CSV_PATH, "Book data loading...", "Book data is loaded!");
+        dataList.stream().forEach(data -> {
             Integer id = Integer.valueOf(data[0]);
             String bookTitle = data[1];
             String genre = data[3];

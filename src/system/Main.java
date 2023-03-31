@@ -1,66 +1,63 @@
 package system;
 
-import java.util.Arrays;
+import static system.models.Constants.*;
+
 import java.util.List;
-import java.util.Scanner;
-import system.screens.Menu;
 import system.utils.StudentUtil;
 
 /**
+ * This program manage the library system with simple functionality.
  *
  * @author halilugur
  */
 public class Main {
 
-    private static final Scanner SCANNER = new Scanner(System.in);
-    private static final Menu menu = Menu.getInstance();
-
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        menu.printBanner();
-        // LOAD DATA START
-        StudentUtil.readFromCsv();
-        // LOAD DATA END
-        menu.printControllers();
+        MENU.printBanner();
+        MENU.printDataLoading();
+        STUDENTS.addAll(StudentUtil.readFromCsv());
+        MENU.printDataLoaded();
+        MENU.printControllers();
         int option;
         do {
             System.out.print("Please select an option: ");
-            option = SCANNER.nextInt();
+            option = checkNumber(MAIN_MENU);
             switch (option) {
                 case 1:
                     while (option != 9) {
-                        menu.printStudentOptions();
-                        option = checkNumber(Arrays.asList(1, 2, 3, 4, 9));
-                        menu.printLongSpace();
+                        MENU.printStudentOptions();
+                        option = checkNumber(STUDENT_MENU);
+                        MENU.printLongSpace();
                         // Operation will implemented here
                         System.out.println("Operation doing... " + option);
                     }
                     break;
                 case 2:
                     while (option != 9) {
-                        menu.printBorrowedOptions();
-                        option = checkNumber(Arrays.asList(1, 2, 9));
-                        menu.printLongSpace();
+                        MENU.printBorrowedOptions();
+                        option = checkNumber(BARROWED_MENU);
+                        MENU.printLongSpace();
                         // Operation will implemented here
                         System.out.println("Operation doing... " + option);
                     }
                     break;
                 case 3:
                     while (option != 9) {
-                        menu.printBookOptions();
-                        option = checkNumber(Arrays.asList(1, 2, 3, 4, 9));
-                        menu.printLongSpace();
+                        MENU.printBookOptions();
+                        option = checkNumber(BOOK_MENU);
+                        MENU.printLongSpace();
                         // Operation will implemented here
                         System.out.println("Operation doing... " + option);
                     }
                     break;
                 case 4:
                     while (option != 9) {
-                        menu.printAuthorOptions();
-                        option = checkNumber(Arrays.asList(1, 2, 9));
-                        menu.printLongSpace();
+                        MENU.printAuthorOptions();
+                        option = checkNumber(AUTHOR_MENU);
+                        MENU.printLongSpace();
                         // Operation will implemented here
                         System.out.println("Operation doing... " + option);
                     }
@@ -70,21 +67,38 @@ public class Main {
         } while (option != 0);
     }
 
+    /**
+     * When user input 9 number to console print main menu to the console.
+     *
+     * @param number input value
+     */
     public static void printControllers(int number) {
         if (number == 9) {
-            menu.printLongSpace();
-            menu.printBanner();
-            menu.printControllers();
+            MENU.printLongSpace();
+            MENU.printBanner();
+            MENU.printControllers();
         }
     }
 
+    /**
+     * Show warning when user enters any value other than options.
+     *
+     * @param options available options list
+     * @return number of option
+     */
     public static int checkNumber(List<Integer> options) {
-        int number = SCANNER.nextInt();
-        if (!options.contains(number)) {
+        try {
+            int number = SCANNER.nextInt();
+            if (!options.contains(number)) {
+                System.out.println("This option is not available.");
+                System.out.print("Please select an option: ");
+                return checkNumber(options);
+            }
+            return number;
+        } catch (Exception e) {
             System.out.println("This option is not available.");
             System.out.print("Please select an option: ");
             return checkNumber(options);
         }
-        return number;
     }
 }
