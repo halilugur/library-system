@@ -13,13 +13,13 @@ import java.util.Objects;
 public class Author {
 
     private Integer id;
-    private String author_first_name;
-    private String author_last_name;
+    private String name;
+    private String surname;
 
-    public Author(Integer id, String author_first_name, String author_last_name) {
+    public Author(Integer id, String name, String surname) {
         this.id = id;
-        this.author_first_name = author_first_name;
-        this.author_last_name = author_last_name;
+        this.name = name;
+        this.surname = surname;
     }
 
     public Integer getId() {
@@ -30,28 +30,28 @@ public class Author {
         this.id = id;
     }
 
-    public String getAuthor_first_name() {
-        return author_first_name;
+    public String getName() {
+        return name;
     }
 
-    public void setAuthor_first_name(String author_first_name) {
-        this.author_first_name = author_first_name;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public String getAuthor_last_name() {
-        return author_last_name;
+    public String getSurname() {
+        return surname;
     }
 
-    public void setAuthor_last_name(String author_last_name) {
-        this.author_last_name = author_last_name;
+    public void setSurname(String surname) {
+        this.surname = surname;
     }
 
     @Override
     public int hashCode() {
-        int hash = 7;
-        hash = 89 * hash + Objects.hashCode(this.id);
-        hash = 89 * hash + Objects.hashCode(this.author_first_name);
-        hash = 89 * hash + Objects.hashCode(this.author_last_name);
+        int hash = 3;
+        hash = 59 * hash + Objects.hashCode(this.id);
+        hash = 59 * hash + Objects.hashCode(this.name);
+        hash = 59 * hash + Objects.hashCode(this.surname);
         return hash;
     }
 
@@ -67,14 +67,15 @@ public class Author {
             return false;
         }
         final Author other = (Author) obj;
-        if (!Objects.equals(this.author_first_name, other.author_first_name)) {
+        if (!Objects.equals(this.name, other.name)) {
             return false;
         }
-        if (!Objects.equals(this.author_last_name, other.author_last_name)) {
+        if (!Objects.equals(this.surname, other.surname)) {
             return false;
         }
         return Objects.equals(this.id, other.id);
     }
+
     
     
 }

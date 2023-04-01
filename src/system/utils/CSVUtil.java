@@ -1,8 +1,10 @@
 package system.utils;
 
 import java.io.BufferedReader;
+import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collections;
@@ -10,10 +12,11 @@ import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
+
 /**
  * This class read and write to CSV file.
  *
- * @author halilugur
+ * @author halilugur&tolga baris pinar
  */
 public class CSVUtil {
 
@@ -59,6 +62,20 @@ public class CSVUtil {
      * @param messageEnd print message when ended write data.
      */
     public static void writeCSV(String path, String messageStart, String messageEnd) {
+        System.out.println(messageStart);
 
+//        // first create file object for file placed at location
+//        // specified by file's path
+//        File file = new File(path);
+//
+//        try {
+//            FileWriter fileWriter = new FileWriter(file);
+//            CSVWriter csvWriter = new CSVWriter(fileWriter);
+//
+//            csvWriter;
+//        } catch (IOException e) {
+//        }
+
+        System.out.println(messageEnd);
     }
 }

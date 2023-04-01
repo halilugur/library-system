@@ -3,6 +3,7 @@ package system;
 import static system.models.Constants.*;
 
 import java.util.List;
+import system.utils.BookUtil;
 import system.utils.StudentUtil;
 
 /**
@@ -19,6 +20,7 @@ public class Main {
         MENU.printBanner();
         MENU.printDataLoading();
         STUDENTS.addAll(StudentUtil.readFromCsv());
+        BOOKS.addAll(BookUtil.readFromCsv());
         MENU.printDataLoaded();
         MENU.printControllers();
         int option;

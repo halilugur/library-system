@@ -4,55 +4,57 @@
  */
 package system.models;
 
+import java.util.Arrays;
 import java.util.Objects;
 
 /**
  *
  * @author Tolga Baris Pinar
  */
-public class Book {
+public class Book extends BaseModel {
 
-    private Integer id;
-    private String bookTitle;
-    private String genre;
+    private String code;
+    private String title;
+    private String[] genre;
 
-    public Book(Integer id, String bookTitle, String genre) {
+    public Book(Integer id, String code, String title, String[] genre) {
 
-        this.id = id;
-        this.bookTitle = bookTitle;
+        super(id);
+        this.code = code;
+        this.title = title;
         this.genre = genre;
     }
 
-    public Integer getId() {
-        return id;
+    public String getCode() {
+        return code;
     }
 
-    public void setId(Integer id) {
-        this.id = id;
+    public void setCode(String code) {
+        this.code = code;
     }
 
-    public String getBookTitle() {
-        return bookTitle;
+    public String getTitle() {
+        return title;
     }
 
-    public void setBookTitle(String bookTitle) {
-        this.bookTitle = bookTitle;
+    public void setTitle(String title) {
+        this.title = title;
     }
 
-    public String getGenre() {
+    public String[] getGenre() {
         return genre;
     }
 
-    public void setGenre(String genre) {
+    public void setGenre(String[] genre) {
         this.genre = genre;
     }
 
     @Override
     public int hashCode() {
-        int hash = 3;
-        hash = 89 * hash + Objects.hashCode(this.id);
-        hash = 89 * hash + Objects.hashCode(this.bookTitle);
-        hash = 89 * hash + Objects.hashCode(this.genre);
+        int hash = 7;
+        hash = 79 * hash + Objects.hashCode(this.code);
+        hash = 79 * hash + Objects.hashCode(this.title);
+        hash = 79 * hash + Arrays.deepHashCode(this.genre);
         return hash;
     }
 
@@ -68,13 +70,18 @@ public class Book {
             return false;
         }
         final Book other = (Book) obj;
-        if (!Objects.equals(this.bookTitle, other.bookTitle)) {
+        if (!Objects.equals(this.code, other.code)) {
             return false;
         }
-        if (!Objects.equals(this.genre, other.genre)) {
+        if (!Objects.equals(this.title, other.title)) {
             return false;
         }
-        return Objects.equals(this.id, other.id);
+        return Arrays.deepEquals(this.genre, other.genre);
+    }
+
+    @Override
+    public String toString() {
+        return "Book{" + "code=" + code + ", title=" + title + ", genre=" + genre + '}';
     }
 
 }
