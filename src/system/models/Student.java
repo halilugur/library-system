@@ -6,6 +6,7 @@ import java.util.Set;
 
 /**
  *
+ * @author Tolga Baris Pinar
  * @author halilugur
  */
 public class Student extends BaseModel {

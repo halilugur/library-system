@@ -11,6 +11,7 @@ import system.models.BaseModel;
 
 /**
  *
+ * @author Tolga Baris Pinar
  * @author halilugur
  */
 public class SearchUtil {
@@ -75,15 +76,17 @@ public class SearchUtil {
      * @param index
      */
     public static void indexingOfObject(Map<String, Integer[]> mapper, Object object, Integer index) {
+        //to hold the index of the object
         Integer[] indexList;
         String cascadeString = Optional.of(object)
                 .filter(String.class::isInstance)
                 .map(Object::toString)
                 .map(String::toLowerCase)
                 .orElse(object.toString());
+        //to create a new integer array with the current index if the mapper not contain a key
         if (mapper.get(cascadeString) == null) {
             indexList = mapper.getOrDefault(cascadeString, new Integer[]{index});
-        } else {
+        } else { //retrive the existing index list from the mapper and add the new 'index'
             indexList = mapper.get(cascadeString);
             indexList = Arrays.copyOf(indexList, indexList.length + 1);
             indexList[indexList.length - 1] = index;

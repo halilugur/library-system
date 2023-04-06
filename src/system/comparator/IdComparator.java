@@ -5,6 +5,7 @@ import system.models.BaseModel;
 
 /**
  *
+ * @author Tolga Baris Pinar
  * @author halilugur
  * @param <M> model of data. Data should extended from BaseModel class
  */

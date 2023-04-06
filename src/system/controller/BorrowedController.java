@@ -12,6 +12,7 @@ import system.models.WaitingQueue;
 
 /**
  *
+ * @author Tolga Baris Pinar
  * @author halilugur
  */
 public class BorrowedController {

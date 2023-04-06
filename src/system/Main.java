@@ -3,14 +3,18 @@ package system;
 import static system.models.Constants.*;
 
 import java.util.List;
+import system.controller.AuthorController;
+import system.controller.BookController;
 import system.controller.BorrowedController;
 import system.controller.StudentController;
+import system.utils.AuthorUtil;
 import system.utils.BookUtil;
 import system.utils.StudentUtil;
 
 /**
  * This program manage the library system with simple functionality.
  *
+ * @author Tolga Baris Pinar
  * @author halilugur
  */
 public class Main {
@@ -20,6 +24,7 @@ public class Main {
         MENU.printDataLoading();
         STUDENTS.addAll(StudentUtil.readFromCsv());
         BOOKS.addAll(BookUtil.readFromCsv());
+        AUTHORS.addAll(AuthorUtil.readFromCsv());
         MENU.printDataLoaded();
         MENU.printControllers();
     }
@@ -31,6 +36,8 @@ public class Main {
         setup();
         StudentController studentController = new StudentController();
         BorrowedController borrowedController = new BorrowedController();
+        BookController bookController = new BookController();
+        AuthorController authorController = new AuthorController();
         int option;
         do {
             System.out.print("Please select an option: ");
@@ -60,8 +67,7 @@ public class Main {
                         System.out.print("Please select an option: ");
                         option = checkNumber(BOOK_MENU);
                         MENU.printLongSpace();
-                        // Operation will implemented here
-                        System.out.println("Operation doing... " + option);
+                        bookController.search(option);
                     }
                     break;
                 case 4:
@@ -70,8 +76,7 @@ public class Main {
                         System.out.print("Please select an option: ");
                         option = checkNumber(AUTHOR_MENU);
                         MENU.printLongSpace();
-                        // Operation will implemented here
-                        System.out.println("Operation doing... " + option);
+                        authorController.search(option);
                     }
                     break;
             }

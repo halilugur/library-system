@@ -41,6 +41,8 @@ public class CSVUtil {
                     skipFirstLine = false;
                     continue;
                 }
+                
+                // Split the line using the delimiter
                 String[] values = line.split(DELIMITER);
                 dataList.add(values);
             }

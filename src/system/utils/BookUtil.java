@@ -2,6 +2,7 @@ package system.utils;
 
 import system.comparator.IdComparator;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 import system.models.Book;
@@ -9,6 +10,7 @@ import system.models.Book;
 /**
  *
  * @author Tolga Baris Pinar
+ * @author halilugur
  */
 public class BookUtil {
 
@@ -26,7 +28,7 @@ public class BookUtil {
             String code = data[1];
             String title = data[2];
             String[] genre = data[3].split("\\|");
-            Book book = new Book(id, code, title, List.of(genre));
+            Book book = new Book(id, code, title, Arrays.asList(genre));
             books.add(book);
         });
         Collections.sort(books, new IdComparator<>());

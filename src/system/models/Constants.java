@@ -9,6 +9,7 @@ import system.screens.Menu;
 /**
  * This interface provide constant data.
  *
+ * @author Tolga Baris Pinar
  * @author halilugur
  */
 public interface Constants {
@@ -27,5 +28,6 @@ public interface Constants {
     // Loaded Data
     List<Student> STUDENTS = new ArrayList<>();
     List<Book> BOOKS = new ArrayList<>();
-    List<Author> AUTHOR = new ArrayList<>();
+    List<Author> AUTHORS = new ArrayList<>();
+
 }

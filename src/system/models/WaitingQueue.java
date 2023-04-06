@@ -6,6 +6,7 @@ import java.util.Map;
 
 /**
  *
+ * @author Tolga Baris Pinar
  * @author halilugur
  */
 public class WaitingQueue {

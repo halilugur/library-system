@@ -9,6 +9,7 @@ import system.models.Author;
 /**
  *
  * @author Tolga Baris Pinar
+ * @author halilugur
  */
 public class AuthorUtil {
 

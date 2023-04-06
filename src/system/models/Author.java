@@ -5,6 +5,7 @@ import java.util.Objects;
 /**
  *
  * @author Tolga Baris Pinar
+ * @author halilugur
  */
 public class Author extends BaseModel {
 

@@ -14,6 +14,7 @@ import system.utils.SearchUtil;
 /**
  * This class provide student searching functionality.
  *
+ * @author Tolga Baris Pinar
  * @author halilugur
  */
 public class StudentController {
@@ -60,29 +61,29 @@ public class StudentController {
         if (index != -1) {
             System.out.println(STUDENTS.get(index));
         } else {
-            System.out.println("No have any student by id is '" + id + "'");
+            System.out.println("Couldn't find any student with an ID number: '" + id + "'");
         }
     }
 
     public void searchByName() {
         System.out.println("Search by name: ");
-        String name = SCANNER.next();
+        String name = SCANNER.next().toLowerCase();
         Integer[] indexes = INDEXED_NAME_VALUE.get(name);
         if (indexes != null) {
             findAndPrint(indexes);
         } else {
-            System.out.println("No have any student name is '" + name + "'");
+            System.out.println("Couldn't find any student with a name: '" + name + "'");
         }
     }
 
     public void searchBySurname() {
         System.out.println("Search by surname: ");
-        String surname = SCANNER.next();
+        String surname = SCANNER.next().toLowerCase();
         Integer[] indexes = INDEXED_SURNAME_VALUE.get(surname);
         if (indexes != null) {
             findAndPrint(indexes);
         } else {
-            System.out.println("No have any student surname is '" + surname + "'");
+            System.out.println("Couldn't find any student with a surname: '" + surname + "'");
         }
     }
 
@@ -101,7 +102,7 @@ public class StudentController {
         if (index != -1) {
             System.out.println(STUDENTS.get(index).getBorrowedList());
         } else {
-            System.out.println("No have any student by id is '" + id + "'");
+            System.out.println("Couldn't find any student with an ID number: '" + id + "'");
         }
     }
 
@@ -112,7 +113,7 @@ public class StudentController {
         if (index != -1) {
             System.out.println(STUDENTS.get(index).getWaitingList());
         } else {
-            System.out.println("No have any student by id is '" + id + "'");
+            System.out.println("Couldn't find any student with an ID number: '" + id + "'");
         }
     }
 

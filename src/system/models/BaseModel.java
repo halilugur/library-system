@@ -2,6 +2,7 @@ package system.models;
 
 /**
  *
+ * @author Tolga Baris Pinar
  * @author halilugur
  */
 public class BaseModel {

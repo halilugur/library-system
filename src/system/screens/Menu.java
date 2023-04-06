@@ -5,6 +5,7 @@ import java.util.Objects;
 
 /**
  *
+ * @author Tolga Baris Pinar
  * @author halilugur
  */
 public final class Menu {
@@ -62,6 +63,7 @@ public final class Menu {
         System.out.println("2) Borrowed Book");
         System.out.println("3) Book Search");
         System.out.println("4) Author Search");
+        System.out.println("9) Exit");
     }
 
     public void printStudentOptions() {
@@ -92,7 +94,7 @@ public final class Menu {
         System.out.println("| Book Search |");
         System.out.println("⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯");
         System.out.println("1) Search by title");
-        System.out.println("2) Search by genre");
+        System.out.println("2) Search by genre"); //TODO print genre lists so that user can choose one
         System.out.println("3) Find all by author name");
         System.out.println("4) Find all by author surname");
         System.out.println("9) Back");
@@ -106,4 +108,15 @@ public final class Menu {
         System.out.println("2) Search by surname");
         System.out.println("9) Back");
     }
+
+    public void printGenreOptions() {
+        System.out.println("⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯");
+        System.out.println("| Genre Types |");
+        System.out.println("⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯");
+        System.out.println(" Action | Adventure | Fantasy | Romance | Children | Horror ");
+        System.out.println(" Mystery | Thriller | Comedy | Western | Animation | Musical ");
+        System.out.println(" Film-Noir | Documentary | Crime | Sci-Fi | IMAX | War | Drama ");
+        System.out.println("0) Back");
+    }
+
 }

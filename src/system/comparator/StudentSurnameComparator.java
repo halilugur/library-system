@@ -6,6 +6,7 @@ import system.models.Student;
 /**
  * Compare surname of students
  *
+ * @author Tolga Baris Pinar
  * @author halilugur
  */
 public class StudentSurnameComparator implements Comparator<Student> {

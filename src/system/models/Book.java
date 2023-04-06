@@ -6,6 +6,7 @@ import java.util.Objects;
 /**
  *
  * @author Tolga Baris Pinar
+ * @author halilugur
  */
 public class Book extends BaseModel {
 
