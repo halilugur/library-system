@@ -19,13 +19,13 @@ public interface Constants {
 
     // Menu Options
     List<Integer> MAIN_MENU = Arrays.asList(1, 2, 3, 4);
-    List<Integer> STUDENT_MENU = Arrays.asList(1, 2, 3, 4, 9);
+    List<Integer> STUDENT_MENU = Arrays.asList(1, 2, 3, 4, 5, 6, 7, 9);
     List<Integer> BARROWED_MENU = Arrays.asList(1, 2, 9);
     List<Integer> BOOK_MENU = Arrays.asList(1, 2, 3, 4, 9);
     List<Integer> AUTHOR_MENU = Arrays.asList(1, 2, 9);
 
     // Loaded Data
     List<Student> STUDENTS = new ArrayList<>();
-    List<Integer> BOOKS = new ArrayList<>();
-    List<Integer> AUTHOR = new ArrayList<>();
+    List<Book> BOOKS = new ArrayList<>();
+    List<Author> AUTHOR = new ArrayList<>();
 }

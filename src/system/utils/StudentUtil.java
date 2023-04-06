@@ -1,5 +1,6 @@
 package system.utils;
 
+import system.comparator.IdComparator;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -28,7 +29,7 @@ public class StudentUtil {
             Student student = new Student(id, name, surname);
             students.add(student);
         });
-        Collections.sort(students, new DataComparator<>());
+        Collections.sort(students, new IdComparator<>());
         return students;
     }
 }

@@ -1,7 +1,8 @@
 package system.models;
 
-import java.util.Arrays;
+import java.util.HashSet;
 import java.util.Objects;
+import java.util.Set;
 
 /**
  *
@@ -11,13 +12,15 @@ public class Student extends BaseModel {
 
     private String name;
     private String surname;
-    private Book[] waitingList;
-    private Book[] borrowedList;
+    private Set<Book> waitingList;
+    private Set<Book> borrowedList;
 
     public Student(Integer id, String name, String surname) {
         super(id);
         this.name = name;
         this.surname = surname;
+        this.waitingList = new HashSet<>();
+        this.borrowedList = new HashSet<>();
     }
 
     public String getName() {
@@ -36,19 +39,19 @@ public class Student extends BaseModel {
         this.surname = surname;
     }
 
-    public Book[] getWaitingList() {
+    public Set<Book> getWaitingList() {
         return waitingList;
     }
 
-    public void setWaitingList(Book[] waitingList) {
+    public void setWaitingList(Set<Book> waitingList) {
         this.waitingList = waitingList;
     }
 
-    public Book[] getBorrowedList() {
+    public Set<Book> getBorrowedList() {
         return borrowedList;
     }
 
-    public void setBorrowedList(Book[] borrowedList) {
+    public void setBorrowedList(Set<Book> borrowedList) {
         this.borrowedList = borrowedList;
     }
 
@@ -85,10 +88,9 @@ public class Student extends BaseModel {
     @Override
     public String toString() {
         return "Student{"
+                + "id=" + getId() + ", "
                 + "name=" + name + ", "
-                + "surname=" + surname + ", "
-                + "waitingList=" + Arrays.toString(waitingList) + ", "
-                + "borrowedList=" + Arrays.toString(borrowedList) + '}';
+                + "surname=" + surname + '}';
     }
 
 }

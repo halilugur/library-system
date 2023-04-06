@@ -1,10 +1,6 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package system.models;
 
-import java.util.Arrays;
+import java.util.List;
 import java.util.Objects;
 
 /**
@@ -15,10 +11,9 @@ public class Book extends BaseModel {
 
     private String code;
     private String title;
-    private String[] genre;
+    private List<String> genre;
 
-    public Book(Integer id, String code, String title, String[] genre) {
-
+    public Book(Integer id, String code, String title, List<String> genre) {
         super(id);
         this.code = code;
         this.title = title;
@@ -41,20 +36,20 @@ public class Book extends BaseModel {
         this.title = title;
     }
 
-    public String[] getGenre() {
+    public List<String> getGenre() {
         return genre;
     }
 
-    public void setGenre(String[] genre) {
+    public void setGenre(List<String> genre) {
         this.genre = genre;
     }
 
     @Override
     public int hashCode() {
-        int hash = 7;
-        hash = 79 * hash + Objects.hashCode(this.code);
-        hash = 79 * hash + Objects.hashCode(this.title);
-        hash = 79 * hash + Arrays.deepHashCode(this.genre);
+        int hash = 3;
+        hash = 59 * hash + Objects.hashCode(this.getId());
+        hash = 59 * hash + Objects.hashCode(this.code);
+        hash = 59 * hash + Objects.hashCode(this.title);
         return hash;
     }
 
@@ -70,18 +65,20 @@ public class Book extends BaseModel {
             return false;
         }
         final Book other = (Book) obj;
+        if (!Objects.equals(this.getId(), other.getId())) {
+            return false;
+        }
         if (!Objects.equals(this.code, other.code)) {
             return false;
         }
-        if (!Objects.equals(this.title, other.title)) {
-            return false;
-        }
-        return Arrays.deepEquals(this.genre, other.genre);
+        return Objects.equals(this.title, other.title);
     }
 
     @Override
     public String toString() {
-        return "Book{" + "code=" + code + ", title=" + title + ", genre=" + genre + '}';
+        return "Book{"
+                + "id=" + getId()
+                + ", code=" + code
+                + ", title=" + title + '}';
     }
-
 }

@@ -1,5 +1,6 @@
 package system.screens;
 
+import java.util.Arrays;
 import java.util.Objects;
 
 /**
@@ -67,10 +68,13 @@ public final class Menu {
         System.out.println("⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯");
         System.out.println("| Student Search |");
         System.out.println("⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯");
-        System.out.println("1) Search by name");
-        System.out.println("2) Search by surname");
-        System.out.println("3) Find all borrowed book");
-        System.out.println("4) Find all waiting book");
+        System.out.println("1) Search by id");
+        System.out.println("2) Search by name");
+        System.out.println("3) Search by surname");
+        System.out.println("4) Find all borrowed book by student id");
+        System.out.println("5) Find all waiting book by student id");
+        System.out.println("6) List all student by name");
+        System.out.println("7) List all student by surname");
         System.out.println("9) Back");
     }
 
@@ -78,8 +82,8 @@ public final class Menu {
         System.out.println("⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯");
         System.out.println("| Borrowed Book |");
         System.out.println("⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯");
-        System.out.println("1) Refund book by id");
-        System.out.println("2) Borrowed book by id");
+        System.out.println("1) Borrow a book by id");
+        System.out.println("2) Give back a book by id");
         System.out.println("9) Back");
     }
 

@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package system.models;
 
 import java.util.Objects;
@@ -10,24 +6,15 @@ import java.util.Objects;
  *
  * @author Tolga Baris Pinar
  */
-public class Author {
+public class Author extends BaseModel {
 
-    private Integer id;
     private String name;
     private String surname;
 
     public Author(Integer id, String name, String surname) {
-        this.id = id;
+        super(id);
         this.name = name;
         this.surname = surname;
-    }
-
-    public Integer getId() {
-        return id;
-    }
-
-    public void setId(Integer id) {
-        this.id = id;
     }
 
     public String getName() {
@@ -49,7 +36,7 @@ public class Author {
     @Override
     public int hashCode() {
         int hash = 3;
-        hash = 59 * hash + Objects.hashCode(this.id);
+        hash = 59 * hash + Objects.hashCode(this.getId());
         hash = 59 * hash + Objects.hashCode(this.name);
         hash = 59 * hash + Objects.hashCode(this.surname);
         return hash;
@@ -73,9 +60,15 @@ public class Author {
         if (!Objects.equals(this.surname, other.surname)) {
             return false;
         }
-        return Objects.equals(this.id, other.id);
+        return Objects.equals(this.getId(), other.getId());
     }
 
-    
-    
+    @Override
+    public String toString() {
+        return "Author{"
+                + "id=" + getId()
+                + "name=" + name
+                + ", surname=" + surname + '}';
+    }
+
 }
