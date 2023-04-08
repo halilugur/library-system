@@ -176,10 +176,9 @@ public class BookController {
     private void prepareSearchData() {
         for (int i = 0; i < BOOKS.size(); i++) {
             Book book = BOOKS.get(i);
-            final int finalIndex = i;
-            indexingOfObject(INDEXED_TITLE_VALUE, book.getTitle(), finalIndex);
-            indexingOfObject(INDEXED_AUTHOR_NAME_VALUE, book.getAuthor().getName(), finalIndex);
-            indexingOfObject(INDEXED_AUTHOR_SURNAME_VALUE, book.getAuthor().getSurname(), finalIndex);
+            indexingOfObject(INDEXED_TITLE_VALUE, book.getTitle(), i);
+            indexingOfObject(INDEXED_AUTHOR_NAME_VALUE, book.getAuthor().getName(), i);
+            indexingOfObject(INDEXED_AUTHOR_SURNAME_VALUE, book.getAuthor().getSurname(), i);
             indexingOfList(INDEXED_GENRE_VALUE, book.getGenres(), i);
         }
     }
