@@ -7,6 +7,7 @@ import java.util.Optional;
 import java.util.stream.Collectors;
 import system.comparator.BookAuthorNameComparator;
 import system.comparator.BookAuthorSurnameComparator;
+import system.comparator.BookTitleComparator;
 import system.models.Book;
 import static system.models.Constants.BOOKS;
 import static system.models.Constants.SCANNER;
@@ -60,9 +61,12 @@ public class BookController {
                 searchByAuthorSurname();
                 break;
             case 7:
-                listAllBookByAuthorName();
+                listAllBookByTitle();
                 break;
             case 8:
+                listAllBookByAuthorName();
+                break;
+            case 9:
                 listAllBookByAuthorSurname();
                 break;
         }
@@ -149,6 +153,11 @@ public class BookController {
     private void listAllBookByAuthorSurname() {
         printTableLabels();
         listAllDataByCompare(BOOKS, new BookAuthorSurnameComparator());
+    }
+
+    private void listAllBookByTitle() {
+        printTableLabels();
+        listAllDataByCompare(BOOKS, new BookTitleComparator());
     }
 
     private void printTableLabels() {

@@ -96,7 +96,7 @@ public class Main {
      * @param number input value
      */
     public static void printControllers(int number) {
-        if (number == 9) {
+        if (number == BACK) {
             MENU.printLongSpace();
             MENU.printBanner();
             MENU.printControllers();

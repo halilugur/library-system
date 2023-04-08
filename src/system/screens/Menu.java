@@ -1,6 +1,7 @@
 package system.screens;
 
 import java.util.Objects;
+import system.models.Constants;
 
 /**
  *
@@ -67,7 +68,7 @@ public final class Menu {
         System.out.println("2) Borrowed Book");
         System.out.println("3) Book Search");
         System.out.println("4) Author Search");
-        System.out.println("9) Exit");
+        System.out.println("0) Exit");
         System.out.println("⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯");
     }
 
@@ -82,7 +83,7 @@ public final class Menu {
         System.out.println("5) Find all waiting book by student id");
         System.out.println("6) List all student by name");
         System.out.println("7) List all student by surname");
-        System.out.println("9) Back");
+        System.out.println(Constants.BACK + ") Back");
         System.out.println("⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯");
 
     }
@@ -93,7 +94,7 @@ public final class Menu {
         System.out.println("⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯");
         System.out.println("1) Borrow a book by id");
         System.out.println("2) Give back a book by id");
-        System.out.println("9) Back");
+        System.out.println(Constants.BACK + ") Back");
         System.out.println("⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯");
     }
 
@@ -105,11 +106,12 @@ public final class Menu {
         System.out.println("2) Search by code");
         System.out.println("3) Search by title");
         System.out.println("4) Search by genre");
-        System.out.println("5) Find all by author name");
-        System.out.println("6) Find all by author surname");
-        System.out.println("7) List all order by author name");
-        System.out.println("8) List all order by author surname");
-        System.out.println("9) Back");
+        System.out.println("5) Find all book by author name");
+        System.out.println("6) Find all book by author surname");
+        System.out.println("7) List all book order by title");
+        System.out.println("8) List all book order by author name");
+        System.out.println("9) List all book order by author surname");
+        System.out.println(Constants.BACK + ") Back");
         System.out.println("⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯");
     }
 
@@ -122,7 +124,7 @@ public final class Menu {
         System.out.println("3) Search by surname");
         System.out.println("4) List all author by name");
         System.out.println("5) List all author by surname");
-        System.out.println("9) Back");
+        System.out.println(Constants.BACK + ") Back");
         System.out.println("⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯");
     }
 
