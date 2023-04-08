@@ -17,13 +17,13 @@ public class StudentUtil {
 
     /**
      * This method prepare student data for storage on the RAM.
-     * 
+     *
      * @return list of student
      */
     public static List<Student> readFromCsv() {
         List<Student> students = new ArrayList<>();
         List<String[]> dataList = CSVUtil.readCSV(STUDENT_CSV_PATH, "Student data loading...", "Student data is loaded!");
-        dataList.stream().forEach(data -> {
+        dataList.forEach(data -> {
             Integer id = Integer.valueOf(data[0]);
             String name = data[1];
             String surname = data[2];

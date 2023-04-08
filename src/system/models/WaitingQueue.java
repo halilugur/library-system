@@ -22,10 +22,10 @@ public class WaitingQueue {
     }
 
     /**
-     * 
+     *
      * @param book
      * @param student
-     * @return 
+     * @return
      */
     public boolean add(Book book, Student student) {
         for (int i = 0; i < books.length; i++) {
@@ -46,9 +46,9 @@ public class WaitingQueue {
     }
 
     /**
-     * 
+     *
      * @param book
-     * @return 
+     * @return
      */
     public Student poll(Book book) {
         int findPosition = -1;
@@ -82,9 +82,9 @@ public class WaitingQueue {
     }
 
     /**
-     * 
+     *
      * @param book
-     * @return 
+     * @return
      */
     public Student peek(Book book) {
         for (int i = 0; i < books.length; i++) {
@@ -97,8 +97,8 @@ public class WaitingQueue {
     }
 
     /**
-     * 
-     * @return 
+     *
+     * @return
      */
     public Map<String, Integer> toMap() {
         Map<String, Integer> mapped = new HashMap<>();
@@ -106,13 +106,5 @@ public class WaitingQueue {
             mapped.put(books[i].getCode(), students[i].getId());
         }
         return mapped;
-    }
-
-    @Override
-    public String toString() {
-        return "WaitingList{"
-                + "books=" + Arrays.toString(books)
-                + ", students=" + Arrays.toString(students)
-                + ", elementCount=" + elementCount + '}';
     }
 }

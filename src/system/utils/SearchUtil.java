@@ -2,6 +2,7 @@ package system.utils;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collection;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
@@ -86,11 +87,19 @@ public class SearchUtil {
         //to create a new integer array with the current index if the mapper not contain a key
         if (mapper.get(cascadeString) == null) {
             indexList = mapper.getOrDefault(cascadeString, new Integer[]{index});
-        } else { //retrive the existing index list from the mapper and add the new 'index'
+        } else { 
+            //retrive the existing index list from the mapper and add the new 'index'
             indexList = mapper.get(cascadeString);
             indexList = Arrays.copyOf(indexList, indexList.length + 1);
             indexList[indexList.length - 1] = index;
         }
         mapper.put(cascadeString, indexList);
     }
+
+    public static void indexingOfList(Map<String, Integer[]> mapper, Collection collection, Integer index) {
+        collection.forEach(genre -> {
+            indexingOfObject(mapper, genre, index);
+        });
+    }
+
 }

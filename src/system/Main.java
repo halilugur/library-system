@@ -10,6 +10,7 @@ import system.controller.StudentController;
 import system.utils.AuthorUtil;
 import system.utils.BookUtil;
 import system.utils.StudentUtil;
+import system.utils.RelationUtil;
 
 /**
  * This program manage the library system with simple functionality.
@@ -25,6 +26,7 @@ public class Main {
         STUDENTS.addAll(StudentUtil.readFromCsv());
         BOOKS.addAll(BookUtil.readFromCsv());
         AUTHORS.addAll(AuthorUtil.readFromCsv());
+        RelationUtil.loadBookAndAuthorRelation(BOOKS, AUTHORS);
         MENU.printDataLoaded();
         MENU.printControllers();
     }
@@ -44,44 +46,48 @@ public class Main {
             option = checkNumber(MAIN_MENU);
             switch (option) {
                 case 1:
-                    while (option != 9) {
+                    while (option != BACK) {
                         MENU.printStudentOptions();
                         System.out.print("Please select an option: ");
-                        option = checkNumber(STUDENT_MENU);
+                        option = checkNumber(STUDENT_MENU_OPTIONS);
                         MENU.printLongSpace();
                         studentController.search(option);
+                        MENU.printShortSpace();
                     }
                     break;
                 case 2:
-                    while (option != 9) {
+                    while (option != BACK) {
                         MENU.printBorrowedOptions();
                         System.out.print("Please select an option: ");
-                        option = checkNumber(BARROWED_MENU);
+                        option = checkNumber(BARROWED_MENU_OPTIONS);
                         MENU.printLongSpace();
                         borrowedController.borrowed(option);
+                        MENU.printShortSpace();
                     }
                     break;
                 case 3:
-                    while (option != 9) {
+                    while (option != BACK) {
                         MENU.printBookOptions();
                         System.out.print("Please select an option: ");
-                        option = checkNumber(BOOK_MENU);
+                        option = checkNumber(BOOK_MENU_OPTIONS);
                         MENU.printLongSpace();
                         bookController.search(option);
+                        MENU.printShortSpace();
                     }
                     break;
                 case 4:
-                    while (option != 9) {
+                    while (option != BACK) {
                         MENU.printAuthorOptions();
                         System.out.print("Please select an option: ");
-                        option = checkNumber(AUTHOR_MENU);
+                        option = checkNumber(AUTHOR_MENU_OPTIONS);
                         MENU.printLongSpace();
                         authorController.search(option);
+                        MENU.printShortSpace();
                     }
                     break;
             }
             printControllers(option);
-        } while (option != 0);
+        } while (option != EXIT);
     }
 
     /**

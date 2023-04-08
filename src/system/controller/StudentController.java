@@ -88,10 +88,12 @@ public class StudentController {
     }
 
     public void listAllStudentByName() {
+        printTableLabels();
         listAllDataByCompare(STUDENTS, new StudentNameComparator());
     }
 
     public void listAllStudentBySurname() {
+        printTableLabels();
         listAllDataByCompare(STUDENTS, new StudentSurnameComparator());
     }
 
@@ -117,7 +119,14 @@ public class StudentController {
         }
     }
 
+    private void printTableLabels() {
+        System.out.println("⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯");
+        System.out.println(String.format("%-10s%-20s%-20s", "ID", "Name", "Surname"));
+        System.out.println("⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯");
+    }
+
     private void findAndPrint(Integer[] indexes) {
+        printTableLabels();
         for (Integer index : indexes) {
             System.out.println(STUDENTS.get(index));
         }

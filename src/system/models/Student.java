@@ -88,10 +88,6 @@ public class Student extends BaseModel {
 
     @Override
     public String toString() {
-        return "Student{"
-                + "id=" + getId() + ", "
-                + "name=" + name + ", "
-                + "surname=" + surname + '}';
+        return String.format("%-10d%-20s%-20s", this.getId(), name, surname);
     }
-
 }

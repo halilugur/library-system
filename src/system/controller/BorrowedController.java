@@ -85,11 +85,12 @@ public class BorrowedController {
                 student.getBorrowedList().remove(book.get());
                 Optional.ofNullable(WAITING_BOOK.peek(book.get()))
                         .ifPresent(newBorrower -> {
-                            System.out.println("⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯");
-                            System.out.println("| Student waiting for this book! |");
+                            System.out.println("⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯");
+                            System.out.println("Below student in waiting list for this book!");
+                            System.out.println("⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯");
+                            System.out.println(String.format("%-10s%-20s%-20s", "ID", "Name", "Surname"));
+                            System.out.println("⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯");
                             System.out.println(newBorrower);
-                            System.out.println("Waiting List: " + newBorrower.getWaitingList());
-                            System.out.println("⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯");
                         });
             } else {
                 System.out.println("This book not borrowed.");

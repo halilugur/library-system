@@ -1,7 +1,8 @@
 package system.models;
 
-import java.util.List;
 import java.util.Objects;
+import java.util.Set;
+import static system.utils.StringUtil.makeShort;
 
 /**
  *
@@ -12,13 +13,14 @@ public class Book extends BaseModel {
 
     private String code;
     private String title;
-    private List<String> genre;
+    private Author author;
+    private Set<String> genres;
 
-    public Book(Integer id, String code, String title, List<String> genre) {
+    public Book(Integer id, String code, String title, Set<String> genres) {
         super(id);
         this.code = code;
         this.title = title;
-        this.genre = genre;
+        this.genres = genres;
     }
 
     public String getCode() {
@@ -37,12 +39,20 @@ public class Book extends BaseModel {
         this.title = title;
     }
 
-    public List<String> getGenre() {
-        return genre;
+    public Set<String> getGenres() {
+        return genres;
     }
 
-    public void setGenre(List<String> genre) {
-        this.genre = genre;
+    public void setGenres(Set<String> genres) {
+        this.genres = genres;
+    }
+
+    public Author getAuthor() {
+        return author;
+    }
+
+    public void setAuthor(Author author) {
+        this.author = author;
     }
 
     @Override
@@ -77,9 +87,6 @@ public class Book extends BaseModel {
 
     @Override
     public String toString() {
-        return "Book{"
-                + "id=" + getId()
-                + ", code=" + code
-                + ", title=" + title + '}';
+        return String.format("%-10d%-40s%-20s%-20s%-20s", this.getId(), code, makeShort(title), makeShort(genres), author);
     }
 }

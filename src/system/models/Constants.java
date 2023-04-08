@@ -19,11 +19,17 @@ public interface Constants {
     Menu MENU = Menu.getInstance();
 
     // Menu Options
-    List<Integer> MAIN_MENU = Arrays.asList(1, 2, 3, 4);
-    List<Integer> STUDENT_MENU = Arrays.asList(1, 2, 3, 4, 5, 6, 7, 9);
-    List<Integer> BARROWED_MENU = Arrays.asList(1, 2, 9);
-    List<Integer> BOOK_MENU = Arrays.asList(1, 2, 3, 4, 9);
-    List<Integer> AUTHOR_MENU = Arrays.asList(1, 2, 9);
+    Integer EXIT = 0;
+    Integer STUDENT = 1;
+    Integer BARROWED = 2;
+    Integer BOOK = 3;
+    Integer AUTHOR = 4;
+    Integer BACK = 9;
+    List<Integer> MAIN_MENU = Arrays.asList(STUDENT, BARROWED, BOOK, AUTHOR);
+    List<Integer> STUDENT_MENU_OPTIONS = Arrays.asList(1, 2, 3, 4, 5, 6, 7, BACK);
+    List<Integer> BARROWED_MENU_OPTIONS = Arrays.asList(1, 2, BACK);
+    List<Integer> BOOK_MENU_OPTIONS = Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, BACK);
+    List<Integer> AUTHOR_MENU_OPTIONS = Arrays.asList(1, 2, 3, 4, 5, BACK);
 
     // Loaded Data
     List<Student> STUDENTS = new ArrayList<>();

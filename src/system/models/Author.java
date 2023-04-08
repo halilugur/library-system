@@ -66,10 +66,7 @@ public class Author extends BaseModel {
 
     @Override
     public String toString() {
-        return "Author{"
-                + "id=" + getId()
-                + "name=" + name
-                + ", surname=" + surname + '}';
+        return String.format("%-10d%-20s%-20s", this.getId(), name, surname);
     }
 
 }

@@ -1,27 +1,27 @@
-id,code,title,genre
+id,code,title,genres
 1,140a3d7e-a417-4c2b-96fe-32f9a2732693,Tarzan's Magic Fountain,Action|Adventure|Fantasy|Romance
 2,b4eb8f48-2bbb-46bf-b836-017f9372c463,Possession,Drama|Horror|Mystery|Romance|Thriller
-3,ac6644b2-9da8-439d-8d43-b27418acbc1e,"Best of Everything, The",Drama|Romance
+3,ac6644b2-9da8-439d-8d43-b27418acbc1e,Best of Everything The,Drama|Romance
 4,273ddc90-fff0-4e29-a75c-39cb09cfff8e,Vamps,Comedy|Horror|Romance
-5,ca2c0609-3e1d-4bac-a79c-d1ee0f9e7555,"Day of the Beast, The (Día de la Bestia, El)",Adventure|Comedy|Thriller
-6,d2678f78-1cdc-4113-b335-e6bbf8a95449,"Turkish Dance, Ella Lola",(no genres listed)
+5,ca2c0609-3e1d-4bac-a79c-d1ee0f9e7555,Day of the Beast The (Día de la Bestia El),Adventure|Comedy|Thriller
+6,d2678f78-1cdc-4113-b335-e6bbf8a95449,Turkish Dance Ella Lola,
 7,e874c101-7ecb-4d13-a363-0a7f06d4313f,Lust for Love,Comedy|Romance
-8,2aaf3991-b161-480d-85a0-56663e34e51a,"Fitzgerald Family Christmas, The",Drama
+8,2aaf3991-b161-480d-85a0-56663e34e51a,Fitzgerald Family Christmas The,Drama
 9,6e91dd83-91de-40d7-b755-e100da72f8db,Hellraiser: Deader,Horror
 10,615ff2df-d4fc-4818-8a7c-034b853128a6,Sink the Bismark!,Action|Drama|War
 11,5f7b55c1-58c7-4e99-82d4-030a62c8de0c,Gunless,Action|Comedy|Drama|Western
 12,c11b25bb-711f-4537-b5d4-cea7b046f42b,State Fair,Comedy|Drama|Romance
 13,916c8516-4c29-4146-b295-e02380a4e44f,Duck Soup,Comedy|Musical|War
 14,f23dfac0-7780-4ff6-b159-3881916d6954,Swing,Comedy|Drama|Musical
-15,16faecce-20ae-4384-850a-50787fe4a84a,"Foul King, The (Banchikwang)",Comedy
+15,16faecce-20ae-4384-850a-50787fe4a84a,Foul King The (Banchikwang),Comedy
 16,3e73bbba-f36e-4ede-beff-74fefcf178d7,New Scenes from America,Documentary
-17,083a21b4-4214-479d-8388-1737e56583a9,"Time to Live, a Time to Die, A (Tong nien wang shi)",Drama
-18,e578b06e-66e9-413a-b0e2-d387d00c907d,"Blacksmith, The",Comedy
+17,083a21b4-4214-479d-8388-1737e56583a9,Time to Live a Time to Die A (Tong nien wang shi),Drama
+18,e578b06e-66e9-413a-b0e2-d387d00c907d,Blacksmith The,Comedy
 19,10013066-8fae-4b91-9486-999aac5e84b7,Buried Alive,Film-Noir|Horror|Thriller
 20,352ed6ef-8397-48cf-8b8e-434e23eddef8,Grande école,Drama
 21,ddcf3a39-a3b5-4596-a5a8-cafcfda3843c,Relentless,Thriller
-22,2dbf98ab-502e-44a7-8244-d04ff67638a8,"Stars Look Down, The",Drama
-23,c3d57ba5-be85-4651-83e0-6512bf40f260,"Lady in Red, The",Action
+22,2dbf98ab-502e-44a7-8244-d04ff67638a8,Stars Look Down The,Drama
+23,c3d57ba5-be85-4651-83e0-6512bf40f260,Lady in Red The,Action
 24,2941b9c1-ff84-4239-aea2-9936014ddac4,Adios Carmen,Drama
 25,4eac9c61-0760-4df2-9aea-5fe5a3e5488f,Garage Days,Comedy|Musical
 26,0aac5842-f2cc-4cc2-96f3-d9ad121b108d,Thumbsucker,Comedy|Drama
@@ -31,27 +31,27 @@ id,code,title,genre
 30,3da0e299-9916-48cf-bb57-de283ca97337,Superheroes,Action|Comedy|Documentary|Drama
 31,0b948f82-e08b-4681-8d57-5855555563a1,Transit,Crime|Drama|Thriller
 32,c831b54e-1521-43bf-868b-07679dea3efb,We'll Never Have Paris,Comedy|Romance
-33,26465b6c-5114-4e2f-b23c-5c16c8d2acb0,"Man Who Left His Will on Film, The (Tôkyô sensô sengo hiwa)",Drama
+33,26465b6c-5114-4e2f-b23c-5c16c8d2acb0,Man Who Left His Will on Film The (Tôkyô sensô sengo hiwa),Drama
 34,e02b9740-925f-4323-9cbe-520525a2fb5b,Room for One More,Comedy
 35,b42f7202-86c9-4800-85b7-b98f8905e25e,Africa addio,Documentary
-36,1c36e1c5-d659-4e38-bd89-dd58697c1121,"Love Movie, The (Rakkauselokuva)",Comedy|Drama
+36,1c36e1c5-d659-4e38-bd89-dd58697c1121,Love Movie The (Rakkauselokuva),Comedy|Drama
 37,e2ec523e-bdb4-4a6b-8b45-4b1d5191eb7f,Love Is a Woman (Death Is a Woman),Crime|Drama|Mystery
 38,20f07fe1-d8bb-4608-8b6a-7a6db82148ba,Battle Beyond the Stars,Sci-Fi
 39,944bb69d-4d26-4f1f-8449-ba14527aeb60,Sam's Song,Drama
 40,ccc49120-e7db-4807-a105-dd947c9faad8,Beautiful,Comedy|Drama
 41,01ab87dd-86bb-4aa1-b8ac-aafb31b1b09f,Harry Potter and the Deathly Hallows: Part 1,Action|Adventure|Fantasy|IMAX
-42,0da49357-6374-4e78-9537-e8a9afb8270d,"Stranger, The (Straniero, Lo)",Drama
+42,0da49357-6374-4e78-9537-e8a9afb8270d,Stranger The (Straniero Lo),Drama
 43,9aec6c90-05e3-43b3-9a26-a98516140f8a,Topper Returns,Comedy|Fantasy|Mystery|Romance
 44,ebb58800-5e48-4666-88e2-2c60dd11233a,Dr. Gillespie's New Assistant,Comedy|Drama|Mystery
-45,1da6be09-94df-4f65-bf0b-c98aae022c44,"Lay of the Land, The",Comedy|Drama
+45,1da6be09-94df-4f65-bf0b-c98aae022c44,Lay of the Land The,Comedy|Drama
 46,ff2dea5d-1406-48c7-9143-fe5a4c1a9123,Yumeji,Drama|Fantasy
 47,4cc30652-cad1-4fb3-824c-34f89eab86db,Easier with Practice,Drama|Romance
 48,6d724ab7-57c2-4677-bbd0-486b6fe09b78,Boogeyman,Drama|Horror|Mystery|Thriller
-49,be2f7df6-9da1-49f6-aaac-159d22e34e57,"Wreck of the Mary Deare, The",Drama|Thriller
+49,be2f7df6-9da1-49f6-aaac-159d22e34e57,Wreck of the Mary Deare The,Drama|Thriller
 50,d15edf05-1952-4b11-84ed-0664fdd7942f,Veronica Guerin,Crime|Drama|Thriller
 51,4eba4be5-f33c-491c-8a8b-8af659b3ff85,Glitter,Drama|Musical|Romance
 52,41b9262f-1d2c-4bec-ab28-9b321da430ce,Teddy Bears' Picnic,Comedy
-53,b3622be6-22e2-41f5-9012-e61e0abb9460,"Decoy Bride, The",Comedy|Romance
+53,b3622be6-22e2-41f5-9012-e61e0abb9460,Decoy Bride The,Comedy|Romance
 54,d9cc2057-3805-4221-b1a6-176090aceb92,Echoes of the Rainbow (Sui yuet san tau),Comedy|Drama|Romance
 55,52dd0c42-44ab-4461-8e39-9807778a490c,Jean-Luc Cinema Godard,Documentary
 56,3ec16369-ad1c-48fb-a9d6-20784ae2cd6e,Jacky in the Kingdom of Women,Comedy
@@ -59,7 +59,7 @@ id,code,title,genre
 58,b6fa1236-489b-4466-baf0-70742ffa9273,Benny & Joon,Comedy|Romance
 59,55780849-ad56-4cb6-8c9f-9cb4ef4e889c,Kaksi kotia (Dagmamman),Drama
 60,25284205-3a85-4351-8c00-20b01343c0e3,Gridlock'd,Crime
-61,3f5961e8-1ac7-4d4c-a611-562e8e55777b,"Flat, The",Documentary
+61,3f5961e8-1ac7-4d4c-a611-562e8e55777b,Flat The,Documentary
 62,e4f49d86-67a3-47d7-be51-3656ff471723,Black Roses ,Horror|Musical
 63,3d7e2009-2efb-43bd-8839-72a6d35dbd8b,Birdy,Drama|War
 64,5fe299db-cb1d-4bda-9e61-7c806ecbc7a6,Macbeth,Drama
@@ -68,82 +68,82 @@ id,code,title,genre
 67,d73e5c8d-1d8f-44b6-921c-75b945c7a671,Spencer's Mountain,Comedy|Drama
 68,08aa7f17-53d4-466c-a39a-cadab18fed22,Apollo 13,Adventure|Drama|IMAX
 69,c23a4c6a-6dc8-441b-9768-75ad0516bd64,Dead Ahead: The Exxon Valdez Disaster,Drama
-70,0099403c-02de-4347-ac20-f169dd157454,"Troll in Central Park, A",Animation|Children
+70,0099403c-02de-4347-ac20-f169dd157454,Troll in Central Park A,Animation|Children
 71,bde756a8-80ca-4a99-adea-830b59f8f204,Cyrus,Comedy|Drama|Romance
-72,67edc628-12e6-4b79-b2fb-add72516aa15,"Honor Among Thieves (Adieu l'ami) (Farewell, Friend)",Action|Adventure|Crime|Drama|Mystery|Thriller
+72,67edc628-12e6-4b79-b2fb-add72516aa15,Honor Among Thieves (Adieu l'ami) (Farewell Friend),Action|Adventure|Crime|Drama|Mystery|Thriller
 73,f7ff0c9d-cafe-4238-9807-ae83448a5902,Goodbye Charlie,Comedy|Fantasy|Romance
-74,844ab63a-237d-405c-bc7f-86b22b9ee319,"Average Little Man, An (Un borghese piccolo piccolo)",Drama
+74,844ab63a-237d-405c-bc7f-86b22b9ee319,Average Little Man An (Un borghese piccolo piccolo),Drama
 75,781393aa-b19d-48e8-a1ab-437b37a4130e,Hitler: A Film from Germany (Hitler - ein Film aus Deutschland),Drama|War
 76,500afbe4-41b3-48c5-9609-0751488c6c3c,Caótica Ana,Comedy|Drama|Mystery|Romance
-77,e27473d7-85e6-4306-b59f-c66b5db6c164,"Oh, Woe Is Me (Hélas pour moi)",Comedy|Drama
+77,e27473d7-85e6-4306-b59f-c66b5db6c164,Oh Woe Is Me (Hélas pour moi),Comedy|Drama
 78,091b0e0b-c004-43bb-9ed2-cee7287f9382,All Night Long,Comedy|Drama
 79,fc32f3ff-9f21-4807-8ea3-16bc104e947c,I Am Love (Io sono l'amore),Drama|Romance
 80,873ccc6d-3e52-4c3a-aa8a-c44a829d85df,Freddy Got Fingered,Comedy
-81,816ee778-3578-4125-a40f-86b4171798ae,"Bride Came C.O.D., The",Comedy|Romance
+81,816ee778-3578-4125-a40f-86b4171798ae,Bride Came C.O.D. The,Comedy|Romance
 82,36495f91-f679-4c61-8c5d-681fa69e191a,Afternoon Delight,Comedy|Drama
 83,cdc1e3c8-4867-42c9-a549-78746a7ff9cc,Hidden (a.k.a. Cache) (Caché),Drama|Mystery|Thriller
-84,65436b99-99e9-4be5-b5bf-57545e5563f5,"Devil and Miss Jones, The",Comedy|Romance
-85,c4cf3c74-79ea-4911-8c16-00fd24f56dcf,"Fast & Furious (Fast and the Furious 4, The)",Action|Crime|Drama|Thriller
+84,65436b99-99e9-4be5-b5bf-57545e5563f5,Devil and Miss Jones The,Comedy|Romance
+85,c4cf3c74-79ea-4911-8c16-00fd24f56dcf,Fast & Furious (Fast and the Furious 4 The),Action|Crime|Drama|Thriller
 86,d714129c-078b-4087-b510-1d5d1134b6cc,Savage Streets,Action|Crime|Drama|Thriller
 87,a8603abc-1fd5-4a3a-9d08-685fd6f2c65a,Four Days in July,Comedy|Drama
 88,a194fecd-3bc2-4f96-a169-0713c85eb77f,Grouse,Comedy
 89,7c59bb1c-83d5-454c-ab38-c5b569ceec78,Over the Brooklyn Bridge,Comedy
-90,8cfc37c6-7563-4ddd-824d-386644721e3b,"Tillman Story, The",Documentary
+90,8cfc37c6-7563-4ddd-824d-386644721e3b,Tillman Story The,Documentary
 91,8f22e9e4-b658-4750-b2a3-90e0d26f32e5,D-War (Dragon Wars),Action|Adventure|Drama|Fantasy
-92,0b110579-0118-442c-80c4-6149e126c385,"Children of Heaven, The (Bacheha-Ye Aseman)",Comedy|Drama
+92,0b110579-0118-442c-80c4-6149e126c385,Children of Heaven The (Bacheha-Ye Aseman),Comedy|Drama
 93,7bce7759-897b-4d42-9a18-28f739106c1c,Take the Money and Run,Comedy|Crime
 94,e0a2adfb-eacc-42ac-a082-a5899d7dcf0f,Hot Pepper,Documentary|Musical
 95,bf55c497-304c-417a-aea0-bafc7106739f,Mannequin,Comedy|Romance
 96,bf362eb5-b069-4051-9c5d-f7b0bc9dba1f,Merlusse,Comedy|Drama
 97,e039f861-a09f-4413-a1f9-052288e65582,Pictures of the Old World (Obrazy starého sveta),Documentary
-98,ade97f5b-2041-4ba0-a355-c5aa83519a8a,"My Wife, A Body to Love",(no genres listed)
+98,ade97f5b-2041-4ba0-a355-c5aa83519a8a,My Wife A Body to Love,
 99,1b3286dc-f543-4942-ba47-f34e2ed83ab7,The Little Matchgirl,Animation
-100,f5ea386e-b9a8-4015-928f-97475b2090f1,"Cadaver Christmas, A",Comedy|Horror
-101,4b405ae9-e1ef-496c-91c5-bc0a2fd36f8d,"Eye of Vichy, The (Oeil de Vichy, L')",Documentary
+100,f5ea386e-b9a8-4015-928f-97475b2090f1,Cadaver Christmas A,Comedy|Horror
+101,4b405ae9-e1ef-496c-91c5-bc0a2fd36f8d,Eye of Vichy The (Oeil de Vichy L'),Documentary
 102,cac6d9d5-7bbd-4a3d-8b30-1f3094deab5c,Pearls and Pigs (Helmiä ja sikoja),Comedy
-103,6db8d8a5-f9ca-4bea-a24f-2ac349a14fe1,"Quiet American, The",Drama|Romance|Thriller|War
+103,6db8d8a5-f9ca-4bea-a24f-2ac349a14fe1,Quiet American The,Drama|Romance|Thriller|War
 104,51d37a3e-33b2-47fb-bf26-85c31df34929,French Kiss,Action|Comedy|Romance
 105,f13f4490-3a68-454a-a9f5-2dcb15967e5b,Grateful Dead,Documentary
 106,152f74a3-7dc6-4f27-af68-edc6db69a5a3,Original Sin,Drama|Romance|Thriller
 107,a68d4f50-dd71-4a34-817f-fb59c2d9f399,San Quentin,Drama
 108,8f2381c3-3417-46f1-a5cc-2f204c6ee7e0,The Left Handed Gun,Crime|Drama|Western
-109,c27e0fc2-f060-4c7a-9b04-051727fd8f4b,"Message to Garcia, A",Drama|Romance
+109,c27e0fc2-f060-4c7a-9b04-051727fd8f4b,Message to Garcia A,Drama|Romance
 110,60240c70-068c-4314-a90e-580c4e54877a,Lady on a Train,Comedy|Crime|Film-Noir|Mystery|Romance|Thriller
 111,3c314a46-d447-4d7e-900e-b8fea667e7c3,Maniac,Horror
 112,9967bd51-e9c3-44d6-beee-3cc592fdd99b,The First Men in the Moon,Sci-Fi
 113,884d18e2-f019-403f-b5b0-b451eb6d4bce,Donner Pass,Horror
 114,81cbc01e-a3b1-47db-a129-c9fb87e1d90b,Point Blank (À bout portant),Action|Crime|Thriller
-115,26718398-21b2-4fa7-842a-649bb041592c,"Rains Came, The",Adventure|Drama|Romance
+115,26718398-21b2-4fa7-842a-649bb041592c,Rains Came The,Adventure|Drama|Romance
 116,63fe873c-fc5c-42f8-88d3-93c80c4cd6e9,Caesar and Cleopatra,Comedy|Drama|War
 117,8ffac9f5-0406-45c9-a42f-566f797a17ad,And Your Mother Too (Y tu mamá también),Drama|Romance
 118,8d9bce54-3ca0-48b3-9104-a4e782a89d84,3 Ninjas,Action|Children|Comedy
 119,839627cf-c7d6-4bef-be6f-df6cf28c2851,The Bone Snatcher,Horror|Sci-Fi
 120,cc30f566-7d28-486c-8f1a-b926307c7b29,I Heart Huckabees,Comedy
-121,7d503952-f969-418b-8fdf-315089bb1fac,"Girl in the Red Velvet Swing, The",Crime|Drama|Romance
-122,818de9fc-84f3-41cc-a4d2-e9bb121c2481,"One Potato, Two Potato",Drama
+121,7d503952-f969-418b-8fdf-315089bb1fac,Girl in the Red Velvet Swing The,Crime|Drama|Romance
+122,818de9fc-84f3-41cc-a4d2-e9bb121c2481,One Potato Two Potato,Drama
 123,d43b4114-8896-48bb-b589-99e496c12d19,Sleepless Night (Nuit blanche),Action|Crime|Thriller
 124,d450822a-963d-49d7-8550-f1b6e57bafd7,Paheli,Drama|Fantasy|Musical|Romance
-125,0a619161-8342-47a1-80de-98c08c9cb807,"District, The (Nyócker!)",Animation|Comedy
+125,0a619161-8342-47a1-80de-98c08c9cb807,District The (Nyócker!),Animation|Comedy
 126,e9ec0b27-9a59-4986-ae36-12004c559304,Monsieur Ibrahim (Monsieur Ibrahim et les fleurs du Coran),Drama
 127,6cf260ab-0c41-4b51-b872-3eac265ec1bc,Manhattan Melodrama,Crime|Drama|Romance
 128,f7d3a3c1-1e9e-497c-96c1-71d5b709c885,Some Girls,Comedy|Drama|Romance
 129,9ceeda63-6e4c-47e9-8f38-04d7a9d1a14d,Mág,Drama
 130,bd2ac644-c8b2-4e85-a768-679659abfe8a,Dr. Otto and the Riddle of the Gloom Beam,Comedy
 131,515a8a37-ed19-4d7d-9bd3-f00d2b7d32f0,In the Folds of the Flesh,Drama|Horror|Thriller
-132,bad1e6f1-ea9f-43c9-be71-febd1e5df24e,"Ivan the Terrible, Part One (Ivan Groznyy I)",Drama
+132,bad1e6f1-ea9f-43c9-be71-febd1e5df24e,Ivan the Terrible Part One (Ivan Groznyy I),Drama
 133,26432c6b-9768-4ee3-b269-d5d6d24a194d,Blood Shot,Action|Comedy|Horror
 134,115412f8-9003-4d6e-b661-4699a33af0f5,Race,Action|Comedy
 135,0a2fd1d4-6645-40fb-9c27-348ec69607e5,Our Life (La nostra vita),Drama
 136,c107bc4d-a63b-4303-92e2-ffa1f7a218c6,Remo Williams: The Adventure Begins,Action|Comedy|Crime|Thriller
 137,d2f6d92b-21c4-4685-8a55-db857d32d0f3,Sholay,Action|Adventure|Comedy|Musical|Romance|Thriller
-138,5f5c0812-4f8c-4e6b-8585-8bf32bb0ded0,"Quiet American, The",Drama|Romance|Thriller|War
+138,5f5c0812-4f8c-4e6b-8585-8bf32bb0ded0,Quiet American The,Drama|Romance|Thriller|War
 139,08d30641-aed9-4630-b4d0-3eb2f8d87acc,You're Not You,Drama
-140,8ccd5481-776d-4cf2-b44e-ae1e0db2da31,"Heartbeat Detector (Question humaine, La)",Drama|Thriller
+140,8ccd5481-776d-4cf2-b44e-ae1e0db2da31,Heartbeat Detector (Question humaine La),Drama|Thriller
 141,29c41d23-9187-460f-84b8-7bc4568d8dd1,Berserk: The Golden Age Arc 3 - Descent,Action|Animation|Fantasy
-142,f917e064-3b3a-4e5e-b1f9-a96dc0e382de,"Suburbans, The",Drama
+142,f917e064-3b3a-4e5e-b1f9-a96dc0e382de,Suburbans The,Drama
 143,87a1e64b-07df-4fca-96b7-9ef1258cca16,Alien Trespass,Comedy|Sci-Fi
 144,6afd3062-8113-4358-acde-86d7ae8036c1,Taxi,Action|Comedy
-145,f2044b77-c54a-48b7-bdb0-a9021788c17c,"It's Me, It's Me (Ore Ore)",Comedy|Drama|Sci-Fi
+145,f2044b77-c54a-48b7-bdb0-a9021788c17c,It's Me It's Me (Ore Ore),Comedy|Drama|Sci-Fi
 146,a41dd297-d5f9-49c0-b1dc-b0a2e26c554d,Levitated Mass,Documentary
 147,ce294b6f-c7d2-4f5c-a238-6277a186596b,Waterboys,Comedy
 148,3073cde7-8879-4c48-83fb-0c35920ab2b0,California Dreamin' (Nesfarsit),Comedy|Drama|War
@@ -152,74 +152,74 @@ id,code,title,genre
 151,a277a333-73b6-46f4-9fd4-74a81165cdc6,Cinderella,Children|Fantasy|Musical|Romance
 152,4ebcc3ee-b28a-4ce4-8001-76d91dc01b30,King of Germany,Comedy
 153,73bb7e11-685d-4e55-ae5a-8d8a7e9384ef,Cialo,Comedy|Crime
-154,9be3c2a1-d25a-478a-be9e-8152774f4f8f,"Barbary Coast Gent (Gold Town) (Honest Thief, The)",Comedy|Western
+154,9be3c2a1-d25a-478a-be9e-8152774f4f8f,Barbary Coast Gent (Gold Town) (Honest Thief The),Comedy|Western
 155,bd9c324b-7bea-4f78-8fdb-c409cec6ec2a,Real Men,Comedy|Sci-Fi
-156,4e990280-4118-4da2-94a8-324ae8397817,"Burglars, The (Le casse)",Action|Crime|Thriller
+156,4e990280-4118-4da2-94a8-324ae8397817,Burglars The (Le casse),Action|Crime|Thriller
 157,2cc44192-02a1-472e-b9b9-865dda6345c6,Hart's War,Drama|War
-158,f293b6c6-ce7d-425a-ac60-f001574383b8,"Auntie from Chicago, The (I theia apo to Chicago)",Comedy|Romance
-159,ea3232b7-e6e3-4839-94b6-6150ef7bd854,"Aviator, The",Adventure
-160,29a50363-67c7-412d-a8bd-f22f5ff197b8,"Happy Ending, The",Drama
+158,f293b6c6-ce7d-425a-ac60-f001574383b8,Auntie from Chicago The (I theia apo to Chicago),Comedy|Romance
+159,ea3232b7-e6e3-4839-94b6-6150ef7bd854,Aviator The,Adventure
+160,29a50363-67c7-412d-a8bd-f22f5ff197b8,Happy Ending The,Drama
 161,8c7c500b-c614-4bd4-a31c-d104e23bea22,8 Mile,Drama
 162,5af334c1-e4ba-4515-8d48-e4cd9f1e3cfc,Curse of the Pink Panther,Comedy|Crime|Mystery
 163,823cebcb-d303-46a7-904e-26433289bf73,Cotton Comes to Harlem,Action|Comedy
-164,6c1aa172-e942-4a87-883d-d74bddbd5b4b,"Wog Boy, The",Comedy
+164,6c1aa172-e942-4a87-883d-d74bddbd5b4b,Wog Boy The,Comedy
 165,bb6b73cb-2ad8-4e64-8637-0505b492f6e0,Mad Dog Time,Crime
 166,badf662e-1b90-48ca-a8c2-8c2f8f519ebf,Tooth Fairy 2,Children|Comedy
 167,ca459852-f219-4f98-bca5-5b3e0df9e488,I'm Starting From Three (Ricomincio da Tre),Comedy
 168,ae257236-3eca-48ce-9fce-b1154f885f34,Trapped in Paradise,Comedy|Crime
 169,729c7a26-78a9-4dbc-bc1f-00c3187f51c2,Paparazzi,Drama|Thriller
 170,765976d9-d446-43d3-a65f-5e7e9f83c7be,Down by Law,Comedy|Drama|Film-Noir
-171,d538408d-e375-454a-b524-991142d53951,"Water Horse: Legend of the Deep, The",Adventure|Children|Fantasy
+171,d538408d-e375-454a-b524-991142d53951,Water Horse: Legend of the Deep The,Adventure|Children|Fantasy
 172,42125aea-56ef-44f9-aa9e-a9defb0a9ffe,Dracula's Daughter,Drama|Horror
 173,f684279c-3372-4546-80a6-14e2ec6c6a95,Enron: The Smartest Guys in the Room,Documentary
 174,9f142b6d-8c5c-44e5-8f0f-57656f3ab686,Son of Paleface,Action|Comedy|Romance|Western
 175,bd73e860-7d68-45f5-9d90-2bafd368b1e2,Irresistible,Drama|Thriller
 176,fafaba64-f69f-4253-86fa-61d98f64657a,What's Your Number?,Comedy|Romance
 177,d2c5cc87-5692-4cf0-beda-d32c608cc6de,'Salem's Lot,Drama|Horror|Mystery|Thriller
-178,8bf8f09d-296f-4a48-b43e-5f28cb6dfd05,"Jackal, The",Action|Thriller
+178,8bf8f09d-296f-4a48-b43e-5f28cb6dfd05,Jackal The,Action|Thriller
 179,dc2fa4c2-4a4c-4c30-809d-335a0512f473,Yanco ,Drama
-180,9e3bbed3-bd4b-4ef4-9490-64fc05b68d10,"Children of Huang Shi, The",Drama|War
+180,9e3bbed3-bd4b-4ef4-9490-64fc05b68d10,Children of Huang Shi The,Drama|War
 181,b9b76494-2221-40bf-84f2-a0fe651d850e,Murder Party,Comedy|Drama|Horror|Thriller
 182,06013b25-0559-4f37-96a1-327a424eb598,Kevin Smith: Too Fat For 40,Comedy
 183,c7ad9025-fbba-4db1-861b-8905aa7d907d,Hot Coffee,Documentary
 184,3da80755-c183-48f7-8429-8e8aaa32b375,Panic in Year Zero!,Horror|Sci-Fi|Thriller
 185,d15b9998-44d9-47ae-94e4-a5e33e291b80,Men to Kiss,Comedy|Romance
-186,243d6151-ed48-49a5-b90d-ea04b5224ac4,"Inkwell, The",Comedy|Drama
+186,243d6151-ed48-49a5-b90d-ea04b5224ac4,Inkwell The,Comedy|Drama
 187,cf0f4fad-9257-4ee5-b270-7cb118590199,Return,Drama
 188,71048575-0dd8-4c91-8d8a-63f5d188e8e0,Raiders From Beneath the Sea,Crime|Drama
-189,2cb035f6-a4e2-437f-bcfb-d4c91d41fd7a,"Crazies, The (a.k.a. Code Name: Trixie)",Action|Drama|Horror|Sci-Fi|Thriller
-190,baec633b-5f05-4f48-b871-b8b2f56d8971,"Signal, The",Sci-Fi|Thriller
+189,2cb035f6-a4e2-437f-bcfb-d4c91d41fd7a,Crazies The (a.k.a. Code Name: Trixie),Action|Drama|Horror|Sci-Fi|Thriller
+190,baec633b-5f05-4f48-b871-b8b2f56d8971,Signal The,Sci-Fi|Thriller
 191,2e823ada-57ed-47f5-857a-119f88ad3859,Flight of the Navigator,Adventure|Children|Sci-Fi
-192,ea3b1da2-dcdf-4eaa-a7c5-e764dbfd1701,"Wonderful Ice Cream Suit, The",Children|Comedy|Fantasy
+192,ea3b1da2-dcdf-4eaa-a7c5-e764dbfd1701,Wonderful Ice Cream Suit The,Children|Comedy|Fantasy
 193,604a71dd-db22-47eb-8d83-f98cdcb90041,Nancy Drew: Detective,Comedy|Mystery
-194,60cf7890-6947-4b7b-90ea-e2597039156f,"Scalphunters, The",Comedy|Western
+194,60cf7890-6947-4b7b-90ea-e2597039156f,Scalphunters The,Comedy|Western
 195,718c8d2f-669a-4fb8-8428-42da52a055ab,5x2,Drama|Romance
 196,fbf03392-0655-4c1e-8c49-a7e53fec1d2d,Intimate Strangers (Confidences trop intimes),Drama
 197,22810a7f-c5b6-4e6d-9fb0-e8a94da02093,12 Years a Slave,Drama
-198,155fb4a7-5162-4798-9463-6d6488e54941,"Guest, The",Thriller
+198,155fb4a7-5162-4798-9463-6d6488e54941,Guest The,Thriller
 199,e3082a45-2415-4b19-99bd-447d52cb9751,Werewolves on Wheels,Horror
-200,6b46bf1f-a2f9-4879-b087-acd6ff3a4440,"Tree Grows in Brooklyn, A",Drama
+200,6b46bf1f-a2f9-4879-b087-acd6ff3a4440,Tree Grows in Brooklyn A,Drama
 201,40ae7a97-1b04-4563-8ad5-6dfc8ea8be6a,Brewster McCloud,Comedy
 202,f6ce8764-5991-41aa-ac3d-4479b19d8fbe,28 Up,Documentary
-203,0e597e67-4e91-47af-b65b-d09028e66671,"Twilight Saga: Breaking Dawn - Part 2, The",Adventure|Drama|Fantasy|Romance|IMAX
-204,018ab99d-5859-4c80-ba6e-a20ca39eb851,"Exploding Girl, The",Drama
+203,0e597e67-4e91-47af-b65b-d09028e66671,Twilight Saga: Breaking Dawn - Part 2 The,Adventure|Drama|Fantasy|Romance|IMAX
+204,018ab99d-5859-4c80-ba6e-a20ca39eb851,Exploding Girl The,Drama
 205,b3291df0-5d65-446a-9f02-b4bbe817f054,Winter of Discontent,Drama
 206,079ca92b-9d13-44bb-97c8-f0850781e5d9,Swept Away (Travolti da un insolito destino nell'azzurro mare d'Agosto),Comedy|Drama
 207,34af5300-27b9-4cfe-aede-dfcac791ed29,Dad Savage,Crime|Thriller
 208,7d76a0e3-1410-4d46-a1ae-3a8529dbf56e,Wings of Honneamise (Ôritsu uchûgun Oneamisu no tsubasa),Animation|Drama|Sci-Fi|War
 209,22248b52-6c5c-4187-814d-17e67200026a,Strange Brew,Comedy
-210,cf75182b-0b7d-4bf7-b9b3-c555c7655eca,"Thing with Two Heads, The",Comedy|Horror|Sci-Fi
+210,cf75182b-0b7d-4bf7-b9b3-c555c7655eca,Thing with Two Heads The,Comedy|Horror|Sci-Fi
 211,428f4519-8717-4808-baeb-4124ce576a3c,Fullmetal Alchemist the Movie: Conqueror of Shamballa (Gekijô-ban hagane no renkinjutsushi: Shanbara wo yuku mono),Action|Adventure|Animation|Drama
 212,d6a697b6-104c-469e-a77f-9f6260641bd7,No Place to Hide,Thriller
 213,c3ed7186-2227-4101-a062-8179b8b56a16,Carry on Spying (Agent Oooh!),Comedy
-214,d58548e6-b307-4c72-ad64-b8860f966207,"Arise, My Love",Comedy|Drama|Romance
+214,d58548e6-b307-4c72-ad64-b8860f966207,Arise My Love,Comedy|Drama|Romance
 215,5519de3e-b3d1-429e-9752-6614481059e2,All Cheerleaders Die,Comedy|Horror|Thriller
 216,c8021d5c-327c-4ee1-9279-6aefe9d2e267,Marley & Me,Comedy|Drama
 217,20f1fca9-6fb5-4f18-a42f-ca61b06f6a88,Desperate Hours,Crime|Drama|Thriller
 218,a68970bb-d53d-4a83-9598-41cb957a045e,Late Marriage (Hatuna Meuheret),Comedy|Drama|Romance
 219,3b4f04c0-f0c3-44e4-844d-ea7fa67a6f31,Who'll Stop the Rain,Crime|Drama
 220,79caa925-2727-4a1b-83fd-1c3e758376e1,Death Race 2000,Action|Sci-Fi
-221,9abbf561-ef6a-420f-b3d0-f217325620af,"We and the I, The",Drama
+221,9abbf561-ef6a-420f-b3d0-f217325620af,We and the I The,Drama
 222,4d0ae371-3d9e-46d9-98b9-cd82195837de,Rollerball,Action|Drama|Sci-Fi
 223,bd856287-4c4a-4942-8ca5-e6e691c34dfe,I'll Cry Tomorrow,Drama
 224,0c7de754-02ca-4c4c-940a-da60954e62c5,Dangerous Game,Drama
@@ -231,20 +231,20 @@ id,code,title,genre
 230,3b04f23f-84a9-4c59-be85-0df8476f26a8,Tube Tales,Drama
 231,7cd87a38-7434-4af2-843a-65fe70ca025d,Halo 4: Forward Unto Dawn,Action|Sci-Fi|Thriller
 232,6548c518-649f-4691-85a8-f9ff74fdc5a4,A Patriotic Man,Comedy|Drama
-233,f9d61822-9df7-4431-8c26-f8490e190adf,"Way of the Dragon, The (a.k.a. Return of the Dragon) (Meng long guo jiang)",Action|Crime
-234,a2588373-b76b-4120-b76a-0da9e308e30b,"Girl Said No, The",Comedy|Romance
+233,f9d61822-9df7-4431-8c26-f8490e190adf,Way of the Dragon The (a.k.a. Return of the Dragon) (Meng long guo jiang),Action|Crime
+234,a2588373-b76b-4120-b76a-0da9e308e30b,Girl Said No The,Comedy|Romance
 235,9ccb73c9-9b0e-47a4-af11-1d0db0d09e6a,Escape from Dartmoor,Crime|Drama
-236,da14b3a7-decd-40ec-a3b8-b11141513644,"Shanghai Gesture, The",Drama|Film-Noir
-237,19117454-a05b-40da-904f-cbdf332f3af8,"Big Bounce, The",Comedy|Crime|Thriller
-238,855ce02b-43ef-40c2-a4a7-d98ab3f7d0f9,"Private Function, A",Comedy
+236,da14b3a7-decd-40ec-a3b8-b11141513644,Shanghai Gesture The,Drama|Film-Noir
+237,19117454-a05b-40da-904f-cbdf332f3af8,Big Bounce The,Comedy|Crime|Thriller
+238,855ce02b-43ef-40c2-a4a7-d98ab3f7d0f9,Private Function A,Comedy
 239,0f899fa6-3f19-4887-977e-e340a0422b90,12 Angry Men,Drama
-240,eaf78034-f134-4ee5-9089-2c1c04cf3853,"Strangers, The",Horror|Thriller
+240,eaf78034-f134-4ee5-9089-2c1c04cf3853,Strangers The,Horror|Thriller
 241,e6873436-e36a-4033-8bec-9ed72bf6c033,King Kong,Action|Adventure|Drama|Fantasy|Thriller
 242,a425a6ed-6578-4fe5-a77c-f1fab123c3cf,Cult of the Cobra,Horror
 243,60d98c08-6f36-4a07-8070-0f7ffe127ddf,Joe Somebody,Comedy|Drama|Romance
-244,845cc257-a7ed-43a0-a286-ed6d0f5a6a6b,"Time Machine, The",Action|Adventure|Sci-Fi
+244,845cc257-a7ed-43a0-a286-ed6d0f5a6a6b,Time Machine The,Action|Adventure|Sci-Fi
 245,f637b78a-1546-4527-95dd-2771279fb1e1,Rookie of the Year,Comedy|Fantasy
-246,8b0b8373-d14c-411b-ba16-41cf845ec36b,"Soldier's Story, A",Drama
+246,8b0b8373-d14c-411b-ba16-41cf845ec36b,Soldier's Story A,Drama
 247,c38c861c-5427-494c-a518-e97134cfa699,Russia 88,Drama
 248,7ed09d2f-a2a0-4a11-906c-a34d939a43bf,Favela Rising,Documentary
 249,9fd6159a-a4fc-4b2f-b9b9-920770f8eaeb,(Untitled),Comedy|Drama
@@ -253,32 +253,32 @@ id,code,title,genre
 252,8514f823-cda9-486b-b5c7-44020d7cbbb9,Boom Town,Adventure|Drama|Romance
 253,578eb3bd-9458-44c8-bcd5-6edb6c48a6f2,You're Telling Me!,Comedy
 254,e7337933-b441-488e-a3f0-24ca590b7d7d,Weeds,Drama
-255,987b867d-d06d-45b1-8f7e-0f89416a7dee,"Red Dwarf, The (Nain rouge, Le)",Comedy|Drama
+255,987b867d-d06d-45b1-8f7e-0f89416a7dee,Red Dwarf The (Nain rouge Le),Comedy|Drama
 256,849876d9-eeb6-4dfa-af8b-55837fb541ee,Monday Morning (Lundi matin),Comedy|Drama|Romance
-257,2dbee0b9-b20e-459b-a850-260c8c589104,"Aviator, The",Drama
-258,56636fe4-7035-4886-b853-03296c8662bc,"Californie, La",Drama
-259,5c210b2c-f069-47a9-8844-23feaa5df344,"War at Home, The",Drama
+257,2dbee0b9-b20e-459b-a850-260c8c589104,Aviator The,Drama
+258,56636fe4-7035-4886-b853-03296c8662bc,Californie La,Drama
+259,5c210b2c-f069-47a9-8844-23feaa5df344,War at Home The,Drama
 260,c992967a-99c8-47a8-b448-87a66d6d575e,Love Me No More (Deux jours à tuer),Drama|Romance
 261,104fb078-b56e-443f-938a-4ef598e78f75,Watership Down,Adventure|Animation|Children|Drama|Fantasy
-262,e6e100b7-5393-40a9-91d3-691f15092d48,"Program, The",Action|Drama
-263,5b5df0f8-e3ee-4b64-b569-278db8d1959c,"Owl and the Pussycat, The",Comedy
-264,f599660e-cbb2-43b8-a404-0e38c92a8600,"Captain Newman, M.D.",Comedy|Drama|War
+262,e6e100b7-5393-40a9-91d3-691f15092d48,Program The,Action|Drama
+263,5b5df0f8-e3ee-4b64-b569-278db8d1959c,Owl and the Pussycat The,Comedy
+264,f599660e-cbb2-43b8-a404-0e38c92a8600,Captain Newman M.D.,Comedy|Drama|War
 265,08ddc9c6-162e-42f4-bc66-acdb067bd726,Albatross,Drama
-266,31fe1ffe-8ab6-48da-93b5-0f7975b90829,"Reluctant Saint, The",Comedy|Drama
+266,31fe1ffe-8ab6-48da-93b5-0f7975b90829,Reluctant Saint The,Comedy|Drama
 267,1097b8bd-b274-4922-b804-da1090a636c2,Spare Parts,Children|Drama
 268,6b997cee-8c2f-4aee-ba0f-af8286a86a9a,I Could Never Be Your Woman,Comedy|Romance
-269,48f9d5a3-439d-440d-85c9-7d394a9967b6,"Man Who Knew Too Much, The",Drama|Thriller
+269,48f9d5a3-439d-440d-85c9-7d394a9967b6,Man Who Knew Too Much The,Drama|Thriller
 270,ebf32e80-8609-41df-8d1a-c17becfdef19,Desert Bloom,Drama
 271,a71ac0d8-4a9d-4fd5-b45d-048477e47608,Purpose,Drama
 272,60a822ae-001a-44b7-83b1-eafc7f82cb42,Deception,Drama|Film-Noir|Thriller
 273,69a1c0d0-b3e9-4bfb-90dc-647448b5b1e8,Fay Grim,Action|Thriller
-274,ab1ec233-d443-4042-8b9a-008930e64882,"Last Lovecraft: Relic of Cthulhu, The",Comedy|Horror
-275,5f7a79af-9f64-4d62-84a9-78743b5f8ea8,"Lifeguard, The",Comedy|Drama
+274,ab1ec233-d443-4042-8b9a-008930e64882,Last Lovecraft: Relic of Cthulhu The,Comedy|Horror
+275,5f7a79af-9f64-4d62-84a9-78743b5f8ea8,Lifeguard The,Comedy|Drama
 276,af8e1944-00b8-4aee-a2d5-cbab62e97c1b,Popular Music (Populärmusik från Vittula),Comedy|Drama
 277,957e00c7-171f-4ea6-8194-d2892c5c9403,Semper Fi,Action|Drama
 278,cfa2ef14-20e6-4d8c-8299-ff2be01b46d4,Dr. Dolittle: Tail to the Chief,Children|Comedy|Fantasy
-279,f48b4c5a-368b-43ac-9cf2-4c85dcc4f4a3,"Great Ecstasy of Robert Carmichael, The",Drama|Horror
-280,be9002ae-e01e-4b6a-9128-0e0560ff6f11,"Substitute, The",Drama|Thriller
+279,f48b4c5a-368b-43ac-9cf2-4c85dcc4f4a3,Great Ecstasy of Robert Carmichael The,Drama|Horror
+280,be9002ae-e01e-4b6a-9128-0e0560ff6f11,Substitute The,Drama|Thriller
 281,0ef727cd-73c2-47b2-acb2-8423e895e51f,Het Vonnis,Crime|Drama
 282,6414481f-8d79-454b-9404-ca01d925a2dd,Plan 9 from Outer Space,Horror|Sci-Fi
 283,e02f2657-6fad-4b9b-babc-239eb1b82988,Unleashed (Danny the Dog),Action|Crime|Drama|Thriller
@@ -288,7 +288,7 @@ id,code,title,genre
 287,23172e4f-5809-4e5c-acb2-97402b155cfa,Great Directors,Documentary
 288,d98f8df4-b658-4f7c-98a1-550d6570a203,Superpower,Documentary
 289,c0dcddc7-ffde-46d5-ab31-41d86d269d02,Saving Face,Comedy|Drama|Romance
-290,114abc7d-00eb-436e-89af-62c45504f12f,"Seafarers, The",Documentary
+290,114abc7d-00eb-436e-89af-62c45504f12f,Seafarers The,Documentary
 291,cee43d84-4a70-49ca-90aa-22633ad80c9a,Uuno in Spain,Comedy
 292,8943fa2f-4ce2-4b76-99a3-a17d80a38e32,Walk the Line,Drama|Musical|Romance
 293,107542e7-be09-494e-81ed-c91c70839658,Kiss the Bride,Comedy|Romance
@@ -296,7 +296,7 @@ id,code,title,genre
 295,8ef9234c-0654-44bc-96d7-776d8b1e2ac4,Bundle of Joy,Comedy|Musical
 296,6a9c12fb-c864-41a4-ad2a-4a958d3f64fe,Silentium,Crime|Thriller
 297,2893e788-9dfd-4d93-95e5-a898263e7525,Juarez,Drama|Romance
-298,58e1d814-7303-40ae-aa7c-04e9f4c332ab,"Animal Kingdom, The",Drama|Romance
+298,58e1d814-7303-40ae-aa7c-04e9f4c332ab,Animal Kingdom The,Drama|Romance
 299,057c9035-cef3-4b9a-94ca-2696734e9c3b,In a Lonely Place,Drama|Film-Noir|Mystery|Romance
 300,c331ef62-d78c-4428-86a4-d35ab3ddeead,Ice Age 2: The Meltdown,Adventure|Animation|Children|Comedy
 301,eca1aa69-68f1-4b5a-81fd-889405989b53,Kill for Me,Drama|Thriller
@@ -312,16 +312,16 @@ id,code,title,genre
 311,64f02fd4-e75e-44ce-b33f-000280a429ab,Pretty Cool,Action|Comedy|Thriller
 312,86d55bfc-00dd-41a6-bb78-10ea2d0f6e41,Eden of the East the Movie I: The King of Eden (Higashi no Eden Gekijoban),Action|Animation|Crime|Sci-Fi|Thriller
 313,3d5b0a06-0422-48af-9fc0-e3cad0a2f3ba,Ninja,Action|Crime|Drama|Thriller
-314,f2663f15-e1df-416e-8413-e5c003be6646,"Love Guru, The",Comedy
+314,f2663f15-e1df-416e-8413-e5c003be6646,Love Guru The,Comedy
 315,1818279c-f278-4429-a47f-99e967424ce5,Sex Ed,Comedy|Romance
 316,3020027b-18cc-4a42-9387-f3a9cc90cffd,Raajneeti,Crime|Drama|Romance
 317,5e650988-322c-42dd-abcb-0a7bd82c296c,National Lampoon's Vacation,Comedy
 318,72ebb40e-cbbf-4b4a-8525-c97f46e5715b,Last Exit to Brooklyn,Drama
 319,379166f6-9cce-4547-b39f-8e1c8ebfadae,Postman Blues,Action|Comedy|Crime|Drama
 320,55110b38-28ba-4af2-abfe-20412e754d5b,Secret Reunion (Ui-hyeong-je),Drama|Thriller
-321,8315430d-be62-40fc-aec5-ca3dd0c84f27,"Wankers, The (Les branleuses)",Documentary
+321,8315430d-be62-40fc-aec5-ca3dd0c84f27,Wankers The (Les branleuses),Documentary
 322,c3f3c983-fc63-4e26-8c21-afdd2b89ab37,Kitty,Drama
-323,d79195fc-16b3-464b-9b44-2a68cabe9922,"Collector, The (La collectionneuse)",Drama
+323,d79195fc-16b3-464b-9b44-2a68cabe9922,Collector The (La collectionneuse),Drama
 324,00410f9f-1c8e-4375-883f-503ac2281e85,Of Mice and Men,Drama
 325,8e65877e-e61d-4bb8-a744-07fd6aec2420,Blind Spot: Hitler's Secretary (Im toten Winkel - Hitlers Sekretärin),Documentary
 326,e0f18fed-7f8b-4dd5-a38c-93292e8526fb,Carnosaur,Horror|Sci-Fi
@@ -333,36 +333,36 @@ id,code,title,genre
 332,6d7a2262-84ae-49c4-9d45-7351de91faa1,Black Christmas,Horror|Mystery|Thriller
 333,250ec4f5-19bb-4eed-bf52-10b7664ba2bc,Conspiracy,Action|Drama|Mystery|Thriller|War
 334,e0217e18-9d25-4462-9e2f-2f0935ccd7d3,Star Trek: Nemesis,Action|Drama|Sci-Fi|Thriller
-335,444c7978-870e-4792-bd5c-fc667b9fc207,"Weekend It Lives, The (Ax 'Em)",Horror
+335,444c7978-870e-4792-bd5c-fc667b9fc207,Weekend It Lives The (Ax 'Em),Horror
 336,ab8b3899-1658-41b9-ab54-66b5c4833a6e,Lost Souls,Drama|Horror|Thriller
 337,be66d30e-43f5-41b4-ac42-c1d674d1137c,His New Profession,Comedy
-338,ba92c894-9d1d-4896-8257-ddc8ff474972,"Limey, The",Crime|Drama|Thriller
+338,ba92c894-9d1d-4896-8257-ddc8ff474972,Limey The,Crime|Drama|Thriller
 339,31992cde-f718-49b3-a49d-dd8874d59e1c,Fast Lane,Action|Drama
 340,72f65d02-f23a-4ec6-abe6-ae1cd38e0c34,Directed by John Ford,Documentary
-341,e3d7f647-2012-4248-808d-7b935eed393d,"Client List, The",Drama
+341,e3d7f647-2012-4248-808d-7b935eed393d,Client List The,Drama
 342,f013e8cb-0f57-4fec-a73c-bbb5e9fd0ab2,Rosa Luxemburg,Drama
-343,d291ae4e-84fb-4a4f-b274-1d8238ddc4e4,"Cobweb, The",Drama
+343,d291ae4e-84fb-4a4f-b274-1d8238ddc4e4,Cobweb The,Drama
 344,42d90d15-f4cd-4240-b6f3-0f17718d71db,Bad Girl Island (Sirens of Eleuthera) (Sirens of the Caribbean),Mystery|Sci-Fi
 345,3b15a29e-3fd1-488a-bef7-5b23d5a4c497,Counsellor at Law,Drama
-346,aa412e00-e55e-46ec-bb51-c08c4b54ea26,"Man Without a Face, The",Drama
+346,aa412e00-e55e-46ec-bb51-c08c4b54ea26,Man Without a Face The,Drama
 347,580f2b6c-369a-495d-8a18-86e2f6641c31,Rembrandt's J'accuse,Documentary|Mystery
 348,acf07eea-f74b-4fef-b43c-3f46afb428b4,Mount St. Elias,Documentary
 349,5d787339-d2db-4891-a5aa-0189b5aa38c4,Everything or Nothing: The Untold Story of 007,Documentary
 350,9532e091-a984-4540-9c8a-a7ad219a2ae4,Zatoichi and the Doomed Man (Zatôichi sakate giri) (Zatôichi 11),Action|Drama
 351,e44e5a69-2abd-4eaf-b648-8876b8d509e0,John Carter,Action|Adventure|Sci-Fi|IMAX
 352,b3c54843-8f33-424f-89a8-08071f0a6d64,Home Alone 3,Children|Comedy
-353,a8a66efd-a6bb-4bbe-b678-74377c5ddf9e,"Big Trail, The",Adventure|Romance|Western
+353,a8a66efd-a6bb-4bbe-b678-74377c5ddf9e,Big Trail The,Adventure|Romance|Western
 354,55a3e582-e811-4f40-b18f-60bca26e6f0f,Purgatory,Fantasy|Western
 355,0ebb2502-f533-4e2e-bb94-65fb98f7fc93,That Obscure Object of Desire (Cet obscur objet du désir),Drama
 356,d5d6f9d6-8f96-45a9-9de4-cfcb3533458b,Bullfighter and the Lady,Action|Drama|Romance
-357,bc69e1e7-8cb4-45f7-81f3-87d55df7676b,"Wild, Wild Planet (I criminali della galassia)",Sci-Fi
+357,bc69e1e7-8cb4-45f7-81f3-87d55df7676b,Wild Wild Planet (I criminali della galassia),Sci-Fi
 358,5dc51764-1b50-4d8b-b4e6-78dd8cb58cf8,Stuart Little,Children|Comedy|Fantasy
 359,ca897ee0-fd47-4a78-93dd-8368224191be,Beowulf,Action|Adventure|Animation|Fantasy|IMAX
 360,0031fcb3-175a-496e-a778-b0329886bdc0,My Little Chickadee,Comedy|Western
 361,9a284ae4-867f-48ba-8e59-ba2ebcaf6e57,Hands Over the City (Le mani sulla città),Drama
-362,783c66d1-322b-4692-985b-2b6603820180,"Yoo-Hoo, Mrs. Goldberg",Documentary
+362,783c66d1-322b-4692-985b-2b6603820180,Yoo-Hoo Mrs. Goldberg,Documentary
 363,ded3de38-b4aa-4bf5-8a6a-b656813afcab,No More School,Comedy
-364,fe6b74b6-fcf8-4b3f-9a96-7d659bc889a7,"Fly Away (Bis zum Horizont, dann links!)",Comedy
+364,fe6b74b6-fcf8-4b3f-9a96-7d659bc889a7,Fly Away (Bis zum Horizont dann links!),Comedy
 365,8a86b18e-6d89-49ba-bf95-ceee5291cefa,Heart of Glass (Herz aus Glas),Drama
 366,463040e4-03c4-40f6-b092-8d049957be11,Manhunt,Documentary|War
 367,2da6f839-c51c-470e-afa5-e0c57f122ed0,Boricua's Bond,Drama
@@ -374,39 +374,39 @@ id,code,title,genre
 373,46278b0c-43fa-4805-9982-a5a0e8bd1624,Lost Horizon,Adventure|Drama|Fantasy|Musical|Romance
 374,16b81bae-18a3-49a5-a6ac-37819e52af73,Jack Reacher,Action|Crime|Thriller
 375,6fed6188-2b5e-4443-8735-b4804840d5c7,Repentance,Drama|Horror|Thriller
-376,043c0c4d-bd1e-44d7-85ad-fe8ab069a3bf,"Message from Akira Kurosawa: For Beautiful Movies, A (Kurosawa Akira kara no messêji: Utsukushii eiga o)",Documentary
+376,043c0c4d-bd1e-44d7-85ad-fe8ab069a3bf,Message from Akira Kurosawa: For Beautiful Movies A (Kurosawa Akira kara no messêji: Utsukushii eiga o),Documentary
 377,bf76f34e-d41b-443a-848a-e05c311a139a,Casper's Haunted Christmas,Animation|Children
 378,f871cee5-6c3e-4f9d-a18b-269d9f69636f,Cinderella,Animation|Children|Fantasy|Musical|Romance
 379,4207adfc-5bfb-42ae-aa0e-db015e496b8c,Swing Vote,Comedy|Drama
-380,3f128861-a2f7-4bb1-beac-7789ca356245,"Prime of Miss Jean Brodie, The",Drama
+380,3f128861-a2f7-4bb1-beac-7789ca356245,Prime of Miss Jean Brodie The,Drama
 381,b7a84c43-dbde-4621-a248-9d8dc069abbf,Tears of the Black Tiger (Fah talai jone),Action|Comedy|Romance|Western
 382,8a5a8475-9e50-4e27-8223-0e81102f5873,Harry Potter and the Deathly Hallows: Part 2,Action|Adventure|Drama|Fantasy|Mystery|IMAX
-383,de49a729-b802-44b2-ace2-d15b5395c2dd,"Edge of the World, The",Drama|Romance
-384,540be6ed-2aad-418f-abc2-3250f42e1277,"Great Gabbo, The",Drama|Musical|Romance
-385,cd8fab8d-a455-402d-9c5f-f1b428ae97f0,"Happening, The",Drama|Sci-Fi|Thriller
-386,e14383f9-0ae3-41c9-a60f-a64e815b115e,"Extremely Goofy Movie, An",Animation|Children|Comedy
+383,de49a729-b802-44b2-ace2-d15b5395c2dd,Edge of the World The,Drama|Romance
+384,540be6ed-2aad-418f-abc2-3250f42e1277,Great Gabbo The,Drama|Musical|Romance
+385,cd8fab8d-a455-402d-9c5f-f1b428ae97f0,Happening The,Drama|Sci-Fi|Thriller
+386,e14383f9-0ae3-41c9-a60f-a64e815b115e,Extremely Goofy Movie An,Animation|Children|Comedy
 387,0a0edfa0-a148-4ad9-a645-104217c796f3,Campus Man,Comedy
 388,1ac5227c-7ad7-4ad0-93fe-e30f1c31f876,Bitch Slap,Action|Comedy|Crime|Thriller
 389,eaa21709-b4c0-44f9-81dc-629575ca48fc,Bridget Jones's Diary,Comedy|Drama|Romance
-390,9326ad38-2b37-4636-8121-a4384f93f1c8,"Guy Thing, A",Comedy|Romance
+390,9326ad38-2b37-4636-8121-a4384f93f1c8,Guy Thing A,Comedy|Romance
 391,4d733353-a144-451a-b753-8351838fa561,Confessions of a Burning Man,Documentary
 392,14c1b745-778c-4cac-879d-4770f684e161,Happy End,Comedy
 393,9d3fb6b2-6fa1-4bca-a777-8d6c0c00c289,Belly,Crime|Drama
-394,7e702e35-db7d-4cee-afe5-b24ac12fabe4,"Haunted Castle, The (Schloß Vogeloed)",Crime|Drama|Horror|Mystery
+394,7e702e35-db7d-4cee-afe5-b24ac12fabe4,Haunted Castle The (Schloß Vogeloed),Crime|Drama|Horror|Mystery
 395,83c5d33a-5ad5-4342-b358-943accad2772,Bedazzled,Comedy
-396,d0a9be9e-96a7-4795-91b9-7403d6c5d17d,"Missing Person, The",Drama|Film-Noir|Mystery
+396,d0a9be9e-96a7-4795-91b9-7403d6c5d17d,Missing Person The,Drama|Film-Noir|Mystery
 397,cfb730fa-0610-42a5-a639-1e335f8f6fcb,Trust the Man,Comedy|Drama|Romance
 398,73645801-4d25-4c08-b0af-9ba58af6757b,Free Enterprise,Comedy|Romance|Sci-Fi
 399,6939581f-7fd9-4c1f-a985-f616c24a8732,Lady Killer,Drama|Romance|War
-400,42be8bb7-e34a-4d85-81bf-4fc964065878,"Natural, The",Drama
+400,42be8bb7-e34a-4d85-81bf-4fc964065878,Natural The,Drama
 401,ebb3935b-0d2f-4262-bd30-a91f7e82caad,Never Make It Home,Documentary|Musical
 402,9ad602c0-36a8-4730-8055-e5eb77921747,Cremaster 2,Drama
-403,99ed4ac4-12a3-43af-9d6c-5584d6b8cccb,"Computer Wore Tennis Shoes, The",Children|Comedy
+403,99ed4ac4-12a3-43af-9d6c-5584d6b8cccb,Computer Wore Tennis Shoes The,Children|Comedy
 404,dc257afa-e0e3-4530-8913-9263849efafa,Six Pack,Comedy|Drama
-405,d601a50b-3b50-4789-ba4e-14555943589a,"Hunt for Red October, The",Action|Adventure|Thriller
-406,9054c9f9-9a93-4bab-adea-9b9ba85d6c2c,"Mission, The",Drama
+405,d601a50b-3b50-4789-ba4e-14555943589a,Hunt for Red October The,Action|Adventure|Thriller
+406,9054c9f9-9a93-4bab-adea-9b9ba85d6c2c,Mission The,Drama
 407,1b0ce6f5-c7e7-4fea-8cb0-e0c13b0cf1df,Mickey's Twice Upon a Christmas,Animation|Children|Comedy
-408,50a4b0c0-e52d-4bc6-8846-62508cc0d7ee,"Kidnapping, Caucasian Style (Kavkazskaya plennitsa)",Comedy|Romance
+408,50a4b0c0-e52d-4bc6-8846-62508cc0d7ee,Kidnapping Caucasian Style (Kavkazskaya plennitsa),Comedy|Romance
 409,173abcea-6707-4e95-a6a7-0d73a663da6b,Welcome to Collinwood,Comedy|Crime
 410,2f44162f-0a7b-43a4-934e-065ee21d27b0,Windstruck (Nae yeojachingureul sogae habnida),Comedy|Crime|Drama
 411,bad92161-4153-424c-9a1e-69e505fda9a4,Monsterman (Monsterimies),Documentary|Drama
@@ -417,14 +417,14 @@ id,code,title,genre
 416,67859c20-e0d4-4af6-8f4d-670e3788250b,Marley & Me,Comedy|Drama
 417,5b38c8de-4693-400a-9dd7-dc1c1a2cfaa2,Deadly Friend,Horror
 418,cf3a6803-9ecf-4dc3-9d42-537f949818ef,Love unto Death (L'amour a mort),Drama
-419,72feae8d-e321-4132-a050-a69bfda6467c,"Adventures of Mark Twain, The",Adventure|Animation|Children
-420,3141c116-63be-4f68-881b-3fde3f280130,"Enemy of the People, An",Drama
+419,72feae8d-e321-4132-a050-a69bfda6467c,Adventures of Mark Twain The,Adventure|Animation|Children
+420,3141c116-63be-4f68-881b-3fde3f280130,Enemy of the People An,Drama
 421,9f76d1d0-e142-4190-9608-d6abad067bc5,Brooklyn,Comedy|Drama|Romance
 422,6f8befa9-4d5e-467b-94b2-6b4b69784aa7,Undertaking Betty (Plots with a View),Comedy|Romance
 423,d9c4976f-8f6e-45c2-839f-54bae8ed5d12,Viva Las Vegas,Comedy|Musical|Romance
 424,34bd472f-a121-44af-81dc-15b60f3983ac,The Brave Little Toaster Goes to Mars,Animation|Children
 425,a9e203c3-b62a-4137-8b9b-9170f6092743,Mutant Chronicles,Action|Adventure|Sci-Fi
-426,36ba7d95-12cf-4593-84c2-58cf00741496,"Santa Clause, The",Comedy|Drama|Fantasy
+426,36ba7d95-12cf-4593-84c2-58cf00741496,Santa Clause The,Comedy|Drama|Fantasy
 427,7323e30c-a403-4dd0-9939-8e8520fb5b23,Crawlspace,Horror|Thriller
 428,b8704c7b-f3f3-401c-9697-96046e5925f7,Brighton Rock,Crime|Drama|Thriller
 429,42677a16-cabc-45b2-b4b3-4509d37b3e51,Capitalism: A Love Story,Documentary
@@ -437,56 +437,56 @@ id,code,title,genre
 436,29c3a47e-0ab0-4556-a770-a9d600d4c1c3,Alex Cross,Action|Crime|Mystery|Thriller
 437,0b808f52-6de9-4350-b242-de2bf1e4d5c9,Jonah Hex,Action|Drama|Thriller|Western
 438,9bdf0c9b-b22a-49b9-a057-4b0c1bb9a4ec,Girls! Girls! Girls!,Comedy|Musical
-439,fe1f52ac-8d73-4da2-9a03-8d32adb20207,"Final Countdown, The",Action|Sci-Fi
+439,fe1f52ac-8d73-4da2-9a03-8d32adb20207,Final Countdown The,Action|Sci-Fi
 440,b7e97275-6fc3-40ce-b39b-8ebd6739e739,Cemetery Junction,Comedy|Drama|Romance
-441,8df6f8ee-35cb-49c7-9146-cf27accf54d0,"Me You Them (Eu, Tu, Eles)",Comedy|Drama|Romance
-442,248826db-ad68-4c61-8bb5-aabd0e13a4e7,"Ballad of Nessie, The",Animation|Children
+441,8df6f8ee-35cb-49c7-9146-cf27accf54d0,Me You Them (Eu Tu Eles),Comedy|Drama|Romance
+442,248826db-ad68-4c61-8bb5-aabd0e13a4e7,Ballad of Nessie The,Animation|Children
 443,950527a2-1bc3-4136-b4c8-33dc776a6fa0,Nurse Betty,Comedy|Crime|Drama|Romance|Thriller
 444,728c908d-86dd-4f8d-862d-4d0b951a5a0b,Richard Pryor Live on the Sunset Strip,Comedy|Documentary
-445,321d8715-7854-4acf-a483-aca71bbb1a88,"Three Lives of Thomasina, The",Children|Drama
+445,321d8715-7854-4acf-a483-aca71bbb1a88,Three Lives of Thomasina The,Children|Drama
 446,90f186fa-4dea-4576-a646-1639e25d3bcd,Mission London,Comedy
 447,6185b412-5a21-4bb5-9a3e-56b90e1d8983,It Happened One Night,Comedy|Romance
 448,9eb9afe7-fa26-415a-b73d-e5bc26dbd68e,American Adobo,Comedy
-449,393bcf63-500b-4d7e-a9d7-e27c3168e6c4,"Machine, The",Sci-Fi|Thriller
+449,393bcf63-500b-4d7e-a9d7-e27c3168e6c4,Machine The,Sci-Fi|Thriller
 450,72a732be-db8f-472e-9cd7-60d9234e0480,Son of Flubber,Children|Comedy
 451,55c449f9-2bbd-41a8-a72a-c308ca199b13,Formosa Betrayed,Thriller
-452,f9247e51-2599-4acf-b645-0a468f7f5d30,"League of Ordinary Gentlemen, A",Documentary
+452,f9247e51-2599-4acf-b645-0a468f7f5d30,League of Ordinary Gentlemen A,Documentary
 453,a5d1bfec-eb54-4cd8-b5b5-718fb3c689d0,Madeline,Children|Comedy
 454,46d75f37-003b-48f0-a954-a1d103e51282,Mars,Documentary|Sci-Fi
 455,61dc37a0-f826-4f2a-9970-f7732e70a37a,The Walking Hills,Western
 456,6e8c6b20-5bda-4a46-86c8-7ccac02b24f0,Accident on Hill Road,Crime|Drama|Thriller
-457,adbfdafe-03a7-4bdb-a24f-b4bad2f8d17a,"Visit, The",Drama
+457,adbfdafe-03a7-4bdb-a24f-b4bad2f8d17a,Visit The,Drama
 458,33a9430f-fb03-4a62-9d5f-4f1c657f4881,Alien Nation: Millennium,Sci-Fi
-459,b1d5452f-c491-4f72-86b2-8f8b3d01b6c6,"Big Tease, The",Comedy
+459,b1d5452f-c491-4f72-86b2-8f8b3d01b6c6,Big Tease The,Comedy
 460,288f647d-a214-46b8-b05f-9e83f030d95f,Call Girl,Drama|Thriller
-461,b88a0e16-b8d4-49eb-9cf5-50b6cbe192fd,"Paris, Texas",Drama|Romance
+461,b88a0e16-b8d4-49eb-9cf5-50b6cbe192fd,Paris Texas,Drama|Romance
 462,54b576d9-75f6-43f1-8bcb-52cacd3f8d07,Back Stage,Documentary
 463,9ceaf64a-cedb-4b90-afb9-1a4c26f8a5b4,The Returned,Drama|Horror|Thriller
-464,c8e77081-97ab-4e51-a4c2-2f2e0e3f68c7,"Way Back, The",Drama
+464,c8e77081-97ab-4e51-a4c2-2f2e0e3f68c7,Way Back The,Drama
 465,7bd07953-117b-4b97-9444-58e9b72d04a4,Starsuckers,Documentary
-466,bc4cdf78-61e5-4cb4-8e6e-267c7f614bf2,"Bleeding House, The",Drama|Horror|Mystery|Thriller
+466,bc4cdf78-61e5-4cb4-8e6e-267c7f614bf2,Bleeding House The,Drama|Horror|Mystery|Thriller
 467,c173a53e-d915-468d-ac3b-25bb56ccfb00,Sinbad of the Seven Seas,Adventure|Fantasy|Romance
 468,a4a0ca4f-6651-4c03-82fa-33045d71fff9,Goal! The Dream Begins (Goal!),Drama
 469,b3652f3e-a61a-4377-94ac-e359df80a996,Simon Sez,Action|Comedy
 470,6fb8c25a-86a6-487a-862a-34589fa1bf43,Aeon Flux,Action|Sci-Fi
 471,a9e46dfe-0dd7-435f-b341-7f32501d3e0a,Toughguy,Crime|Drama|Thriller
-472,7f047dfb-942f-4b6c-8eed-c9a0950fb07e,"Little Night Music, A",Comedy|Musical|Romance
-473,cb34adfa-3461-44cd-8708-4f67eaba6222,"Runner, The (Davandeh)",Drama
-474,072bca33-f575-4106-aab3-2159f7fc61b1,"Rocker, The",Comedy
+472,7f047dfb-942f-4b6c-8eed-c9a0950fb07e,Little Night Music A,Comedy|Musical|Romance
+473,cb34adfa-3461-44cd-8708-4f67eaba6222,Runner The (Davandeh),Drama
+474,072bca33-f575-4106-aab3-2159f7fc61b1,Rocker The,Comedy
 475,7265a71f-070d-46c9-a850-66878df3b27f,Hannah Free,Drama
-476,3084204b-d048-40f8-9dcf-ea96aad94af2,Special Delivery,(no genres listed)
+476,3084204b-d048-40f8-9dcf-ea96aad94af2,Special Delivery,
 477,55ec8359-10c3-41e0-b670-7fdd33cc88b0,Hateship Loveship,Drama
 478,196526b9-a53c-4fd6-8734-32e746b4eb30,Jekyll & Hyde,Horror
-479,2d1e453a-6a6f-4299-900c-4f88d5528001,"Tree of Wooden Clogs, The (L'albero degli zoccoli)",Drama
+479,2d1e453a-6a6f-4299-900c-4f88d5528001,Tree of Wooden Clogs The (L'albero degli zoccoli),Drama
 480,991d8f08-f89d-4ca2-af48-962e68cf2f14,Tuulikaappimaa,Comedy
 481,7583ad35-71f7-420c-aecf-13e4cb0931a1,Zatoichi's Vengeance (Zatôichi no uta ga kikoeru) (Zatôichi 13),Action|Drama
 482,39a451f2-9ae7-4665-a7ea-5159d8d07625,Hot Lead and Cold Feet,Action|Comedy|Western
-483,eecf2dad-02a1-4848-a377-aa835f3520c4,"Nutty Professor, The",Comedy|Fantasy|Romance|Sci-Fi
-484,a30b6ae0-0046-46d2-a00c-afec5ebdc4b0,"Devil's in the Details, The",Thriller
+483,eecf2dad-02a1-4848-a377-aa835f3520c4,Nutty Professor The,Comedy|Fantasy|Romance|Sci-Fi
+484,a30b6ae0-0046-46d2-a00c-afec5ebdc4b0,Devil's in the Details The,Thriller
 485,cbd3aafc-daf5-444d-b29b-03cf66535f53,Nightbreed,Fantasy|Horror
 486,08df9f91-fa65-42ab-a930-d70668b7fac9,Only Two Can Play,Comedy|Drama
 487,70a1f65c-d026-4a75-a6b3-2dd276eb9c46,Z,Drama|Mystery|Thriller
-488,4d04eba8-7bc4-421d-9b3c-27260601cf79,"Die, Monster, Die!",Horror|Mystery|Sci-Fi
+488,4d04eba8-7bc4-421d-9b3c-27260601cf79,Die Monster Die!,Horror|Mystery|Sci-Fi
 489,cd2a6c7f-f910-4fae-bbb3-9d181d176f0b,Trail of the Screaming Forehead,Comedy|Sci-Fi
 490,ede22492-50da-4110-b831-3d736dcd942e,A Via Láctea,Drama
 491,5ff60f8e-4ba6-428c-8426-c0b565a28025,Flandres (Flanders),Action|Drama|War
@@ -498,4 +498,4 @@ id,code,title,genre
 497,80de15b1-eaf2-41d7-a99f-aef2c5a6441d,In the Name of the King 2: Two Worlds,Action|Adventure|Drama|Fantasy
 498,c0fe5280-ce5a-4b4a-b027-c503f16f5399,Greystone Park,Horror
 499,a657a0b4-263d-43d9-b13c-a9058cb64644,You Can't Take It with You,Comedy|Romance
-500,33fd3ae1-fb42-4544-a3ba-5aee457c767f,"Raisin in the Sun, A",Drama
+500,33fd3ae1-fb42-4544-a3ba-5aee457c767f,Raisin in the Sun A,Drama
