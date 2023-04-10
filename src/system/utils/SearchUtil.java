@@ -59,12 +59,12 @@ public class SearchUtil {
     /**
      *
      * @param array
-     * @param comparetor
+     * @param comparator
      */
-    public static void listAllDataByCompare(List array, Comparator comparetor) {
+    public static void listAllDataByCompare(List array, Comparator comparator) {
         List copyArray = new ArrayList(array);
         Collections.copy(copyArray, array);
-        Collections.sort(copyArray, comparetor);
+        Collections.sort(copyArray, comparator);
         copyArray.forEach(data -> {
             System.out.println(data);
         });

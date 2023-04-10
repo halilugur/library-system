@@ -2,7 +2,8 @@ package system.utils;
 
 import system.comparator.IdComparator;
 import java.util.ArrayList;
-import java.util.Collections;
+import java.util.Arrays;
+
 import java.util.List;
 import java.util.Set;
 import system.models.Book;
@@ -36,7 +37,7 @@ public class BookUtil {
             Book book = new Book(id, code, title, Set.of(genres));
             books.add(book);
         });
-        Collections.sort(books, new IdComparator<>());
+        SortUtil.sort(books, new IdComparator<>());
         return books;
     }
 }

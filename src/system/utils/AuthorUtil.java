@@ -29,7 +29,7 @@ public class AuthorUtil {
             Author author = new Author(id, name, surname);
             authors.add(author);
         });
-        Collections.sort(authors, new IdComparator<>());
+        SortUtil.sort(authors, new IdComparator<>());
         return authors;
     }
 
