@@ -11,6 +11,7 @@ import java.util.Optional;
 import system.models.BaseModel;
 
 /**
+ * A utility class for searching and indexing objects in a list.
  *
  * @author Tolga Baris Pinar
  * @author halilugur
@@ -18,12 +19,12 @@ import system.models.BaseModel;
 public class SearchUtil {
 
     /**
-     * Search data in array by id
+     * Searches for an element in a list of BaseModel objects by their ID.
      *
-     * @param <T> data type should extends BaseModel
-     * @param array data list
-     * @param id number for searching
-     * @return index of data
+     * @param array The list of BaseModel objects to search through
+     * @param id The ID of the element to search for
+     * @param <T> A type that extends BaseModel
+     * @return The index of the element in the list, or -1 if it is not found
      */
     public static <T extends BaseModel> int find(List<T> array, Integer id) {
         Integer[] ids = array.stream().map(BaseModel::getId).toArray(Integer[]::new);
@@ -31,14 +32,14 @@ public class SearchUtil {
     }
 
     /**
-     * This method implements the Binary Search
+     * Searches for an object in a sorted array using binary search.
      *
-     * @param <T>
-     * @param array The array for searching
-     * @param object The data for searching
-     * @param left The lower of array
-     * @param right The upper of array
-     * @return the location of the data in array
+     * @param array The sorted array to search in.
+     * @param object The object to search for.
+     * @param left The leftmost index of the array to search in.
+     * @param right The rightmost index of the array to search in.
+     * @param <T> The type of the objects in the array, which must implement Comparable.
+     * @return The index of the object in the array, or -1 if it is not found.
      */
     private static <T extends Comparable<T>> int search(T array[], T object, int left, int right) {
         if (right < left) {
@@ -57,9 +58,10 @@ public class SearchUtil {
     }
 
     /**
+     * Sorts and prints a copy of the given list using the provided comparator.
      *
-     * @param array
-     * @param comparator
+     * @param array The list to be sorted and printed
+     * @param comparator The comparator to be used for sorting
      */
     public static void listAllDataByCompare(List array, Comparator comparator) {
         List copyArray = new ArrayList(array);
@@ -71,10 +73,11 @@ public class SearchUtil {
     }
 
     /**
+     * Indexes an object in a given mapper with a given index.
      *
-     * @param mapper
-     * @param object
-     * @param index
+     * @param mapper The mapper to index the object in.
+     * @param object The object to index.
+     * @param index The index to use for the object.
      */
     public static void indexingOfObject(Map<String, Integer[]> mapper, Object object, Integer index) {
         //to hold the index of the object
@@ -87,7 +90,7 @@ public class SearchUtil {
         //to create a new integer array with the current index if the mapper not contain a key
         if (mapper.get(cascadeString) == null) {
             indexList = mapper.getOrDefault(cascadeString, new Integer[]{index});
-        } else { 
+        } else {
             //retrive the existing index list from the mapper and add the new 'index'
             indexList = mapper.get(cascadeString);
             indexList = Arrays.copyOf(indexList, indexList.length + 1);
@@ -96,10 +99,16 @@ public class SearchUtil {
         mapper.put(cascadeString, indexList);
     }
 
+    /**
+     * Indexes each element in a collection with a given index and stores it in a map.
+     *
+     * @param mapper The map to store the indexed elements in
+     * @param collection The collection to index
+     * @param index The index to assign to each element in the collection
+     */
     public static void indexingOfList(Map<String, Integer[]> mapper, Collection collection, Integer index) {
         collection.forEach(genre -> {
             indexingOfObject(mapper, genre, index);
         });
     }
-
 }

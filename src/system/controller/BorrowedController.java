@@ -11,6 +11,10 @@ import system.models.Student;
 import system.models.WaitingQueue;
 
 /**
+ * The BorrowedController class is responsible for managing the borrowing and
+ * returning of books. It contains a list of borrowed books and a waiting queue
+ * for books that are currently unavailable. The class provides methods for
+ * borrowing a book, returning a book, and listing all currently borrowed books.
  *
  * @author Tolga Baris Pinar
  * @author halilugur
@@ -25,6 +29,13 @@ public class BorrowedController {
         WAITING_BOOK = new WaitingQueue();
     }
 
+    /**
+     * Performs an action based on the given option.
+     *
+     * @param option An integer representing the action to be performed.
+     *               1: Borrow an eBook.
+     *               2: Return a borrowed eBook.
+     */
     public void borrowed(int option) {
         switch (option) {
             case 1:
@@ -36,16 +47,23 @@ public class BorrowedController {
         }
     }
 
+    /**
+     * Allows a student to borrow a book from the library. If the book is
+     * already borrowed, the student is added to the waiting list. If the
+     * student already has the book, they cannot borrow it again.
+     *
+     * @return void
+     */
     private void borroweBook() {
-        System.out.println("Which book you want to borrow? ID: ");
-        String bookId = SCANNER.next();
+        System.out.println("Which book you want to borrow? CODE: ");
+        String bookCode = SCANNER.nextLine();
         System.out.println("Student ID: ");
         Integer studentId = SCANNER.nextInt();
         Optional<Student> student = STUDENTS.stream()
                 .filter(studentFilter -> studentFilter.getId().equals(studentId))
                 .findAny();
         Optional<Book> book = BOOKS.stream()
-                .filter(bookFilter -> bookFilter.getCode().equals(bookId))
+                .filter(bookFilter -> bookFilter.getCode().equals(bookCode))
                 .findAny();
         if (student.isPresent()) {
             if (book.isPresent()) {
@@ -63,18 +81,24 @@ public class BorrowedController {
                     }
                 }
             } else {
-                System.out.println("Book not found! ID: " + bookId);
+                System.out.println("Book not found! ID: " + bookCode);
             }
         } else {
             System.out.println("Student not found! ID: " + studentId);
         }
     }
 
+    /**
+     * Prompts the user to give back a book by entering its code. If the book is
+     * found and has been borrowed, it is removed from the borrowed book list
+     * and the student's borrow list. If there is a student waiting for the
+     * book, they are printed to the console.
+     */
     private void giveBack() {
-        System.out.println("Which book you want to give back? ID: ");
-        String bookId = SCANNER.next();
+        System.out.println("Which book you want to give back? CODE: ");
+        String bookCode = SCANNER.nextLine();
         Optional<Book> book = BOOKS.stream()
-                .filter(bookFilter -> bookFilter.getCode().equals(bookId))
+                .filter(bookFilter -> bookFilter.getCode().equals(bookCode))
                 .findAny();
         if (book.isPresent()) {
             if (BORROWED_BOOK.contains(book.get())) {
@@ -96,10 +120,13 @@ public class BorrowedController {
                 System.out.println("This book not borrowed.");
             }
         } else {
-            System.out.println("Book not found! ID: " + bookId);
+            System.out.println("Book not found! CODE: " + bookCode);
         }
     }
 
+    /**
+     * Prints out the list of borrowed books.
+     */
     private void listBorrowedBook() {
         BORROWED_BOOK.forEach(book -> {
             System.out.println(book);

@@ -5,9 +5,12 @@ import system.models.BaseModel;
 
 /**
  *
+ * A comparator for comparing two BaseModel objects based on their ID.
+ *
+ * @param <M> The type of BaseModel being compared.
+ *
  * @author Tolga Baris Pinar
  * @author halilugur
- * @param <M> model of data. Data should extended from BaseModel class
  */
 public class IdComparator<M extends BaseModel> implements Comparator<M> {
 

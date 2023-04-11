@@ -5,6 +5,8 @@ import java.util.Objects;
 import java.util.Set;
 
 /**
+ * Represents a student with a name, surname, and two sets of books: a waiting
+ * list and a borrowed list. Inherits from BaseModel, which provides an ID.
  *
  * @author Tolga Baris Pinar
  * @author halilugur

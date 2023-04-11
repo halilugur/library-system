@@ -12,7 +12,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 /**
- * This class read and write to CSV file.
+ * A utility class for reading and writing CSV files.
  *
  * @author Tolga Baris Pinar
  * @author halilugur
@@ -22,12 +22,13 @@ public class CSVUtil {
     private final static String DELIMITER = ",";
 
     /**
-     * This method read data from a CSV.
+     * Reads a CSV file and returns its contents as a list of string arrays.
      *
-     * @param path resource of CSV file path.
-     * @param messageStart print message when started read data.
-     * @param messageEnd print message when ended read data.
-     * @return List of data as String[]
+     * @param path The path to the CSV file.
+     * @param messageStart The message to print before reading the file.
+     * @param messageEnd The message to print after reading the file.
+     * @return A list of string arrays containing the contents of the CSV file.
+     * If the file is not found or an error occurs, an empty list is returned.
      */
     public static List<String[]> readCSV(String path, String messageStart, String messageEnd) {
         System.out.println(messageStart);
@@ -40,8 +41,6 @@ public class CSVUtil {
                     skipFirstLine = false;
                     continue;
                 }
-
-                // Split the line using the delimiter
                 String[] values = line.split(DELIMITER);
                 dataList.add(values);
             }
@@ -56,22 +55,23 @@ public class CSVUtil {
     }
 
     /**
-     * This method read data from a CSV.
+     * Reads a CSV file and returns its contents as a list of string arrays.
      *
-     * @param path resource of CSV file path.
-     * @return List of data as String[]
+     * @param path The path to the CSV file.
+     * @return A list of string arrays representing the contents of the CSV
+     * file.
      */
     public static List<String[]> readCSV(String path) {
         return readCSV(path, "", "");
     }
 
     /**
-     * This method write data to a CSV.
+     * Writes a list of data to a CSV file at the specified path.
      *
-     * @param path resource of CSV file path.
-     * @param dataList data for writing to CSV
-     * @param titles titles of dataList
-     * @param isOverwrite write on file if data exist
+     * @param dataList The list of data to write to the CSV file
+     * @param path The path to the CSV file
+     * @param titles The titles of the columns in the CSV file
+     * @param isOverwrite Whether to overwrite the file if it already exists
      */
     public static void writeCSV(List<String> dataList, String path, String titles, boolean isOverwrite) {
         try ( FileWriter fileWriter = new FileWriter(path, isOverwrite)) {
@@ -88,10 +88,12 @@ public class CSVUtil {
     }
 
     /**
+     * Cleans the given CSV data by removing any double quotes and merging
+     * values that are split across multiple columns. The cleaned data is then
+     * written to a new CSV file.
      *
-     *
-     * @param dataList
-     * @param titles
+     * @param dataList The list of CSV data to be cleaned
+     * @param titles The titles of the CSV columns
      */
     public static void cleanCSV(List<String[]> dataList, String titles) {
         List<String> cleanedData = new ArrayList<>();

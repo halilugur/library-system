@@ -5,6 +5,7 @@ import java.util.Set;
 import static system.utils.StringUtil.makeShort;
 
 /**
+ * Represents a book with a unique ID, code, title, author, and genres.
  *
  * @author Tolga Baris Pinar
  * @author halilugur

@@ -4,6 +4,10 @@ import java.util.Comparator;
 import system.models.Book;
 
 /**
+ * 
+ * A comparator for comparing two Book objects based on the name of their
+ * authors. The comparison is case-sensitive and uses the natural ordering of
+ * strings.
  *
  * @author Tolga Baris Pinar
  * @author halilugur

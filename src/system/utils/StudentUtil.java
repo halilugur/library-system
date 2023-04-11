@@ -1,6 +1,5 @@
 package system.utils;
 
-
 import java.util.ArrayList;
 
 import java.util.List;
@@ -8,6 +7,7 @@ import system.comparator.IdComparator;
 import system.models.Student;
 
 /**
+ * A utility class for reading student data from a CSV file.
  *
  * @author Tolga Baris Pinar
  * @author halilugur
@@ -17,9 +17,9 @@ public class StudentUtil {
     private final static String STUDENT_CSV_PATH = "src/resource/student.csv";
 
     /**
-     * This method prepare student data for storage on the RAM.
+     * Reads student data from a CSV file and returns a sorted list of Student objects.
      *
-     * @return list of student
+     * @return A sorted list of Student objects
      */
     public static List<Student> readFromCsv() {
         List<Student> students = new ArrayList<>();
@@ -32,8 +32,6 @@ public class StudentUtil {
             students.add(student);
         });
         SortUtil.sort(students, new IdComparator<>());
-//        Collections.sort(students, new IdComparator<>());
         return students;
     }
-
 }

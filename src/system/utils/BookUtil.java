@@ -2,13 +2,13 @@ package system.utils;
 
 import system.comparator.IdComparator;
 import java.util.ArrayList;
-import java.util.Arrays;
 
 import java.util.List;
 import java.util.Set;
 import system.models.Book;
 
 /**
+ * A utility class for reading book data from a CSV file.
  *
  * @author Tolga Baris Pinar
  * @author halilugur
@@ -18,8 +18,9 @@ public class BookUtil {
     private final static String BOOK_CSV_PATH = "src/resource/book.csv";
 
     /**
+     * Reads book data from a CSV file and returns a list of Book objects.
      *
-     * @return
+     * @return A list of Book objects
      */
     public static List<Book> readFromCsv() {
         List<Book> books = new ArrayList<>();

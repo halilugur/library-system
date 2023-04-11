@@ -3,6 +3,7 @@ package system.models;
 import java.util.Objects;
 
 /**
+ * Represents an author with a unique ID, name, and surname.
  *
  * @author Tolga Baris Pinar
  * @author halilugur
@@ -68,5 +69,4 @@ public class Author extends BaseModel {
     public String toString() {
         return String.format("%-10d%-20s%-20s", this.getId(), name, surname);
     }
-
 }

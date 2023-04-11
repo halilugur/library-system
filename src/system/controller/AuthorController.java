@@ -7,11 +7,17 @@ import system.comparator.AuthorSurnameComparator;
 import system.models.Author;
 import static system.models.Constants.AUTHORS;
 import static system.models.Constants.SCANNER;
+import static system.utils.ScannerUtil.checkNumber;
 import system.utils.SearchUtil;
 import static system.utils.SearchUtil.indexingOfObject;
 import static system.utils.SearchUtil.listAllDataByCompare;
 
 /**
+ * The AuthorController class is responsible for managing the search and listing
+ * of authors. It contains two maps, one for indexing authors by name and
+ * another for indexing authors by surname. The class provides methods for
+ * searching authors by ID, name, and surname, as well as listing all authors in
+ * alphabetical order by name or surname.
  *
  * @author Tolga Baris Pinar
  * @author halilugur
@@ -28,8 +34,14 @@ public class AuthorController {
     }
 
     /**
+     * Searches for authors based on the given option.
      *
-     * @param option
+     * @param option The option to search by:
+     *               1 - search by ID
+     *               2 - search by name
+     *               3 - search by surname
+     *               4 - list authors ordered by name
+     *               5 - list authors ordered by surname
      */
     public void search(Integer option) {
         switch (option) {
@@ -52,11 +64,11 @@ public class AuthorController {
     }
 
     /**
-     *
+     * Searches for an author by their ID number and prints their information if
+     * found.
      */
     public void searchById() {
-        System.out.println("Search by ID: ");
-        Integer id = SCANNER.nextInt();
+        Integer id = checkNumber("Search by ID: ");
         Integer index = SearchUtil.find(AUTHORS, id);
         if (index != -1) {
             printTableLabels();
@@ -67,7 +79,8 @@ public class AuthorController {
     }
 
     /**
-     *
+     * Searches for an author by name and prints their information if found.
+     * Uses a map of indexed name values to quickly find the author.
      */
     private void searchByName() {
         System.out.println("Search by name: ");
@@ -81,7 +94,8 @@ public class AuthorController {
     }
 
     /**
-     *
+     * Searches for authors by surname and prints the results if any are found.
+     * Uses a map of indexed surnames to quickly find matching authors.
      */
     private void searchBySurname() {
         System.out.println("Search by surname: ");
@@ -95,7 +109,8 @@ public class AuthorController {
     }
 
     /**
-     *
+     * Lists all authors in the database in alphabetical order by name. Prints a
+     * table with the author's name, birth year, and death year.
      */
     private void listAuthorsOrderByName() {
         printTableLabels();
@@ -103,7 +118,8 @@ public class AuthorController {
     }
 
     /**
-     *
+     * Lists all authors in the database, ordered by their surname. Uses the
+     * AuthorSurnameComparator to sort the data.
      */
     private void listAuthorsOrderBySurname() {
         printTableLabels();
@@ -111,7 +127,9 @@ public class AuthorController {
     }
 
     /**
-     *
+     * Prints the table labels for a list of people, including ID, name, and
+     * surname. The labels are printed in a formatted table with a horizontal
+     * line above and below.
      */
     private void printTableLabels() {
         System.out.println("⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯");
@@ -120,8 +138,9 @@ public class AuthorController {
     }
 
     /**
+     * Prints the authors names from the AUTHORS list at the given indexes.
      *
-     * @param indexes
+     * @param indexes An array of indexes of the authors to print
      */
     private void findAndPrint(Integer[] indexes) {
         printTableLabels();
@@ -131,7 +150,10 @@ public class AuthorController {
     }
 
     /**
-     *
+     * Prepares the search data by indexing the authors names and surnames. The
+     * indexing is done by adding the author's name and surname to the
+     * corresponding indexed value list, along with the author's index in the
+     * AUTHORS list.
      */
     private void prepareSearchData() {
         for (int i = 0; i < AUTHORS.size(); i++) {

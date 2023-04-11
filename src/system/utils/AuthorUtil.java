@@ -1,12 +1,12 @@
 package system.utils;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 import system.comparator.IdComparator;
 import system.models.Author;
 
 /**
+ * A utility class for reading author data from a CSV file.
  *
  * @author Tolga Baris Pinar
  * @author halilugur
@@ -16,8 +16,10 @@ public class AuthorUtil {
     private final static String AUTHOR_CSV_PATH = "src/resource/author.csv";
 
     /**
+     * Reads author data from a CSV file and returns a sorted list of Author
+     * objects.
      *
-     * @return
+     * @return A sorted list of Author objects
      */
     public static List<Author> readFromCsv() {
         List<Author> authors = new ArrayList<>();
@@ -32,5 +34,4 @@ public class AuthorUtil {
         SortUtil.sort(authors, new IdComparator<>());
         return authors;
     }
-
 }

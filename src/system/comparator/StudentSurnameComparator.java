@@ -4,7 +4,9 @@ import java.util.Comparator;
 import system.models.Student;
 
 /**
- * Compare surname of students
+ * A comparator for comparing two Student objects based on their surnames. This
+ * class should be used in conjunction with the sort() method of the Collections
+ * class.
  *
  * @author Tolga Baris Pinar
  * @author halilugur

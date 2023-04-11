@@ -5,6 +5,10 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
+ * A waiting queue for books and students. Books and students are added to the
+ * queue together. Books can be polled from the queue, and the corresponding
+ * student will be returned. The queue can also be converted to a map of book
+ * codes to student IDs.
  *
  * @author Tolga Baris Pinar
  * @author halilugur
@@ -15,6 +19,10 @@ public class WaitingQueue {
     private Student[] students;
     private int elementCount;
 
+    /**
+     * Constructs a new WaitingQueue object with no books or students and an
+     * element count of 0.
+     */
     public WaitingQueue() {
         books = new Book[0];
         students = new Student[0];
@@ -22,10 +30,13 @@ public class WaitingQueue {
     }
 
     /**
+     * Adds a book to a student's list of borrowed books, if it is not already
+     * borrowed by the student.
      *
-     * @param book
-     * @param student
-     * @return
+     * @param book The book to be borrowed.
+     * @param student The student who is borrowing the book.
+     * @return true if the book was successfully borrowed, false if the book is
+     * already borrowed by the student.
      */
     public boolean add(Book book, Student student) {
         for (int i = 0; i < books.length; i++) {
@@ -46,9 +57,12 @@ public class WaitingQueue {
     }
 
     /**
+     * Removes a student from the library system by removing the book they have
+     * borrowed.
      *
-     * @param book
-     * @return
+     * @param book The book that the student has borrowed.
+     * @return The student who borrowed the book, or null if the book is not
+     * found.
      */
     public Student poll(Book book) {
         int findPosition = -1;
@@ -82,9 +96,12 @@ public class WaitingQueue {
     }
 
     /**
+     * Returns the student who has borrowed the specified book without removing
+     * the book from the library.
      *
-     * @param book
-     * @return
+     * @param book The book to check for
+     * @return The student who has borrowed the book, or null if the book is not
+     * borrowed
      */
     public Student peek(Book book) {
         for (int i = 0; i < books.length; i++) {
@@ -97,8 +114,10 @@ public class WaitingQueue {
     }
 
     /**
+     * Converts the array of books and students to a map where the book code is
+     * the key and the student ID is the value.
      *
-     * @return
+     * @return A map with book codes as keys and student IDs as values.
      */
     public Map<String, Integer> toMap() {
         Map<String, Integer> mapped = new HashMap<>();
