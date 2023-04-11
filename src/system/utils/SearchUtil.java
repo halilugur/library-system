@@ -64,7 +64,7 @@ public class SearchUtil {
     public static void listAllDataByCompare(List array, Comparator comparator) {
         List copyArray = new ArrayList(array);
         Collections.copy(copyArray, array);
-        Collections.sort(copyArray, comparator);
+        SortUtil.sort(copyArray, comparator);
         copyArray.forEach(data -> {
             System.out.println(data);
         });
