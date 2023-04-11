@@ -109,8 +109,8 @@ public class AuthorController {
     }
 
     /**
-     * Lists all authors in the database in alphabetical order by name. Prints a
-     * table with the author's name, birth year, and death year.
+     * Lists all authors in the library by their name, sorted in alphabetical
+     * order. Prints a table with the book information.
      */
     private void listAuthorsOrderByName() {
         printTableLabels();
@@ -118,8 +118,8 @@ public class AuthorController {
     }
 
     /**
-     * Lists all authors in the database, ordered by their surname. Uses the
-     * AuthorSurnameComparator to sort the data.
+     * Lists all authors in the library by their surname, sorted in alphabetical
+     * order. Prints a table with the book information.
      */
     private void listAuthorsOrderBySurname() {
         printTableLabels();
@@ -127,7 +127,7 @@ public class AuthorController {
     }
 
     /**
-     * Prints the table labels for a list of people, including ID, name, and
+     * Prints the table labels for a list of author, including ID, name, and
      * surname. The labels are printed in a formatted table with a horizontal
      * line above and below.
      */
@@ -138,7 +138,7 @@ public class AuthorController {
     }
 
     /**
-     * Prints the authors names from the AUTHORS list at the given indexes.
+     * Prints the authors from the AUTHORS list at the given indexes.
      *
      * @param indexes An array of indexes of the authors to print
      */

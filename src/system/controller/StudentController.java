@@ -89,12 +89,8 @@ public class StudentController {
     }
 
     /**
-     * Searches for a student by name and prints their information if found.
-     * Uses a Scanner to read user input for the name to search. If the name is
-     * found in the INDEXED_NAME_VALUE map, the corresponding indexes are
-     * retrieved and passed to the findAndPrint method to print the information
-     * of the students with that name. If the name is not found, a message is
-     * printed to the console.
+     * Searches for an student by name and prints their information if found.
+     * Uses a map of indexed name values to quickly find the student.
      */
     public void searchByName() {
         System.out.println("Search by name: ");
@@ -108,9 +104,8 @@ public class StudentController {
     }
 
     /**
-     * Searches for students by their surname and prints out the results. Uses a
-     * map to find the indexes of students with the given surname. If there are
-     * no students with the given surname, prints an error message.
+     * Searches for an student by surname and prints their information if found.
+     * Uses a map of indexed surname values to quickly find the student.
      */
     public void searchBySurname() {
         System.out.println("Search by surname: ");
@@ -124,8 +119,8 @@ public class StudentController {
     }
 
     /**
-     * Prints a table of all students sorted by name. Uses the
-     * StudentNameComparator to sort the data.
+     * Lists all students in the RAM by their name, sorted in alphabetical
+     * order. Prints a table with the book information.
      */
     public void listAllStudentsByName() {
         printTableLabels();
@@ -133,8 +128,8 @@ public class StudentController {
     }
 
     /**
-     * Prints a table of all students sorted by surname. Uses the
-     * StudentSurnameComparator to sort the data.
+     * Lists all students in the RAM by their surname, sorted in alphabetical
+     * order. Prints a table with the book information.
      */
     public void listAllStudentsBySurname() {
         printTableLabels();

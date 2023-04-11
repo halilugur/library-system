@@ -96,6 +96,7 @@ public class BookController {
 
     /**
      * Searches for a book by its ID number and prints the book's information if
+     * found. If no book is found, prints a message indicating that no book was
      * found.
      */
     public void searchById() {
@@ -128,10 +129,9 @@ public class BookController {
     }
 
     /**
-     * Searches for books by title and prints the results in a table format.
-     * Prompts the user to enter a title to search for. If any books are found
-     * with a matching title, they are printed in a table format. If no books
-     * are found with a matching title, a message is printed to the console.
+     * Searches for a book by its title and prints the book information if
+     * found. If no book is found, prints a message indicating that no book was
+     * found.
      */
     private void searchByTitle() {
         System.out.println("Search by title: ");
@@ -148,10 +148,8 @@ public class BookController {
     }
 
     /**
-     * Searches for books by genre and prints the results. Prompts the user to
-     * enter a genre and searches the INDEXED_GENRE_VALUE map for the
-     * corresponding indexes. If found, calls findAndPrint() to print the books
-     * at the indexes. If not found, prints an error message.
+     * Searches for a book by genre and prints the book information if found. If
+     * no book is found, prints a message indicating that no book was found.
      */
     private void searchByGenre() {
         System.out.println("Search by genre: ");
@@ -165,10 +163,9 @@ public class BookController {
     }
 
     /**
-     * Searches for books by author name and prints the results. Prompts the
-     * user to enter the author name to search for. If any books are found, they
-     * are printed to the console. If no books are found, a message is printed
-     * to the console.
+     * Searches for a book by author name and prints the book information if
+     * found. If no book is found, prints a message indicating that no book was
+     * found.
      */
     private void searchByAuthorName() {
         System.out.println("Search by author name: ");
@@ -182,11 +179,9 @@ public class BookController {
     }
 
     /**
-     * Searches for books by author surname and prints the results. Prompts the
-     * user to enter a surname and searches the indexed author surnames for
-     * matches. If matches are found, the corresponding book indexes are
-     * retrieved and passed to the findAndPrint method. If no matches are found,
-     * a message is printed to the console.
+     * Searches for a book by author surname and prints the book information if
+     * found. If no book is found, prints a message indicating that no book was
+     * found.
      */
     private void searchByAuthorSurname() {
         System.out.println("Search by surname: ");
@@ -200,9 +195,8 @@ public class BookController {
     }
 
     /**
-     * Lists all books sorted by author name in a table format. Prints the table
-     * labels and then lists all data by comparing the books using the
-     * BookAuthorNameComparator.
+     * Lists all books in the library by author name, sorted in alphabetical
+     * order. Prints a table with the book information.
      */
     private void listAllBookByAuthorName() {
         printTableLabels();
@@ -210,8 +204,8 @@ public class BookController {
     }
 
     /**
-     * Lists all books sorted by author surname. Prints a table with the book
-     * data.
+     * Lists all books in the library by author surname, sorted in alphabetical
+     * order. Prints a table with the book information.
      */
     private void listAllBookByAuthorSurname() {
         printTableLabels();

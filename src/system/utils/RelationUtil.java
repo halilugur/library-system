@@ -5,6 +5,8 @@ import system.models.Author;
 import system.models.Book;
 
 /**
+ * A utility class for loading the relation between entities from a CSV file.
+ *
  * @author Tolga Baris Pinar
  * @author halilugur
  */
