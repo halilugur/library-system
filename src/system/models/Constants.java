@@ -7,7 +7,7 @@ import java.util.Scanner;
 import system.screens.Menu;
 
 /**
- * This interface provide constant data.
+ * This interface provides constant data.
  *
  * @author Tolga Baris Pinar
  * @author halilugur

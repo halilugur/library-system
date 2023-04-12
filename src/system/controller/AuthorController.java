@@ -15,8 +15,8 @@ import static system.utils.SearchUtil.listAllDataByCompare;
 /**
  * The AuthorController class is responsible for managing the search and listing
  * of authors. It contains two maps, one for indexing authors by name and
- * another for indexing authors by surname. The class provides methods for
- * searching authors by ID, name, and surname, as well as listing all authors in
+ * another for indexing authors by surname. In addition,the class provides methods
+ * for searching authors by ID, name, and surname and listing all authors in
  * alphabetical order by name or surname.
  *
  * @author Tolga Baris Pinar

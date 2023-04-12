@@ -24,9 +24,9 @@ import static system.utils.SearchUtil.listAllDataByCompare;
  * The BookController class is responsible for managing the search and listing
  * of books. It contains methods for searching books by various criteria such as
  * ID, code, title, genre, author name, and author surname. It also has methods
- * for listing all books by title, author name, and author surname. The class
- * initializes four maps to store the indexed values of books by title, genre,
- * author name, and author surname.
+ * for listing all books by title, author name, and author surname. Finally, the
+ * class initializes four maps to store the indexed values of books by title,
+ * genre, author name, and author surname.
  *
  * @author Tolga Baris Pinar
  * @author halilugur
