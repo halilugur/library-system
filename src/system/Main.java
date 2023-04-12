@@ -13,7 +13,7 @@ import system.utils.StudentUtil;
 import system.utils.RelationUtil;
 
 /**
- * This program manage the library system with simple functionality.
+ * This program manages the library system with simple functionality.
  *
  * @author Tolga Baris Pinar
  * @author halilugur
@@ -42,7 +42,7 @@ public class Main {
 
     /**
      * The main method of the library management system. It sets up the system
-     * and initializes the controllers for students, borrowed books, books, and
+     * and initialises the controllers for students, borrowed books, books, and
      * authors. It then prompts the user to select an option from the main menu
      * and executes the corresponding operation based on the user's input. The
      * user can navigate through the different options until they choose to exit
