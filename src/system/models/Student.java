@@ -3,9 +3,10 @@ package system.models;
 import java.util.HashSet;
 import java.util.Objects;
 import java.util.Set;
+import static system.utils.StringUtil.makeShort;
 
 /**
- * Represents a student with a name, surname, and two sets of books: a waiting
+ * Represents a student with a name, surname, address and two sets of books: a waiting
  * list and a borrowed list. Inherits from BaseModel, which provides an ID.
  *
  * @author Tolga Baris Pinar
@@ -15,13 +16,15 @@ public class Student extends BaseModel {
 
     private String name;
     private String surname;
+    private String address;
     private Set<Book> waitingList;
     private Set<Book> borrowedList;
 
-    public Student(Integer id, String name, String surname) {
+    public Student(Integer id, String name, String surname, String address) {
         super(id);
         this.name = name;
         this.surname = surname;
+        this.address = address;
         this.waitingList = new HashSet<>();
         this.borrowedList = new HashSet<>();
     }
@@ -40,6 +43,14 @@ public class Student extends BaseModel {
 
     public void setSurname(String surname) {
         this.surname = surname;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
     }
 
     public Set<Book> getWaitingList() {
@@ -90,6 +101,6 @@ public class Student extends BaseModel {
 
     @Override
     public String toString() {
-        return String.format("%-10d%-20s%-20s", this.getId(), name, surname);
+        return String.format("%-10d%-20s%-20s%-20s", this.getId(), name, surname, makeShort(address));
     }
 }

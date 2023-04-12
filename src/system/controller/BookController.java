@@ -11,8 +11,8 @@ import system.comparator.BookTitleComparator;
 import system.models.Book;
 import static system.models.Constants.BOOKS;
 import static system.models.Constants.SCANNER;
+import static system.models.Constants.MENU;
 import static system.utils.ScannerUtil.checkNumber;
-import system.screens.Menu;
 import system.utils.SearchUtil;
 
 import static system.utils.SearchUtil.indexingOfObject;
@@ -33,14 +33,11 @@ import static system.utils.SearchUtil.listAllDataByCompare;
  */
 public class BookController {
 
-    Menu MENU = Menu.getInstance();
-    private final Map<String, Integer[]> INDEXED_TITLE_VALUE;
     private final Map<String, Integer[]> INDEXED_GENRE_VALUE;
     private final Map<String, Integer[]> INDEXED_AUTHOR_NAME_VALUE;
     private final Map<String, Integer[]> INDEXED_AUTHOR_SURNAME_VALUE;
 
     public BookController() {
-        INDEXED_TITLE_VALUE = new HashMap<>();
         INDEXED_GENRE_VALUE = new HashMap<>();
         INDEXED_AUTHOR_NAME_VALUE = new HashMap<>();
         INDEXED_AUTHOR_SURNAME_VALUE = new HashMap<>();
@@ -137,7 +134,7 @@ public class BookController {
         System.out.println("Search by title: ");
         String title = SCANNER.nextLine().toLowerCase();
         List<Book> found = BOOKS.stream()
-                .filter(book -> book.getTitle().contains(title))
+                .filter(book -> book.getTitle().toLowerCase().contains(title))
                 .collect(Collectors.toList());
         if (!found.isEmpty()) {
             printTableLabels();
@@ -252,7 +249,6 @@ public class BookController {
     private void prepareSearchData() {
         for (int i = 0; i < BOOKS.size(); i++) {
             Book book = BOOKS.get(i);
-            indexingOfObject(INDEXED_TITLE_VALUE, book.getTitle(), i);
             indexingOfObject(INDEXED_AUTHOR_NAME_VALUE, book.getAuthor().getName(), i);
             indexingOfObject(INDEXED_AUTHOR_SURNAME_VALUE, book.getAuthor().getSurname(), i);
             indexingOfList(INDEXED_GENRE_VALUE, book.getGenres(), i);

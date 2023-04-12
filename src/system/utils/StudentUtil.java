@@ -17,7 +17,8 @@ public class StudentUtil {
     private final static String STUDENT_CSV_PATH = "src/resource/student.csv";
 
     /**
-     * Reads student data from a CSV file and returns a sorted list of Student objects.
+     * Reads student data from a CSV file and returns a sorted list of Student
+     * objects.
      *
      * @return A sorted list of Student objects
      */
@@ -28,7 +29,8 @@ public class StudentUtil {
             Integer id = Integer.valueOf(data[0]);
             String name = data[1];
             String surname = data[2];
-            Student student = new Student(id, name, surname);
+            String address = data[3];
+            Student student = new Student(id, name, surname, address);
             students.add(student);
         });
         SortUtil.sort(students, new IdComparator<>());
