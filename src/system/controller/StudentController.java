@@ -94,7 +94,7 @@ public class StudentController {
      */
     public void searchByName() {
         System.out.println("Search by name: ");
-        String name = SCANNER.next().toLowerCase();
+        String name = SCANNER.nextLine().toLowerCase();
         Integer[] indexes = INDEXED_NAME_VALUE.get(name);
         if (indexes != null) {
             findAndPrint(indexes);
@@ -109,7 +109,7 @@ public class StudentController {
      */
     public void searchBySurname() {
         System.out.println("Search by surname: ");
-        String surname = SCANNER.next().toLowerCase();
+        String surname = SCANNER.nextLine().toLowerCase();
         Integer[] indexes = INDEXED_SURNAME_VALUE.get(surname);
         if (indexes != null) {
             findAndPrint(indexes);
@@ -170,9 +170,9 @@ public class StudentController {
      * line above and below.
      */
     private void printTableLabels() {
-        System.out.println("⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯");
-        System.out.println(String.format("%-10s%-20s%-20s", "ID", "Name", "Surname"));
-        System.out.println("⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯");
+        System.out.println("⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯");
+        System.out.println(String.format("%-10s%-20s%-20s%-20s", "ID", "Name", "Surname", "Address"));
+        System.out.println("⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯");
     }
 
     /**

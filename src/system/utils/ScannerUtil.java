@@ -24,13 +24,13 @@ public class ScannerUtil {
             Integer number = Integer.valueOf(numberStr);
             if (!options.contains(number)) {
                 System.out.println("This option is not available.");
-                System.out.print("Please select an option: ");
+                System.out.println("Please select an option: ");
                 return checkInListOptions(options);
             }
             return number;
         } catch (NumberFormatException e) {
             System.out.println("Entered value should be number value!");
-            System.out.print("Please select an option: ");
+            System.out.println("Please select an option: ");
             return checkInListOptions(options);
         }
     }
