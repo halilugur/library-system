@@ -9,6 +9,7 @@ import static system.models.Constants.BOOKS;
 import static system.models.Constants.STUDENTS;
 import system.models.Student;
 import system.models.WaitingQueue;
+import static system.utils.ScannerUtil.checkNumber;
 
 /**
  * The BorrowedController class is responsible for managing the borrowing and
@@ -57,8 +58,7 @@ public class BorrowedController {
     private void borroweBook() {
         System.out.println("Which book you want to borrow? CODE: ");
         String bookCode = SCANNER.nextLine();
-        System.out.println("Student ID: ");
-        Integer studentId = SCANNER.nextInt();
+        Integer studentId = checkNumber("Student ID: ");
         Optional<Student> student = STUDENTS.stream()
                 .filter(studentFilter -> studentFilter.getId().equals(studentId))
                 .findAny();
