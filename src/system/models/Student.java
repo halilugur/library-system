@@ -6,8 +6,9 @@ import java.util.Set;
 import static system.utils.StringUtil.makeShort;
 
 /**
- * Represents a student with a name, surname, address and two sets of books: a waiting
- * list and a borrowed list. Inherits from BaseModel, which provides an ID.
+ * Represents a student with a name, surname, address and two sets of books: a
+ * waiting list and a borrowed list. Inherits from BaseModel, which provides an
+ * ID.
  *
  * @author Tolga Baris Pinar
  * @author halilugur
@@ -69,6 +70,11 @@ public class Student extends BaseModel {
         this.borrowedList = borrowedList;
     }
 
+    /**
+     * It generates a hash code so that an object will be unique when it is fetched.
+     * 
+     * @return integer
+     */
     @Override
     public int hashCode() {
         int hash = 5;
@@ -78,6 +84,12 @@ public class Student extends BaseModel {
         return hash;
     }
 
+    /**
+     * It checks whether this Object equals to the current object.
+     * 
+     * @param obj that will be compared.
+     * @return the result of the comparison as a boolean value.
+     */
     @Override
     public boolean equals(Object obj) {
         if (this == obj) {
@@ -99,6 +111,11 @@ public class Student extends BaseModel {
         return Objects.equals(this.getId(), other.getId());
     }
 
+    /**
+     * Prints information of student's ID, Name, Surname and Address.
+     * 
+     * @return a student's ID, Name, Surname and Address.
+     */
     @Override
     public String toString() {
         return String.format("%-10d%-20s%-20s%-20s", this.getId(), name, surname, makeShort(address));

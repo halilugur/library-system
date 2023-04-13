@@ -115,7 +115,7 @@ public class Main {
     private static int borrowedOperations(int option, BorrowedController borrowedController) {
         MENU.printBorrowedOptions();
         System.out.print("Please select an option: ");
-        option = checkInListOptions(BARROWED_MENU_OPTIONS);
+        option = checkInListOptions(BORROWED_MENU_OPTIONS);
         MENU.printLongSpace();
         borrowedController.borrowed(option);
         MENU.printShortSpace();

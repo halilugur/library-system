@@ -35,6 +35,11 @@ public class Author extends BaseModel {
         this.surname = surname;
     }
 
+    /**
+     * It generates a hash code so that an object will be unique when it is fetched.
+     * 
+     * @return integer
+     */
     @Override
     public int hashCode() {
         int hash = 3;
@@ -44,6 +49,12 @@ public class Author extends BaseModel {
         return hash;
     }
 
+    /**
+     * It checks whether this Object equals to the current object.
+     * 
+     * @param obj that will be compared.
+     * @return the result of the comparison as a boolean value.
+     */
     @Override
     public boolean equals(Object obj) {
         if (this == obj) {
@@ -65,6 +76,11 @@ public class Author extends BaseModel {
         return Objects.equals(this.getId(), other.getId());
     }
 
+    /**
+     * Prints information of author's unique ID, name, and surname.
+     * 
+     * @return a author's unique ID, name, and surname.
+     */
     @Override
     public String toString() {
         return String.format("%-10d%-20s%-20s", this.getId(), name, surname);

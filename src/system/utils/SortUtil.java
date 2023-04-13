@@ -18,18 +18,16 @@ public class SortUtil {
      * @param comparator The comparator to be used for sorting
      * @param <T> The type of elements in the list
      */
-    public static <T> void sort(List<T> list, Comparator<T> comparator) {
-        int position;
-        T temporaryElement;
+    public static <T> void sort(List<T> list, Comparator<? super T> comparator) {
+
         for (int i = 1; i < list.size(); i++) {
-            temporaryElement = list.get(i);
-            position = i;
-            T previousValue = list.get(position - 1);
-            while (position > 0 && comparator.compare(previousValue, temporaryElement) > 0) {
-                list.set(position, list.get(position - 1));
-                --position;
+            T temporaryElement = list.get(i);
+            int j = i - 1;
+            while (j >= 0 && comparator.compare(temporaryElement, list.get(j)) < 0) {
+                list.set((j + 1), list.get(j));
+                j--;
             }
-            list.set(position, temporaryElement);
+            list.set((j + 1), temporaryElement);
         }
     }
 }

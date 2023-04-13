@@ -4,6 +4,7 @@ import java.util.List;
 import static system.models.Constants.SCANNER;
 
 /**
+ * A utility class for scanner operation.
  *
  * @author Tolga Baris Pinar
  * @author halilugur

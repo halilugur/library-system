@@ -96,7 +96,7 @@ public class BookController {
      * found. If no book is found, prints a message indicating that no book was
      * found.
      */
-    public void searchById() {
+    private void searchById() {
         Integer id = checkNumber("Search by ID: ");
         Integer index = SearchUtil.find(BOOKS, id);
         if (index != -1) {
@@ -111,7 +111,7 @@ public class BookController {
      * Searches for a book by its code and prints the book information if found.
      * If no book is found, prints a message indicating that no book was found.
      */
-    public void searchByCode() {
+    private void searchByCode() {
         System.out.println("Search by code: ");
         String code = SCANNER.nextLine().toLowerCase();
         Optional<Book> foundBook = BOOKS.stream()

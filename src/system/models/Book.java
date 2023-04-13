@@ -56,6 +56,11 @@ public class Book extends BaseModel {
         this.author = author;
     }
 
+    /**
+     * It generates a hash code so that an object will be unique when it is fetched.
+     * 
+     * @return integer
+     */
     @Override
     public int hashCode() {
         int hash = 3;
@@ -65,6 +70,12 @@ public class Book extends BaseModel {
         return hash;
     }
 
+    /**
+     * It checks whether this Object equals to the current object.
+     * 
+     * @param obj that will be compared.
+     * @return the result of the comparison as a boolean value.
+     */
     @Override
     public boolean equals(Object obj) {
         if (this == obj) {
@@ -86,6 +97,11 @@ public class Book extends BaseModel {
         return Objects.equals(this.title, other.title);
     }
 
+    /**
+     * Prints information of book's ID, code, title and genres and author.
+     *
+     * @return a book's ID, code, title and genres and author.
+     */
     @Override
     public String toString() {
         return String.format("%-10d%-40s%-20s%-20s%-20s", this.getId(), code, makeShort(title), makeShort(genres), author);

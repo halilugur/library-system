@@ -78,7 +78,7 @@ public class StudentController {
      *
      * @throws NumberFormatException if the input is not a valid integer
      */
-    public void searchById() {
+    private void searchById() {
         Integer id = checkNumber("Search by ID: ");
         Integer index = SearchUtil.find(STUDENTS, id);
         if (index != -1) {
@@ -92,7 +92,7 @@ public class StudentController {
      * Searches for an student by name and prints their information if found.
      * Uses a map of indexed name values to quickly find the student.
      */
-    public void searchByName() {
+    private void searchByName() {
         System.out.println("Search by name: ");
         String name = SCANNER.nextLine().toLowerCase();
         Integer[] indexes = INDEXED_NAME_VALUE.get(name);
@@ -107,7 +107,7 @@ public class StudentController {
      * Searches for an student by surname and prints their information if found.
      * Uses a map of indexed surname values to quickly find the student.
      */
-    public void searchBySurname() {
+    private void searchBySurname() {
         System.out.println("Search by surname: ");
         String surname = SCANNER.nextLine().toLowerCase();
         Integer[] indexes = INDEXED_SURNAME_VALUE.get(surname);
@@ -122,7 +122,7 @@ public class StudentController {
      * Lists all students in the RAM by their name, sorted in alphabetical
      * order. Prints a table with the book information.
      */
-    public void listAllStudentsByName() {
+    private void listAllStudentsByName() {
         printTableLabels();
         listAllDataByCompare(STUDENTS, new StudentNameComparator());
     }
@@ -131,7 +131,7 @@ public class StudentController {
      * Lists all students in the RAM by their surname, sorted in alphabetical
      * order. Prints a table with the book information.
      */
-    public void listAllStudentsBySurname() {
+    private void listAllStudentsBySurname() {
         printTableLabels();
         listAllDataByCompare(STUDENTS, new StudentSurnameComparator());
     }
@@ -140,7 +140,7 @@ public class StudentController {
      * Prints the list of borrowed items by a student with the given ID. If the
      * student is not found, prints an error message.
      */
-    public void borrowedListByStudentId() {
+    private void borrowedListByStudentId() {
         Integer id = checkNumber("Student ID: ");
         Integer index = SearchUtil.find(STUDENTS, id);
         if (index != -1) {
@@ -155,7 +155,7 @@ public class StudentController {
      * Prints the waiting list of a student with a given ID number. If the
      * student is not found, prints an error message.
      */
-    public void waitingListByStudentId() {
+    private void waitingListByStudentId() {
         Integer id = checkNumber("Student ID: ");
         Integer index = SearchUtil.find(STUDENTS, id);
         if (index != -1) {

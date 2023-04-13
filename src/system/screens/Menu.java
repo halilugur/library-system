@@ -4,11 +4,12 @@ import java.util.Objects;
 import system.models.Constants;
 
 /**
- * 
- * The Menu class provides a set of methods to print different menus and messages to the console.
- * It is a singleton class, meaning that only one instance of it can exist at a time.
- * The class contains methods to print a banner, different menus for different options, and messages to indicate
- * the loading and loaded state of data.
+ *
+ * The Menu class provides a set of methods to print different menus and
+ * messages to the console. It is a singleton class, meaning that only one
+ * instance of it can exist at a time. The class contains methods to print a
+ * banner, different menus for different options, and messages to indicate the
+ * loading and loaded state of data.
  *
  * @author Tolga Baris Pinar
  * @author halilugur
@@ -88,13 +89,9 @@ public final class Menu {
     }
 
     /**
-     * Prints the available options for the user to select from.
-     * The options include:
-     * 1) Student Search
-     * 2) Borrowed Book
-     * 3) Book Search
-     * 4) Author Search
-     * 0) Exit
+     * Prints the available options for the user to select from. The options
+     * include: 1) Student Search 2) Borrowed Book 3) Book Search 4) Author
+     * Search 0) Exit
      */
     public void printControllers() {
         System.out.println("⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯");
@@ -107,16 +104,11 @@ public final class Menu {
     }
 
     /**
-     * Prints the student available options for the user to select from.
-     * The options include:
-     * 1) Search by id
-     * 2) Search by name
-     * 3) Search by surname
-     * 4) Find all borrowed book by student id
-     * 5) Find all waiting book by student id
-     * 6) List all student by name
-     * 7) List all student by surname
-     * 99) Back
+     * Prints the student available options for the user to select from. The
+     * options include: 1) Search by id 2) Search by name 3) Search by surname
+     * 4) Find all borrowed book by student id 5) Find all waiting book by
+     * student id 6) List all student by name 7) List all student by surname 99)
+     * Back
      */
     public void printStudentOptions() {
         System.out.println("⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯");
@@ -132,13 +124,11 @@ public final class Menu {
         System.out.println(Constants.BACK + ") Back");
         System.out.println("⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯");
     }
-    
+
     /**
      * Prints the borrowed book available options for the user to select from.
-     * The options include:
-     * 1) Borrow a book by id
-     * 2) Give back a book by id
-     * 99) Back
+     * The options include: 1) Borrow a book by id 2) Give back a book by id 99)
+     * Back
      */
     public void printBorrowedOptions() {
         System.out.println("⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯");
@@ -151,18 +141,11 @@ public final class Menu {
     }
 
     /**
-     * Prints the book available options for the user to select from.
-     * The options include:
-     * 1) Search by id
-     * 2) Search by code
-     * 3) Search by title
-     * 4) Search by genre
-     * 5) Find all book by author name
-     * 6) Find all book by author surname
-     * 7) List all book order by title
-     * 8) List all book order by author name
-     * 9) List all book order by author surname
-     * 99) Back
+     * Prints the book available options for the user to select from. The
+     * options include: 1) Search by id 2) Search by code 3) Search by title 4)
+     * Search by genre 5) Find all book by author name 6) Find all book by
+     * author surname 7) List all book order by title 8) List all book order by
+     * author name 9) List all book order by author surname 99) Back
      */
     public void printBookOptions() {
         System.out.println("⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯");
@@ -180,16 +163,11 @@ public final class Menu {
         System.out.println(Constants.BACK + ") Back");
         System.out.println("⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯");
     }
-    
+
     /**
-     * Prints the author available options for the user to select from.
-     * The options include:
-     * 1) Search by id
-     * 2) Search by name
-     * 3) Search by surname
-     * 4) List all author by name
-     * 5) List all author by surname
-     * 99) Back
+     * Prints the author available options for the user to select from. The
+     * options include: 1) Search by id 2) Search by name 3) Search by surname
+     * 4) List all author by name 5) List all author by surname 99) Back
      */
     public void printAuthorOptions() {
         System.out.println("⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯");
@@ -205,8 +183,8 @@ public final class Menu {
     }
 
     /**
-     * Prints a list of available book genres to the console.
-     * Genres are printed in a table format with columns for each genre type.
+     * Prints a list of available book genres to the console. Genres are printed
+     * in a table format with columns for each genre type.
      */
     public void printGenreOptions() {
         System.out.println("⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯");

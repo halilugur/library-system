@@ -104,7 +104,7 @@ public class CSVUtil {
                 if (i < 3) {
                     merge += value + ",";
                 } else {
-                    if (!value.contains("|") && i > 2 && (i + 1) != values.length) {
+                    if (!value.contains("|") && (i + 1) != values.length) {
                         merge += value;
                     } else {
                         merge += "," + value;
