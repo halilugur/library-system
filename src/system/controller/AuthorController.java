@@ -1,16 +1,17 @@
 package system.controller;
 
+import static system.models.Constants.AUTHORS;
+import static system.models.Constants.SCANNER;
+import static system.utils.ScannerUtil.checkNumber;
+import static system.utils.SearchUtil.indexingOfObject;
+import static system.utils.SearchUtil.listAllDataByCompare;
+
 import java.util.HashMap;
 import java.util.Map;
 import system.comparator.AuthorNameComparator;
 import system.comparator.AuthorSurnameComparator;
 import system.models.Author;
-import static system.models.Constants.AUTHORS;
-import static system.models.Constants.SCANNER;
-import static system.utils.ScannerUtil.checkNumber;
 import system.utils.SearchUtil;
-import static system.utils.SearchUtil.indexingOfObject;
-import static system.utils.SearchUtil.listAllDataByCompare;
 
 /**
  * The AuthorController class is responsible for managing the search and listing
@@ -24,12 +25,12 @@ import static system.utils.SearchUtil.listAllDataByCompare;
  */
 public class AuthorController {
 
-    private final Map<String, Integer[]> INDEXED_NAME_VALUE;
-    private final Map<String, Integer[]> INDEXED_SURNAME_VALUE;
+    private final Map<String, Integer[]> indexedNameValue;
+    private final Map<String, Integer[]> indexedSurnameValue;
 
     public AuthorController() {
-        INDEXED_NAME_VALUE = new HashMap<>();
-        INDEXED_SURNAME_VALUE = new HashMap<>();
+        indexedNameValue = new HashMap<>();
+        indexedSurnameValue = new HashMap<>();
         prepareSearchData();
     }
 
@@ -85,7 +86,7 @@ public class AuthorController {
     private void searchByName() {
         System.out.println("Search by name: ");
         String name = SCANNER.nextLine().toLowerCase();
-        Integer[] indexes = INDEXED_NAME_VALUE.get(name);
+        Integer[] indexes = indexedNameValue.get(name);
         if (indexes != null) {
             findAndPrint(indexes);
         } else {
@@ -100,7 +101,7 @@ public class AuthorController {
     private void searchBySurname() {
         System.out.println("Search by surname: ");
         String surname = SCANNER.nextLine().toLowerCase();
-        Integer[] indexes = INDEXED_SURNAME_VALUE.get(surname);
+        Integer[] indexes = indexedSurnameValue.get(surname);
         if (indexes != null) {
             findAndPrint(indexes);
         } else {
@@ -133,7 +134,7 @@ public class AuthorController {
      */
     private void printTableLabels() {
         System.out.println("⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯");
-        System.out.println(String.format("%-10s%-20s%-20s", "ID", "Name", "Surname"));
+        System.out.printf("%-15s%-15s%-15s%n", "ID", "Name", "Surname");
         System.out.println("⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯");
     }
 
@@ -158,8 +159,8 @@ public class AuthorController {
     private void prepareSearchData() {
         for (int i = 0; i < AUTHORS.size(); i++) {
             Author author = AUTHORS.get(i);
-            indexingOfObject(INDEXED_NAME_VALUE, author.getName(), i);
-            indexingOfObject(INDEXED_SURNAME_VALUE, author.getSurname(), i);
+            indexingOfObject(indexedNameValue, author.getName(), i);
+            indexingOfObject(indexedSurnameValue, author.getSurname(), i);
         }
     }
 }

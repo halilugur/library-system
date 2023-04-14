@@ -11,7 +11,7 @@ public abstract class BaseModel {
 
     private Integer id;
 
-    public BaseModel(Integer id) {
+    protected BaseModel(Integer id) {
         this.id = id;
     }
 

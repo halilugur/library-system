@@ -1,7 +1,8 @@
 package system.utils;
 
-import java.util.List;
 import static system.models.Constants.SCANNER;
+
+import java.util.List;
 
 /**
  * A utility class for scanner operation.
@@ -10,6 +11,10 @@ import static system.models.Constants.SCANNER;
  * @author halilugur
  */
 public class ScannerUtil {
+
+    private ScannerUtil() {
+
+    }
 
     /**
      * Prompts the user to enter a number and checks if it is in the given list
@@ -42,7 +47,7 @@ public class ScannerUtil {
      * until a valid number is entered.
      *
      * @param message The message to display to the user when prompting for
-     * input
+     *                input
      * @return The integer value entered by the user
      */
     public static int checkNumber(String message) {

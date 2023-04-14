@@ -4,7 +4,6 @@ import java.util.Objects;
 import system.models.Constants;
 
 /**
- *
  * The Menu class provides a set of methods to print different menus and
  * messages to the console. It is a singleton class, meaning that only one
  * instance of it can exist at a time. The class contains methods to print a
@@ -16,10 +15,11 @@ import system.models.Constants;
  */
 public final class Menu {
 
+    private static Menu instance;
     /**
      * Banner generate website.
-     *
-     * https://springhow.com/spring-boot-banner-generator/
+     * <p>
+     * <a href="https://springhow.com/spring-boot-banner-generator/">Spring Banner Generator Web Site</a>
      */
     private final String BANNER
             = "⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯\n"
@@ -30,8 +30,6 @@ public final class Menu {
             + " |_____|_|_.__/|_|  \\__,_|_|   \\__, | |____/ \\__, |___/\\__\\___|_| |_| |_|\n"
             + "                               |___/         |___/                       "
             + "\n⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯";
-
-    private static Menu instance;
 
     private Menu() {
     }
@@ -136,6 +134,8 @@ public final class Menu {
         System.out.println("⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯");
         System.out.println(" 1) Borrow a book by id");
         System.out.println(" 2) Give back a book by id");
+        System.out.println(" 3) List borrowed books");
+        System.out.println(" 4) List waiting list");
         System.out.println(Constants.BACK + ") Back");
         System.out.println("⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯");
     }

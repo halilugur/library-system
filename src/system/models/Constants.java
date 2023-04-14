@@ -27,7 +27,7 @@ public interface Constants {
     Integer BACK = 99;
     List<Integer> MAIN_MENU = Arrays.asList(STUDENT, BORROWED, BOOK, AUTHOR, EXIT);
     List<Integer> STUDENT_MENU_OPTIONS = Arrays.asList(1, 2, 3, 4, 5, 6, 7, BACK);
-    List<Integer> BORROWED_MENU_OPTIONS = Arrays.asList(1, 2, BACK);
+    List<Integer> BORROWED_MENU_OPTIONS = Arrays.asList(1, 2, 3, 4, BACK);
     List<Integer> BOOK_MENU_OPTIONS = Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, BACK);
     List<Integer> AUTHOR_MENU_OPTIONS = Arrays.asList(1, 2, 3, 4, 5, BACK);
 

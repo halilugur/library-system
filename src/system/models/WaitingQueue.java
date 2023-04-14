@@ -33,7 +33,7 @@ public class WaitingQueue {
      * Adds a book to a student's list of borrowed books, if it is not already
      * borrowed by the student.
      *
-     * @param book The book to be borrowed.
+     * @param book    The book to be borrowed.
      * @param student The student who is borrowing the book.
      * @return true if the book was successfully borrowed, false if the book is
      * already borrowed by the student.
@@ -87,7 +87,8 @@ public class WaitingQueue {
             System.arraycopy(books, 0, newBookIds, 0, findPosition);
             books = newBookIds;
 
-            System.arraycopy(students, findPosition + 1, newStudentIds, findPosition, students.length - findPosition - 1);
+            System.arraycopy(students, findPosition + 1, newStudentIds, findPosition,
+                    students.length - findPosition - 1);
             System.arraycopy(students, 0, newStudentIds, 0, findPosition);
             students = newStudentIds;
             return student;
@@ -114,15 +115,15 @@ public class WaitingQueue {
     }
 
     /**
-     * Converts the array of books and students to a map where the book code is
-     * the key and the student ID is the value.
+     * Converts the array of books and students to a map where the book is
+     * the key and the student is the value.
      *
      * @return A map with book codes as keys and student IDs as values.
      */
-    public Map<String, Integer> toMap() {
-        Map<String, Integer> mapped = new HashMap<>();
+    public Map<Book, Student> toMap() {
+        Map<Book, Student> mapped = new HashMap<>();
         for (int i = 0; i < books.length; i++) {
-            mapped.put(books[i].getCode(), students[i].getId());
+            mapped.put(books[i], students[i]);
         }
         return mapped;
     }

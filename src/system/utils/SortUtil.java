@@ -11,15 +11,17 @@ import java.util.List;
  */
 public class SortUtil {
 
+    private SortUtil() {
+    }
+
     /**
      * Sorts a given list using the provided comparator.
      *
-     * @param list The list to be sorted
+     * @param list       The list to be sorted
      * @param comparator The comparator to be used for sorting
-     * @param <T> The type of elements in the list
+     * @param <T>        The type of elements in the list
      */
     public static <T> void sort(List<T> list, Comparator<? super T> comparator) {
-
         for (int i = 1; i < list.size(); i++) {
             T temporaryElement = list.get(i);
             int j = i - 1;

@@ -19,20 +19,23 @@ import java.util.logging.Logger;
  */
 public class CSVUtil {
 
-    private final static String DELIMITER = ",";
+    private static final String DELIMITER = ",";
+
+    private CSVUtil() {
+    }
 
     /**
      * Reads a CSV file and returns its contents as a list of string arrays.
      *
-     * @param path The path to the CSV file.
+     * @param path         The path to the CSV file.
      * @param messageStart The message to print before reading the file.
-     * @param messageEnd The message to print after reading the file.
+     * @param messageEnd   The message to print after reading the file.
      * @return A list of string arrays containing the contents of the CSV file.
      * If the file is not found or an error occurs, an empty list is returned.
      */
     public static List<String[]> readCSV(String path, String messageStart, String messageEnd) {
         System.out.println(messageStart);
-        try ( BufferedReader reader = new BufferedReader(new FileReader(path))) {
+        try (BufferedReader reader = new BufferedReader(new FileReader(path))) {
             List<String[]> dataList = new ArrayList<>();
             String line;
             boolean skipFirstLine = true;
@@ -51,7 +54,7 @@ public class CSVUtil {
         } catch (IOException ex) {
             Logger.getLogger(StudentUtil.class.getName()).log(Level.SEVERE, "Operation error.", ex);
         }
-        return Collections.EMPTY_LIST;
+        return Collections.emptyList();
     }
 
     /**
@@ -68,20 +71,16 @@ public class CSVUtil {
     /**
      * Writes a list of data to a CSV file at the specified path.
      *
-     * @param dataList The list of data to write to the CSV file
-     * @param path The path to the CSV file
-     * @param titles The titles of the columns in the CSV file
+     * @param dataList    The list of data to write to the CSV file
+     * @param path        The path to the CSV file
+     * @param titles      The titles of the columns in the CSV file
      * @param isOverwrite Whether to overwrite the file if it already exists
      */
     public static void writeCSV(List<String> dataList, String path, String titles, boolean isOverwrite) {
-        try ( FileWriter fileWriter = new FileWriter(path, isOverwrite)) {
+        try (FileWriter fileWriter = new FileWriter(path, isOverwrite)) {
             StringBuilder builder = new StringBuilder(titles).append("\n");
-            dataList.forEach(data -> {
-                builder.append(data)
-                        .append("\n");
-            });
+            dataList.forEach(data -> builder.append(data).append("\n"));
             fileWriter.write(builder.toString());
-            fileWriter.close();
         } catch (IOException exception) {
             System.out.println(exception.getMessage());
         }
@@ -93,25 +92,25 @@ public class CSVUtil {
      * written to a new CSV file.
      *
      * @param dataList The list of CSV data to be cleaned
-     * @param titles The titles of the CSV columns
+     * @param titles   The titles of the CSV columns
      */
     public static void cleanCSV(List<String[]> dataList, String titles) {
         List<String> cleanedData = new ArrayList<>();
         dataList.forEach(values -> {
-            String merge = "";
+            StringBuilder builder = new StringBuilder("");
             for (int i = 0; i < values.length; i++) {
                 String value = values[i].replace("\"", "");
                 if (i < 3) {
-                    merge += value + ",";
+                    builder.append(value).append(",");
                 } else {
                     if (!value.contains("|") && (i + 1) != values.length) {
-                        merge += value;
+                        builder.append(value);
                     } else {
-                        merge += "," + value;
+                        builder.append(",").append(value);
                     }
                 }
             }
-            cleanedData.add(merge);
+            cleanedData.add(builder.toString());
         });
         writeCSV(cleanedData, "src/resource/CLEANED_DATA.csv", titles, false);
     }

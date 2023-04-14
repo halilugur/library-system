@@ -1,8 +1,9 @@
 package system.models;
 
+import static system.utils.StringUtil.makeShort;
+
 import java.util.Objects;
 import java.util.Set;
-import static system.utils.StringUtil.makeShort;
 
 /**
  * Represents a book with a unique ID, code, title, author, and genres.
@@ -58,7 +59,7 @@ public class Book extends BaseModel {
 
     /**
      * It generates a hash code so that an object will be unique when it is fetched.
-     * 
+     *
      * @return integer
      */
     @Override
@@ -72,7 +73,7 @@ public class Book extends BaseModel {
 
     /**
      * It checks whether this Object equals to the current object.
-     * 
+     *
      * @param obj that will be compared.
      * @return the result of the comparison as a boolean value.
      */
@@ -104,6 +105,11 @@ public class Book extends BaseModel {
      */
     @Override
     public String toString() {
-        return String.format("%-10d%-40s%-20s%-20s%-20s", this.getId(), code, makeShort(title), makeShort(genres), author);
+        return String.format("%-10d%-40s%-20s%-20s%-20s",
+                this.getId(),
+                code,
+                makeShort(title),
+                makeShort(genres),
+                author);
     }
 }

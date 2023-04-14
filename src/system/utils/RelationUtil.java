@@ -12,17 +12,22 @@ import system.models.Book;
  */
 public class RelationUtil {
 
-    private final static String BOOK_AUTHOR_CSV_PATH = "src/resource/book_author.csv";
+    private static final String BOOK_AUTHOR_CSV_PATH = "src/resource/book_author.csv";
+
+    private RelationUtil() {
+    }
 
     /**
      * Loads the relation between books and authors from a CSV file and sets the
      * author for each book.
      *
-     * @param books The list of books to set the author for
+     * @param books   The list of books to set the author for
      * @param authors The list of authors to match with the books
      */
     public static void loadBookAndAuthorRelation(List<Book> books, List<Author> authors) {
-        List<String[]> relations = CSVUtil.readCSV(BOOK_AUTHOR_CSV_PATH, "Relation data loading...", "Relation data is loaded!");
+        List<String[]> relations = CSVUtil.readCSV(BOOK_AUTHOR_CSV_PATH,
+                "Relation data loading...",
+                "Relation data is loaded!");
         relations.forEach(relation -> {
             Integer bookId = Integer.valueOf(relation[0]);
             Integer authorId = Integer.valueOf(relation[1]);

@@ -13,7 +13,10 @@ import system.models.Author;
  */
 public class AuthorUtil {
 
-    private final static String AUTHOR_CSV_PATH = "src/resource/author.csv";
+    private static final String AUTHOR_CSV_PATH = "src/resource/author.csv";
+
+    private AuthorUtil() {
+    }
 
     /**
      * Reads author data from a CSV file and returns a sorted list of Author

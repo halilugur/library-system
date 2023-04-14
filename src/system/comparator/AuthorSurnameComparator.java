@@ -4,7 +4,6 @@ import java.util.Comparator;
 import system.models.Author;
 
 /**
- *
  * A comparator for comparing two Author objects based on their surnames. This
  * class should be used in conjunction with the sort() method of the Collections
  * class.

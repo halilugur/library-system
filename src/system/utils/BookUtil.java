@@ -1,10 +1,9 @@
 package system.utils;
 
-import system.comparator.IdComparator;
 import java.util.ArrayList;
-
 import java.util.List;
 import java.util.Set;
+import system.comparator.IdComparator;
 import system.models.Book;
 
 /**
@@ -15,7 +14,10 @@ import system.models.Book;
  */
 public class BookUtil {
 
-    private final static String BOOK_CSV_PATH = "src/resource/book.csv";
+    private static final String BOOK_CSV_PATH = "src/resource/book.csv";
+
+    private BookUtil() {
+    }
 
     /**
      * Reads book data from a CSV file and returns a list of Book objects.

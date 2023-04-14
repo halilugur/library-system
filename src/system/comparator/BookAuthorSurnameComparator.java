@@ -4,7 +4,6 @@ import java.util.Comparator;
 import system.models.Book;
 
 /**
- *
  * A comparator for comparing two Book objects based on the surnames of their
  * authors. The comparison is case-sensitive and uses the natural ordering of
  * strings.

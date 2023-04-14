@@ -1,9 +1,10 @@
 package system.models;
 
+import static system.utils.StringUtil.makeShort;
+
 import java.util.HashSet;
 import java.util.Objects;
 import java.util.Set;
-import static system.utils.StringUtil.makeShort;
 
 /**
  * Represents a student with a name, surname, address and two sets of books: a
@@ -72,7 +73,7 @@ public class Student extends BaseModel {
 
     /**
      * It generates a hash code so that an object will be unique when it is fetched.
-     * 
+     *
      * @return integer
      */
     @Override
@@ -86,7 +87,7 @@ public class Student extends BaseModel {
 
     /**
      * It checks whether this Object equals to the current object.
-     * 
+     *
      * @param obj that will be compared.
      * @return the result of the comparison as a boolean value.
      */
@@ -113,11 +114,15 @@ public class Student extends BaseModel {
 
     /**
      * Prints information of student's ID, Name, Surname and Address.
-     * 
+     *
      * @return a student's ID, Name, Surname and Address.
      */
     @Override
     public String toString() {
-        return String.format("%-10d%-20s%-20s%-20s", this.getId(), name, surname, makeShort(address));
+        return String.format("%-10d%-20s%-20s%-20s",
+                this.getId(),
+                name,
+                surname,
+                makeShort(address));
     }
 }

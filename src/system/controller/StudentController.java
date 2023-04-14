@@ -1,14 +1,15 @@
 package system.controller;
 
+import static system.models.Constants.SCANNER;
+import static system.models.Constants.STUDENTS;
+import static system.utils.ScannerUtil.checkNumber;
+import static system.utils.SearchUtil.indexingOfObject;
+import static system.utils.SearchUtil.listAllDataByCompare;
+
 import java.util.HashMap;
 import java.util.Map;
 import system.comparator.StudentNameComparator;
 import system.comparator.StudentSurnameComparator;
-import static system.models.Constants.SCANNER;
-import static system.models.Constants.STUDENTS;
-import static system.utils.SearchUtil.indexingOfObject;
-import static system.utils.SearchUtil.listAllDataByCompare;
-import static system.utils.ScannerUtil.checkNumber;
 import system.models.Student;
 import system.utils.SearchUtil;
 
@@ -25,12 +26,12 @@ import system.utils.SearchUtil;
  */
 public class StudentController {
 
-    private final Map<String, Integer[]> INDEXED_NAME_VALUE;
-    private final Map<String, Integer[]> INDEXED_SURNAME_VALUE;
+    private final Map<String, Integer[]> indexedNameValue;
+    private final Map<String, Integer[]> indexedSurnameValue;
 
     public StudentController() {
-        INDEXED_NAME_VALUE = new HashMap<>();
-        INDEXED_SURNAME_VALUE = new HashMap<>();
+        indexedNameValue = new HashMap<>();
+        indexedSurnameValue = new HashMap<>();
         prepareSearchData();
     }
 
@@ -95,7 +96,7 @@ public class StudentController {
     private void searchByName() {
         System.out.println("Search by name: ");
         String name = SCANNER.nextLine().toLowerCase();
-        Integer[] indexes = INDEXED_NAME_VALUE.get(name);
+        Integer[] indexes = indexedNameValue.get(name);
         if (indexes != null) {
             findAndPrint(indexes);
         } else {
@@ -110,7 +111,7 @@ public class StudentController {
     private void searchBySurname() {
         System.out.println("Search by surname: ");
         String surname = SCANNER.nextLine().toLowerCase();
-        Integer[] indexes = INDEXED_SURNAME_VALUE.get(surname);
+        Integer[] indexes = indexedSurnameValue.get(surname);
         if (indexes != null) {
             findAndPrint(indexes);
         } else {
@@ -173,7 +174,7 @@ public class StudentController {
      */
     private void printTableLabels() {
         System.out.println("⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯");
-        System.out.println(String.format("%-10s%-20s%-20s%-20s", "ID", "Name", "Surname", "Address"));
+        System.out.printf("%-10s%-20s%-20s%-20s%n", "ID", "Name", "Surname", "Address");
         System.out.println("⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯");
     }
 
@@ -183,9 +184,13 @@ public class StudentController {
      * author surname.
      */
     private void printBookTableLabels() {
-        System.out.println("⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯");
-        System.out.println(String.format("%-10s%-40s%-20s%-20s%-15s%-20s%-20s", "Book ID", "Book Code", "Book Title", "Genres", "Author ID", "Author Name", "Author Surname"));
-        System.out.println("⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯");
+        System.out.println(
+                "⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯");
+        System.out.printf("%-10s%-40s%-20s%-20s%-15s%-20s%-20s%n",
+                "Book ID", "Book Code", "Book Title", "Genres",
+                "Author ID", "Author Name", "Author Surname");
+        System.out.println(
+                "⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯");
     }
 
     /**
@@ -208,8 +213,8 @@ public class StudentController {
     private void prepareSearchData() {
         for (int i = 0; i < STUDENTS.size(); i++) {
             Student student = STUDENTS.get(i);
-            indexingOfObject(INDEXED_NAME_VALUE, student.getName(), i);
-            indexingOfObject(INDEXED_SURNAME_VALUE, student.getSurname(), i);
+            indexingOfObject(indexedNameValue, student.getName(), i);
+            indexingOfObject(indexedSurnameValue, student.getSurname(), i);
         }
     }
 }

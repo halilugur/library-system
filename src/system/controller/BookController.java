@@ -1,5 +1,13 @@
 package system.controller;
 
+import static system.models.Constants.BOOKS;
+import static system.models.Constants.MENU;
+import static system.models.Constants.SCANNER;
+import static system.utils.ScannerUtil.checkNumber;
+import static system.utils.SearchUtil.indexingOfList;
+import static system.utils.SearchUtil.indexingOfObject;
+import static system.utils.SearchUtil.listAllDataByCompare;
+
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -9,18 +17,9 @@ import system.comparator.BookAuthorNameComparator;
 import system.comparator.BookAuthorSurnameComparator;
 import system.comparator.BookTitleComparator;
 import system.models.Book;
-import static system.models.Constants.BOOKS;
-import static system.models.Constants.SCANNER;
-import static system.models.Constants.MENU;
-import static system.utils.ScannerUtil.checkNumber;
 import system.utils.SearchUtil;
 
-import static system.utils.SearchUtil.indexingOfObject;
-import static system.utils.SearchUtil.indexingOfList;
-import static system.utils.SearchUtil.listAllDataByCompare;
-
 /**
- *
  * The BookController class is responsible for managing the search and listing
  * of books. It contains methods for searching books by various criteria such as
  * ID, code, title, genre, author name, and author surname. It also has methods
@@ -33,14 +32,14 @@ import static system.utils.SearchUtil.listAllDataByCompare;
  */
 public class BookController {
 
-    private final Map<String, Integer[]> INDEXED_GENRE_VALUE;
-    private final Map<String, Integer[]> INDEXED_AUTHOR_NAME_VALUE;
-    private final Map<String, Integer[]> INDEXED_AUTHOR_SURNAME_VALUE;
+    private final Map<String, Integer[]> indexedGenreValue;
+    private final Map<String, Integer[]> indexedAuthorNameValue;
+    private final Map<String, Integer[]> indexedAuthorSurnameValue;
 
     public BookController() {
-        INDEXED_GENRE_VALUE = new HashMap<>();
-        INDEXED_AUTHOR_NAME_VALUE = new HashMap<>();
-        INDEXED_AUTHOR_SURNAME_VALUE = new HashMap<>();
+        indexedGenreValue = new HashMap<>();
+        indexedAuthorNameValue = new HashMap<>();
+        indexedAuthorSurnameValue = new HashMap<>();
         prepareSearchData();
     }
 
@@ -48,15 +47,15 @@ public class BookController {
      * Searches for a book based on the user's selected option.
      *
      * @param option The user's selected option.
-     *              1: Search by ID
-     *              2: Search by code
-     *              3: Search by title
-     *              4: Search by genre
-     *              5: Search by author name
-     *              6: Search by author surname
-     *              7: List all books by title
-     *              8: List all books by author name
-     *              9: List all books by author surname
+     *               1: Search by ID
+     *               2: Search by code
+     *               3: Search by title
+     *               4: Search by genre
+     *               5: Search by author name
+     *               6: Search by author surname
+     *               7: List all books by title
+     *               8: List all books by author name
+     *               9: List all books by author surname
      */
     public void search(Integer option) {
         switch (option) {
@@ -151,7 +150,7 @@ public class BookController {
     private void searchByGenre() {
         System.out.println("Search by genre: ");
         String genre = SCANNER.nextLine().toLowerCase();
-        Integer[] indexes = INDEXED_GENRE_VALUE.get(genre);
+        Integer[] indexes = indexedGenreValue.get(genre);
         if (indexes != null) {
             findAndPrint(indexes);
         } else {
@@ -167,7 +166,7 @@ public class BookController {
     private void searchByAuthorName() {
         System.out.println("Search by author name: ");
         String name = SCANNER.nextLine().toLowerCase();
-        Integer[] indexes = INDEXED_AUTHOR_NAME_VALUE.get(name);
+        Integer[] indexes = indexedAuthorNameValue.get(name);
         if (indexes != null) {
             findAndPrint(indexes);
         } else {
@@ -183,7 +182,7 @@ public class BookController {
     private void searchByAuthorSurname() {
         System.out.println("Search by surname: ");
         String surname = SCANNER.nextLine().toLowerCase();
-        Integer[] indexes = INDEXED_AUTHOR_SURNAME_VALUE.get(surname);
+        Integer[] indexes = indexedAuthorSurnameValue.get(surname);
         if (indexes != null) {
             findAndPrint(indexes);
         } else {
@@ -224,9 +223,13 @@ public class BookController {
      * author surname.
      */
     private void printTableLabels() {
-        System.out.println("⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯");
-        System.out.println(String.format("%-10s%-40s%-20s%-20s%-15s%-20s%-20s", "Book ID", "Book Code", "Book Title", "Genres", "Author ID", "Author Name", "Author Surname"));
-        System.out.println("⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯");
+        System.out.println(
+                "⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯");
+        System.out.printf("%-10s%-40s%-20s%-20s%-15s%-15s%-15s%n",
+                "Book ID", "Book Code", "Book Title", "Genres",
+                "Author ID", "Author Name", "Author Surname");
+        System.out.println(
+                "⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯");
     }
 
     /**
@@ -249,9 +252,9 @@ public class BookController {
     private void prepareSearchData() {
         for (int i = 0; i < BOOKS.size(); i++) {
             Book book = BOOKS.get(i);
-            indexingOfObject(INDEXED_AUTHOR_NAME_VALUE, book.getAuthor().getName(), i);
-            indexingOfObject(INDEXED_AUTHOR_SURNAME_VALUE, book.getAuthor().getSurname(), i);
-            indexingOfList(INDEXED_GENRE_VALUE, book.getGenres(), i);
+            indexingOfObject(indexedAuthorNameValue, book.getAuthor().getName(), i);
+            indexingOfObject(indexedAuthorSurnameValue, book.getAuthor().getSurname(), i);
+            indexingOfList(indexedGenreValue, book.getGenres(), i);
         }
     }
 }

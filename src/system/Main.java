@@ -1,7 +1,17 @@
 package system;
 
-import static system.models.Constants.*;
-import static system.utils.ScannerUtil.*;
+import static system.models.Constants.AUTHORS;
+import static system.models.Constants.AUTHOR_MENU_OPTIONS;
+import static system.models.Constants.BACK;
+import static system.models.Constants.BOOKS;
+import static system.models.Constants.BOOK_MENU_OPTIONS;
+import static system.models.Constants.BORROWED_MENU_OPTIONS;
+import static system.models.Constants.EXIT;
+import static system.models.Constants.MAIN_MENU;
+import static system.models.Constants.MENU;
+import static system.models.Constants.STUDENTS;
+import static system.models.Constants.STUDENT_MENU_OPTIONS;
+import static system.utils.ScannerUtil.checkInListOptions;
 
 import system.controller.AuthorController;
 import system.controller.BookController;
@@ -9,8 +19,8 @@ import system.controller.BorrowedController;
 import system.controller.StudentController;
 import system.utils.AuthorUtil;
 import system.utils.BookUtil;
-import system.utils.StudentUtil;
 import system.utils.RelationUtil;
+import system.utils.StudentUtil;
 
 /**
  * This program manages the library system with simple functionality.
@@ -19,6 +29,8 @@ import system.utils.RelationUtil;
  * @author halilugur
  */
 public class Main {
+
+    public static final String PLEASE_SELECT_AN_OPTION = "Please select an option: ";
 
     /**
      * Sets up the application by loading data from CSV files and initializing
@@ -58,27 +70,27 @@ public class Main {
         AuthorController authorController = new AuthorController();
         int option;
         do {
-            System.out.print("Please select an option: ");
+            System.out.print(PLEASE_SELECT_AN_OPTION);
             option = checkInListOptions(MAIN_MENU);
             switch (option) {
                 case 1:
                     while (option != BACK) {
-                        option = studentOperations(option, studentController);
+                        option = studentOperations(studentController);
                     }
                     break;
                 case 2:
                     while (option != BACK) {
-                        option = borrowedOperations(option, borrowedController);
+                        option = borrowedOperations(borrowedController);
                     }
                     break;
                 case 3:
                     while (option != BACK) {
-                        option = bookOperations(option, bookController);
+                        option = bookOperations(bookController);
                     }
                     break;
                 case 4:
                     while (option != BACK) {
-                        option = authorOperations(option, authorController);
+                        option = authorOperations(authorController);
                     }
                     break;
             }
@@ -89,14 +101,13 @@ public class Main {
     /**
      * Handles the operations related to the student menu.
      *
-     * @param option The option selected by the user.
      * @param studentController The controller for the student entity.
      * @return The option selected by the user.
      */
-    private static int studentOperations(int option, StudentController studentController) {
+    private static int studentOperations(StudentController studentController) {
         MENU.printStudentOptions();
-        System.out.print("Please select an option: ");
-        option = checkInListOptions(STUDENT_MENU_OPTIONS);
+        System.out.print(PLEASE_SELECT_AN_OPTION);
+        int option = checkInListOptions(STUDENT_MENU_OPTIONS);
         MENU.printLongSpace();
         studentController.search(option);
         MENU.printShortSpace();
@@ -108,14 +119,13 @@ public class Main {
      * select an option, and executes the selected option using the provided
      * BorrowedController.
      *
-     * @param option The user's selected option
      * @param borrowedController The controller for borrowed operations
      * @return The user's selected option
      */
-    private static int borrowedOperations(int option, BorrowedController borrowedController) {
+    private static int borrowedOperations(BorrowedController borrowedController) {
         MENU.printBorrowedOptions();
-        System.out.print("Please select an option: ");
-        option = checkInListOptions(BORROWED_MENU_OPTIONS);
+        System.out.print(PLEASE_SELECT_AN_OPTION);
+        int option = checkInListOptions(BORROWED_MENU_OPTIONS);
         MENU.printLongSpace();
         borrowedController.borrowed(option);
         MENU.printShortSpace();
@@ -126,14 +136,13 @@ public class Main {
      * Handles the operations related to the book controller based on the user's
      * selected option.
      *
-     * @param option The user's selected option
      * @param bookController The book controller object
      * @return The user's selected option
      */
-    private static int bookOperations(int option, BookController bookController) {
+    private static int bookOperations(BookController bookController) {
         MENU.printBookOptions();
-        System.out.print("Please select an option: ");
-        option = checkInListOptions(BOOK_MENU_OPTIONS);
+        System.out.print(PLEASE_SELECT_AN_OPTION);
+        int option = checkInListOptions(BOOK_MENU_OPTIONS);
         MENU.printLongSpace();
         bookController.search(option);
         MENU.printShortSpace();
@@ -143,14 +152,13 @@ public class Main {
     /**
      * Handles the author operations based on the selected option.
      *
-     * @param option The selected option from the author menu.
      * @param authorController The controller for author operations.
      * @return The selected option.
      */
-    private static int authorOperations(int option, AuthorController authorController) {
+    private static int authorOperations(AuthorController authorController) {
         MENU.printAuthorOptions();
-        System.out.print("Please select an option: ");
-        option = checkInListOptions(AUTHOR_MENU_OPTIONS);
+        System.out.print(PLEASE_SELECT_AN_OPTION);
+        int option = checkInListOptions(AUTHOR_MENU_OPTIONS);
         MENU.printLongSpace();
         authorController.search(option);
         MENU.printShortSpace();

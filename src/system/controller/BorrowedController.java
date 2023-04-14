@@ -1,15 +1,18 @@
 package system.controller;
 
+import static system.models.Constants.BOOKS;
+import static system.models.Constants.SCANNER;
+import static system.models.Constants.STUDENTS;
+import static system.utils.ScannerUtil.checkNumber;
+import static system.utils.StringUtil.makeShort;
+
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 import java.util.Optional;
 import system.models.Book;
-import static system.models.Constants.SCANNER;
-import static system.models.Constants.BOOKS;
-import static system.models.Constants.STUDENTS;
 import system.models.Student;
 import system.models.WaitingQueue;
-import static system.utils.ScannerUtil.checkNumber;
 
 /**
  * The BorrowedController class is responsible for managing the borrowing and
@@ -22,12 +25,12 @@ import static system.utils.ScannerUtil.checkNumber;
  */
 public class BorrowedController {
 
-    private final List<Book> BORROWED_BOOK;
-    private final WaitingQueue WAITING_BOOK;
+    private final List<Book> borrowedBook;
+    private final WaitingQueue waitingBook;
 
     public BorrowedController() {
-        BORROWED_BOOK = new ArrayList<>();
-        WAITING_BOOK = new WaitingQueue();
+        borrowedBook = new ArrayList<>();
+        waitingBook = new WaitingQueue();
     }
 
     /**
@@ -35,7 +38,9 @@ public class BorrowedController {
      *
      * @param option An integer representing the action to be performed.
      *               1: Borrow an eBook.
-     *               2: Return a borrowed eBook.
+     *               2: Return a borrowed book.
+     *               3: List all borrowed book.
+     *               4: List all waiting book.
      */
     public void borrowed(int option) {
         switch (option) {
@@ -45,6 +50,12 @@ public class BorrowedController {
             case 2:
                 giveBack();
                 break;
+            case 3:
+                listBorrowedBook();
+                break;
+            case 4:
+                listWaitingBook();
+                break;
         }
     }
 
@@ -52,8 +63,6 @@ public class BorrowedController {
      * Allows a student to borrow a book from the library. If the book is
      * already borrowed, the student is added to the waiting list. If the
      * student already has the book, they cannot borrow it again.
-     *
-     * @return void
      */
     private void borroweBook() {
         System.out.println("Which book you want to borrow? CODE: ");
@@ -67,8 +76,8 @@ public class BorrowedController {
                 .findAny();
         if (student.isPresent()) {
             if (book.isPresent()) {
-                if (!BORROWED_BOOK.contains(book.get())) {
-                    BORROWED_BOOK.add(book.get());
+                if (!borrowedBook.contains(book.get())) {
+                    borrowedBook.add(book.get());
                     student.get().getBorrowedList().add(book.get());
                     listBorrowedBook();
                 } else {
@@ -76,7 +85,7 @@ public class BorrowedController {
                         System.out.println("This student already have this book!");
                     } else {
                         System.out.println("This book already borrowed! We have added you to the waiting list.");
-                        WAITING_BOOK.add(book.get(), student.get());
+                        waitingBook.add(book.get(), student.get());
                         student.get().getWaitingList().add(book.get());
                     }
                 }
@@ -101,21 +110,24 @@ public class BorrowedController {
                 .filter(bookFilter -> bookFilter.getCode().equals(bookCode))
                 .findAny();
         if (book.isPresent()) {
-            if (BORROWED_BOOK.contains(book.get())) {
-                BORROWED_BOOK.remove(book.get());
+            if (borrowedBook.contains(book.get())) {
+                borrowedBook.remove(book.get());
                 Student student = STUDENTS.stream()
                         .filter(studentFilter -> studentFilter.getBorrowedList().contains(book.get()))
-                        .findAny().get();
-                student.getBorrowedList().remove(book.get());
-                Optional.ofNullable(WAITING_BOOK.peek(book.get()))
-                        .ifPresent(newBorrower -> {
-                            System.out.println("⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯");
-                            System.out.println("Below student in waiting list for this book!");
-                            System.out.println("⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯");
-                            System.out.println(String.format("%-10s%-20s%-20s", "ID", "Name", "Surname"));
-                            System.out.println("⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯");
-                            System.out.println(newBorrower);
-                        });
+                        .findAny().orElse(null);
+                if (Objects.nonNull(student)) {
+                    student.getBorrowedList().remove(book.get());
+                    Optional.ofNullable(waitingBook.peek(book.get()))
+                            .ifPresent(newBorrower -> {
+                                System.out.println("⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯");
+                                System.out.println("Below student in waiting list for this book!");
+                                System.out.println("⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯");
+                                System.out.printf("%-10s%-20s%-20s%n", "ID", "Name", "Surname");
+                                System.out.println("⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯");
+                                System.out.println(newBorrower);
+                            });
+                }
+
             } else {
                 System.out.println("This book not borrowed.");
             }
@@ -128,8 +140,29 @@ public class BorrowedController {
      * Prints out the list of borrowed books.
      */
     private void listBorrowedBook() {
-        BORROWED_BOOK.forEach(book -> {
-            System.out.println(book);
-        });
+        System.out.println(
+                "⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯");
+        System.out.printf("%-10s%-40s%-20s%-20s%-15s%-15s%-15s%n",
+                "Book ID", "Book Code", "Book Title", "Genres",
+                "Author ID", "Author Name", "Author Surname");
+        System.out.println(
+                "⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯");
+        borrowedBook.forEach(System.out::println);
+    }
+
+    /**
+     * Prints out the list of waiting books.
+     */
+    private void listWaitingBook() {
+        System.out.println(
+                "⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯");
+        System.out.printf("%-40s%-20s%-20s%-20s%n", "Book Code", "Book Title", "Student ID", "Student Name");
+        System.out.println(
+                "⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯");
+        waitingBook.toMap().forEach((book, student) -> System.out.printf("%-40s%-20s%-20s%-20s",
+                book.getCode(),
+                makeShort(book.getTitle()),
+                student.getId(),
+                student.getName()));
     }
 }

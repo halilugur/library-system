@@ -11,11 +11,15 @@ import java.util.Optional;
  */
 public class StringUtil {
 
+    private StringUtil() {
+
+    }
+
     /**
      * Shortens a string to a specified maximum length by adding ellipses at the
      * end.
      *
-     * @param string The string to shorten.
+     * @param string    The string to shorten.
      * @param maxLength The maximum length of the shortened string.
      * @return The shortened string with ellipses added at the end, or the
      * original string if it is already shorter than the maximum length.
@@ -43,7 +47,7 @@ public class StringUtil {
      * @param collection The string collection to shorten.
      * @return The shortened string.
      */
-    public static String makeShort(Collection collection) {
+    public static String makeShort(Collection<?> collection) {
         return makeShort(collection.toString(), 15);
     }
 }
