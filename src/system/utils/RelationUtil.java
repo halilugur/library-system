@@ -1,6 +1,8 @@
 package system.utils;
 
+import java.io.InputStream;
 import java.util.List;
+import system.Main;
 import system.models.Author;
 import system.models.Book;
 
@@ -12,7 +14,7 @@ import system.models.Book;
  */
 public class RelationUtil {
 
-    private static final String BOOK_AUTHOR_CSV_PATH = "src/resource/book_author.csv";
+    private static final InputStream BOOK_AUTHOR_CSV_PATH = Main.class.getResourceAsStream("/resource/book_author.csv");
 
     private RelationUtil() {
     }

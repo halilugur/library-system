@@ -2,9 +2,10 @@ package system.utils;
 
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
-import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -33,9 +34,9 @@ public class CSVUtil {
      * @return A list of string arrays containing the contents of the CSV file.
      * If the file is not found or an error occurs, an empty list is returned.
      */
-    public static List<String[]> readCSV(String path, String messageStart, String messageEnd) {
+    public static List<String[]> readCSV(InputStream path, String messageStart, String messageEnd) {
         System.out.println(messageStart);
-        try (BufferedReader reader = new BufferedReader(new FileReader(path))) {
+        try (BufferedReader reader = new BufferedReader(new InputStreamReader(path))) {
             List<String[]> dataList = new ArrayList<>();
             String line;
             boolean skipFirstLine = true;
@@ -64,7 +65,7 @@ public class CSVUtil {
      * @return A list of string arrays representing the contents of the CSV
      * file.
      */
-    public static List<String[]> readCSV(String path) {
+    public static List<String[]> readCSV(InputStream path) {
         return readCSV(path, "", "");
     }
 

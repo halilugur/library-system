@@ -1,7 +1,9 @@
 package system.utils;
 
+import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
+import system.Main;
 import system.comparator.IdComparator;
 import system.models.Student;
 
@@ -13,7 +15,7 @@ import system.models.Student;
  */
 public class StudentUtil {
 
-    private static final String STUDENT_CSV_PATH = "src/resource/student.csv";
+    private static final InputStream STUDENT_CSV_PATH = Main.class.getResourceAsStream("/resource/student.csv");
 
     private StudentUtil() {
 

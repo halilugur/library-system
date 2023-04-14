@@ -1,8 +1,11 @@
 package system.utils;
 
+import java.io.InputStream;
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.HashSet;
 import java.util.List;
-import java.util.Set;
+import system.Main;
 import system.comparator.IdComparator;
 import system.models.Book;
 
@@ -14,7 +17,7 @@ import system.models.Book;
  */
 public class BookUtil {
 
-    private static final String BOOK_CSV_PATH = "src/resource/book.csv";
+    private static final InputStream BOOK_CSV_PATH = Main.class.getResourceAsStream("/resource/book.csv");
 
     private BookUtil() {
     }
@@ -37,7 +40,7 @@ public class BookUtil {
             } else {
                 genres = new String[0];
             }
-            Book book = new Book(id, code, title, Set.of(genres));
+            Book book = new Book(id, code, title, new HashSet<>(Arrays.asList(genres)));
             books.add(book);
         });
         SortUtil.sort(books, new IdComparator<>());
