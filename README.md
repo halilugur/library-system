@@ -9,18 +9,23 @@ This is a console-based library system written in Java that allows users to mana
 - A command line interface such as Terminal, Command Prompt, or PowerShell
 
 ### Installation:
-1. Clone the repository to your local machine using `git clone https://github.com/halilugur/library-system.git`
-2. Navigate to the project directory using `cd library-system`
+1. Install ANT if not have on computer from [here](https://ant.apache.org/bindownload.cgi).
+2. Set ANT_HOME on computer.
+3. Clone the repository to your local machine using `git clone https://github.com/halilugur/library-system.git`
+4. Navigate to the project directory using `cd library-system`
+5. Build project by the `ant` command.
 
 ## Usage:
-To run the program, use the following command:
-`java -jar library-system.jar`
+1. After building you will get dist folder under project folder.
+2. `cd dist`
+3. To run the program, use the following command:
+4. `java -jar library-system.jar`
 
 Once the program is running, you can use the console menu to perform various tasks such as:
-- Adding books to the library
 - Adding borrowers to the system
 - Borrowing and returning books
-- Viewing borrowing history
+- Viewing borrowing and waiting list
+- Search books, authors, students by criterias
 
 ## Contributing:
 Contributions are welcome! If you'd like to contribute to this project, please follow these steps:
@@ -31,7 +36,7 @@ Contributions are welcome! If you'd like to contribute to this project, please f
 5. Submit a pull request to the original repository
 
 ## License:
-This project is licensed under the MIT License - see the LICENSE file for details.
+This project is licensed under the Apache License - see the LICENSE file for details.
 
 ## Acknowledgments:
 This project was inspired by the need for a simple and lightweight library system that can be easily deployed and used from the command line.
