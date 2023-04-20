@@ -45,7 +45,7 @@ public class BorrowedController {
     public void borrowed(int option) {
         switch (option) {
             case 1:
-                borroweBook();
+                borrowedBook();
                 break;
             case 2:
                 giveBack();
@@ -64,7 +64,7 @@ public class BorrowedController {
      * already borrowed, the student is added to the waiting list. If the
      * student already has the book, they cannot borrow it again.
      */
-    private void borroweBook() {
+    private void borrowedBook() {
         System.out.println("Which book you want to borrow? CODE: ");
         String bookCode = SCANNER.nextLine();
         Integer studentId = checkNumber("Student ID: ");
