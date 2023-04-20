@@ -80,6 +80,7 @@ public class BorrowedController {
                     borrowedBook.add(book.get());
                     student.get().getBorrowedList().add(book.get());
                     listBorrowedBook();
+                    waitingBook.poll(book.get());
                 } else {
                     if (student.get().getBorrowedList().contains(book.get())) {
                         System.out.println("This student already have this book!");
